@@ -13,7 +13,7 @@ func start_countdown() -> void:
 	if !timer.is_stopped():
 		return
 	
-	timer.start(getaway_time)
+	timer.start()
 	
 func end_countdown() -> void:
 	print("times up buster")

@@ -38,7 +38,6 @@ func _physics_process(delta: float) -> void:
 		
 	var mouse_pos: Vector2 = Global.get_cursor_position()
 		
-	
 	dragged_node.global_position = dragged_node.global_position.lerp(mouse_pos, ease(delta, drag_curve) * drag_speed)
 	var rotate_to: float = dragged_node.global_position.angle_to(mouse_pos)
 	dragged_node.rotation = lerpf(dragged_node.rotation, rotate_to, ease(delta, drag_curve) * drag_speed)
