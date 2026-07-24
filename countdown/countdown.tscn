@@ -1,6 +1,35 @@
 [gd_scene format=3 uid="uid://r4173am4535v"]
 
 [ext_resource type="Script" uid="uid://bmylcd41qqny6" path="res://countdown/countdown.gd" id="1_kilsm"]
+[ext_resource type="Script" uid="uid://b8xvraoa0yu5b" path="res://countdown/timer/timer_label.gd" id="2_342x3"]
 
-[node name="Countdown" type="Node2D" unique_id=416416051]
+[node name="Countdown" type="Node2D" unique_id=416416051 node_paths=PackedStringArray("timer")]
 script = ExtResource("1_kilsm")
+timer = NodePath("Timer")
+
+[node name="Timer" type="Timer" parent="." unique_id=603634513]
+wait_time = 10.0
+one_shot = true
+
+[node name="TimerLabel" type="RichTextLabel" parent="." unique_id=2013573632 node_paths=PackedStringArray("timer")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -252.0
+offset_top = -67.0
+offset_right = 252.0
+offset_bottom = 67.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+text = "timer"
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_342x3")
+timer = NodePath("../Timer")
