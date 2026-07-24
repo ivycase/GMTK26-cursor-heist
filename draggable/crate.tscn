@@ -9,11 +9,10 @@ size = Vector2(40, 40)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_71qf6"]
 size = Vector2(60, 60)
 
-[node name="Crate" type="RigidBody2D" unique_id=1438339150]
+[node name="Crate" type="CharacterBody2D" unique_id=829496544]
 collision_layer = 4
 collision_mask = 5
-gravity_scale = 0.0
-max_contacts_reported = 1
+motion_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1647803655]
 shape = SubResource("RectangleShape2D_2crkd")
@@ -22,6 +21,7 @@ shape = SubResource("RectangleShape2D_2crkd")
 script = ExtResource("1_2crkd")
 click_area = NodePath("../ClickArea")
 dragged_node = NodePath("..")
+drag_curve = 1.1
 visual = NodePath("../Sprite2D")
 is_activated = true
 metadata/_custom_type_script = "uid://msdiuwyqonfp"

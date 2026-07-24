@@ -26,6 +26,9 @@ size = Vector2(30.775026, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e7anx"]
 size = Vector2(23.133636, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnglu"]
+size = Vector2(230, 20)
+
 [node name="Level" type="Node2D" unique_id=1407220735]
 
 [node name="Walls" type="Node2D" parent="." unique_id=660986934]
@@ -92,3 +95,8 @@ position = Vector2(58, 394)
 
 [node name="Crate" parent="." unique_id=1053499090 instance=ExtResource("3_gmgay")]
 position = Vector2(630, 521)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=546110115]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1130715862]
+shape = SubResource("RectangleShape2D_jnglu")

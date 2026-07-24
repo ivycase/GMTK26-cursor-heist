@@ -38,6 +38,7 @@ func _physics_process(delta: float) -> void:
 		
 	var mouse_pos: Vector2 = Global.get_cursor_position()
 		
+	
 	dragged_node.global_position = dragged_node.global_position.lerp(mouse_pos, ease(delta, drag_curve) * drag_speed)
 	var rotate_to: float = dragged_node.global_position.angle_to(mouse_pos)
 	dragged_node.rotation = lerpf(dragged_node.rotation, rotate_to, ease(delta, drag_curve) * drag_speed)
@@ -62,8 +63,9 @@ func toggle_drag_visual(do_visual: bool) -> void:
 		var over_translate: Vector2 = dragged_node.global_position.lerp(mouse_pos, ease(0.1, drag_curve) * drag_speed)
 		tween.tween_property(dragged_node, "global_position", over_translate, 0.4).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 		
-func _receive_click() -> void:
-	if !is_activated: return
+func _receive_click(cursor: Cursor) -> void:
+	if !is_activated: 
+		return
 	
 	if !Global.request_mouse(self):
 		return
@@ -72,21 +74,23 @@ func _receive_click() -> void:
 	toggle_drag_visual(true)
 	
 	picked.emit()
+	
+	cursor.release.connect(_receive_release.bind(cursor))
 		
-func _receive_release() -> void:
+func _receive_release(cursor: Cursor) -> void:
 	if !is_holding_mouse:
 		return
 		
 	Global.release_mouse(self)
 	is_holding_mouse = false
 	if is_activated: toggle_drag_visual(false)
+	
+	cursor.release.disconnect(_receive_release)
 
 func _on_click_area_body_entered(body: PhysicsBody2D) -> void:
 	if body is Cursor:
-		body.click.connect(_receive_click)
-		body.release.connect(_receive_release)
+		body.click.connect(_receive_click.bind(body))
 		
 func _on_click_area_body_exited(body: PhysicsBody2D) -> void:
-	if body is Cursor and !is_holding_mouse:
+	if body is Cursor:
 		body.click.disconnect(_receive_click)
-		body.release.disconnect(_receive_release)
