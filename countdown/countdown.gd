@@ -10,10 +10,11 @@ func _ready() -> void:
 	timer.timeout.connect(end_countdown)
 
 func start_countdown() -> void:
-	if !timer.is_stopped():
+	if !timer.is_stopped() or timer.paused:
 		return
 	
 	timer.start()
 	
 func end_countdown() -> void:
 	print("times up buster")
+	timer.paused = true
