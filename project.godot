@@ -42,6 +42,7 @@ version_control/autoload_on_startup=true
 2d_physics/layer_3="Draggable"
 2d_physics/layer_4="Getaway Zone"
 2d_physics/layer_5="Alarm"
+2d_physics/layer_6="Button"
 
 [physics]
 

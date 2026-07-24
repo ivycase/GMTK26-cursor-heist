@@ -16,7 +16,7 @@ radius = 38.013157
 [node name="MoneyBag" type="CharacterBody2D" unique_id=829496544]
 modulate = Color(0.62, 1, 0.94299996, 1)
 collision_layer = 4
-collision_mask = 13
+collision_mask = 45
 motion_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1647803655]
