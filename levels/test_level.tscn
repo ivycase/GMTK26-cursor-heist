@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://bbxys6glk7pq7" path="res://art/ref.png" id="1_46lwt"]
 [ext_resource type="PackedScene" uid="uid://bvvebp52vw0ty" path="res://cursor/cursor.tscn" id="2_x25rp"]
 [ext_resource type="PackedScene" uid="uid://b61hrbhkewkux" path="res://draggable/crate.tscn" id="3_gmgay"]
+[ext_resource type="PackedScene" uid="uid://bixx2d1r4mbxs" path="res://zone/vault_zone.tscn" id="4_o6mel"]
+[ext_resource type="PackedScene" uid="uid://borbhm83vuk1o" path="res://zone/getaway_zone.tscn" id="5_e7anx"]
+[ext_resource type="PackedScene" uid="uid://r4173am4535v" path="res://countdown/countdown.tscn" id="6_e7anx"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_46lwt"]
 normal = Vector2(0, 1)
@@ -24,10 +27,13 @@ size = Vector2(20, 40.10128)
 size = Vector2(30.775026, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e7anx"]
-size = Vector2(23.133636, 20)
+size = Vector2(15.000198, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnglu"]
-size = Vector2(230, 20)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pwjn"]
+size = Vector2(268, 416)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ur00s"]
+size = Vector2(282, 408)
 
 [node name="Level" type="Node2D" unique_id=1407220735]
 
@@ -77,11 +83,11 @@ position = Vector2(5.387512, 0)
 shape = SubResource("RectangleShape2D_o6mel")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Walls/Wall" unique_id=868842206]
-position = Vector2(69.50928, 0)
+position = Vector2(65.442566, 0)
 shape = SubResource("RectangleShape2D_e7anx")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Walls/Wall" unique_id=685235514]
-position = Vector2(69.509285, 36.350807)
+position = Vector2(65.97115, 36.350807)
 shape = SubResource("RectangleShape2D_e7anx")
 
 [node name="Ref" type="Sprite2D" parent="." unique_id=748911924]
@@ -96,7 +102,19 @@ position = Vector2(58, 394)
 [node name="Crate" parent="." unique_id=1053499090 instance=ExtResource("3_gmgay")]
 position = Vector2(630, 521)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=546110115]
+[node name="VaultZone" parent="." unique_id=1548073899 instance=ExtResource("4_o6mel")]
+position = Vector2(937, 383)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1130715862]
-shape = SubResource("RectangleShape2D_jnglu")
+[node name="CollisionShape2D" parent="VaultZone" index="1" unique_id=1240688880]
+shape = SubResource("RectangleShape2D_2pwjn")
+
+[node name="GetawayZone" parent="." unique_id=1968612249 instance=ExtResource("5_e7anx")]
+
+[node name="CollisionShape2D" parent="GetawayZone" index="0" unique_id=1240688880]
+position = Vector2(0, 365)
+shape = SubResource("RectangleShape2D_ur00s")
+
+[node name="Countdown" parent="." unique_id=416416051 instance=ExtResource("6_e7anx")]
+
+[editable path="VaultZone"]
+[editable path="GetawayZone"]

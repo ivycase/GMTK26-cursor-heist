@@ -3,6 +3,7 @@ extends Node
 var mouse_holder: Node
 
 var active_cursor: Cursor
+var active_countdown: Countdown
 
 func get_cursor_position() -> Vector2:
 	return active_cursor.global_position

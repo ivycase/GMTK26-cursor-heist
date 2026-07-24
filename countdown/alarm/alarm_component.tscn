@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://df6jaen2162xi"]
+
+[ext_resource type="Script" uid="uid://du6b4f1jco0j7" path="res://countdown/alarm/alarm_component.gd" id="1_wj23v"]
+
+[node name="AlarmComponent" type="Node2D" unique_id=1460893888]
+script = ExtResource("1_wj23v")

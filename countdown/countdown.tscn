@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://r4173am4535v"]
+
+[ext_resource type="Script" uid="uid://bmylcd41qqny6" path="res://countdown/countdown.gd" id="1_kilsm"]
+
+[node name="Countdown" type="Node2D" unique_id=416416051]
+script = ExtResource("1_kilsm")
