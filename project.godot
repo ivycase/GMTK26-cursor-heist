@@ -11,18 +11,35 @@ config_version=5
 [application]
 
 config/name="GMTK26-cursor-heist"
+run/main_scene="uid://cgp6fwc0l6esq"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://jbfiks7opwqh"
+
+[debug]
+
+gdscript/warnings/untyped_declaration=2
+
 [display]
 
-window/stretch/mode="canvas_items"
+window/size/viewport_width=1024
+window/size/viewport_height=768
+window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
 [editor]
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[layer_names]
+
+2d_physics/layer_1="Wall"
+2d_physics/layer_2="Cursor"
+2d_physics/layer_3="Draggable"
 
 [physics]
 

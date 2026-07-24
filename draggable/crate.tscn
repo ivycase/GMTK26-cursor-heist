@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b61hrbhkewkux"]
+
+[ext_resource type="Script" uid="uid://msdiuwyqonfp" path="res://draggable/drag_component.gd" id="1_2crkd"]
+[ext_resource type="Texture2D" uid="uid://camusn6f0yq2x" path="res://icon.svg" id="2_71qf6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2crkd"]
+size = Vector2(40, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_71qf6"]
+size = Vector2(60, 60)
+
+[node name="Crate" type="RigidBody2D" unique_id=1438339150]
+collision_layer = 4
+collision_mask = 5
+gravity_scale = 0.0
+max_contacts_reported = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1647803655]
+shape = SubResource("RectangleShape2D_2crkd")
+
+[node name="DragComponent" type="Node2D" parent="." unique_id=1751797743 node_paths=PackedStringArray("click_area", "dragged_node", "visual")]
+script = ExtResource("1_2crkd")
+click_area = NodePath("../ClickArea")
+dragged_node = NodePath("..")
+visual = NodePath("../Sprite2D")
+is_activated = true
+metadata/_custom_type_script = "uid://msdiuwyqonfp"
+
+[node name="ClickArea" type="Area2D" parent="." unique_id=204969551]
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea" unique_id=1780010406]
+shape = SubResource("RectangleShape2D_71qf6")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=785617651]
+modulate = Color(1, 0.54846776, 0.99069136, 1)
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("2_71qf6")
