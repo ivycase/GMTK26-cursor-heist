@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://r4173am4535v" path="res://countdown/countdown.tscn" id="6_e7anx"]
 [ext_resource type="PackedScene" uid="uid://c6vewa4loifec" path="res://draggable/loot/loot_component.tscn" id="7_ur00s"]
 [ext_resource type="PackedScene" uid="uid://co6gom0ie34uh" path="res://draggable/money_bag.tscn" id="8_wndkh"]
+[ext_resource type="Script" uid="uid://b1yia4xulkik" path="res://countdown/score/score_label.gd" id="11_wkb0e"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_46lwt"]
 normal = Vector2(0, 1)
@@ -150,6 +151,28 @@ position = Vector2(986, 498)
 
 [node name="MoneyBag6" parent="." unique_id=2107057472 instance=ExtResource("8_wndkh")]
 position = Vector2(893, 530)
+
+[node name="ScoreLabel" type="RichTextLabel" parent="." unique_id=754957444]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 580.0
+offset_right = 344.0
+offset_bottom = 714.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 35
+bbcode_enabled = true
+text = "score"
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("11_wkb0e")
 
 [editable path="VaultZone"]
 [editable path="GetawayZone"]

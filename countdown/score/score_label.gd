@@ -1,0 +1,8 @@
+extends RichTextLabel
+
+func _ready() -> void:
+	Global.update_score.connect(update_text)
+	update_text(0, Global.level_score)
+	
+func update_text(_old_score: int, new_score: int) -> void:
+	text = "[wave amp=1]$%s" % new_score
