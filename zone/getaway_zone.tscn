@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://borbhm83vuk1o"]
 
 [ext_resource type="PackedScene" uid="uid://7n2cwwosg6c0" path="res://zone/zone.tscn" id="1_2pwjn"]
+[ext_resource type="PackedScene" uid="uid://ktagko6jf1rr" path="res://zone/collect/collect_component.tscn" id="2_gjvgx"]
 
 [node name="GetawayZone" unique_id=1968612249 instance=ExtResource("1_2pwjn")]
 collision_layer = 8
 collision_mask = 6
+
+[node name="CollectComponent" parent="." index="0" unique_id=891377485 node_paths=PackedStringArray("trigger_zone") instance=ExtResource("2_gjvgx")]
+trigger_zone = NodePath("..")

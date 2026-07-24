@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ktagko6jf1rr"]
+
+[ext_resource type="Script" uid="uid://q14wbgwckcmx" path="res://zone/collect/collect_component.gd" id="1_kmg0j"]
+
+[node name="CollectComponent" type="Node2D" unique_id=891377485]
+script = ExtResource("1_kmg0j")

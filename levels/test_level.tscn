@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bixx2d1r4mbxs" path="res://zone/vault_zone.tscn" id="4_o6mel"]
 [ext_resource type="PackedScene" uid="uid://borbhm83vuk1o" path="res://zone/getaway_zone.tscn" id="5_e7anx"]
 [ext_resource type="PackedScene" uid="uid://r4173am4535v" path="res://countdown/countdown.tscn" id="6_e7anx"]
+[ext_resource type="PackedScene" uid="uid://c6vewa4loifec" path="res://draggable/loot/loot_component.tscn" id="7_ur00s"]
+[ext_resource type="PackedScene" uid="uid://co6gom0ie34uh" path="res://draggable/money_bag.tscn" id="8_wndkh"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_46lwt"]
 normal = Vector2(0, 1)
@@ -102,38 +104,6 @@ position = Vector2(58, 394)
 [node name="Crate" parent="." unique_id=1053499090 instance=ExtResource("3_gmgay")]
 position = Vector2(630, 521)
 
-[node name="Crate2" parent="." unique_id=829496544 instance=ExtResource("3_gmgay")]
-modulate = Color(1, 1, 0, 1)
-position = Vector2(863, 254)
-
-[node name="Crate3" parent="." unique_id=1354293685 instance=ExtResource("3_gmgay")]
-modulate = Color(1, 1, 0, 1)
-position = Vector2(991, 226)
-
-[node name="Crate4" parent="." unique_id=656243628 instance=ExtResource("3_gmgay")]
-modulate = Color(1, 1, 0, 1)
-position = Vector2(971, 390)
-
-[node name="Crate5" parent="." unique_id=762549836 instance=ExtResource("3_gmgay")]
-modulate = Color(1, 1, 0, 1)
-position = Vector2(892, 355)
-
-[node name="Crate6" parent="." unique_id=1001684829 instance=ExtResource("3_gmgay")]
-modulate = Color(1, 1, 0, 1)
-position = Vector2(968, 320)
-
-[node name="Crate7" parent="." unique_id=342270062 instance=ExtResource("3_gmgay")]
-modulate = Color(1, 1, 0, 1)
-position = Vector2(885, 496)
-
-[node name="Crate8" parent="." unique_id=95298394 instance=ExtResource("3_gmgay")]
-modulate = Color(1, 1, 0, 1)
-position = Vector2(981, 488)
-
-[node name="Crate9" parent="." unique_id=976453542 instance=ExtResource("3_gmgay")]
-modulate = Color(1, 1, 0, 1)
-position = Vector2(981, 488)
-
 [node name="VaultZone" parent="." unique_id=1548073899 instance=ExtResource("4_o6mel")]
 position = Vector2(937, 383)
 
@@ -142,12 +112,32 @@ shape = SubResource("RectangleShape2D_2pwjn")
 
 [node name="GetawayZone" parent="." unique_id=1968612249 instance=ExtResource("5_e7anx")]
 
-[node name="CollisionShape2D" parent="GetawayZone" index="0" unique_id=1240688880]
+[node name="CollisionShape2D" parent="GetawayZone" index="1" unique_id=1240688880]
 position = Vector2(0, 365)
 shape = SubResource("RectangleShape2D_ur00s")
 
 [node name="Countdown" parent="." unique_id=416416051 instance=ExtResource("6_e7anx")]
 position = Vector2(506, 668)
+
+[node name="Loot" parent="." unique_id=1847524522 instance=ExtResource("7_ur00s")]
+
+[node name="MoneyBag" parent="." unique_id=829496544 instance=ExtResource("8_wndkh")]
+position = Vector2(862, 269)
+
+[node name="MoneyBag2" parent="." unique_id=330949036 instance=ExtResource("8_wndkh")]
+position = Vector2(960, 238)
+
+[node name="MoneyBag3" parent="." unique_id=586952952 instance=ExtResource("8_wndkh")]
+position = Vector2(960, 321)
+
+[node name="MoneyBag4" parent="." unique_id=111799975 instance=ExtResource("8_wndkh")]
+position = Vector2(882, 415)
+
+[node name="MoneyBag5" parent="." unique_id=981422104 instance=ExtResource("8_wndkh")]
+position = Vector2(986, 498)
+
+[node name="MoneyBag6" parent="." unique_id=2107057472 instance=ExtResource("8_wndkh")]
+position = Vector2(893, 530)
 
 [editable path="VaultZone"]
 [editable path="GetawayZone"]

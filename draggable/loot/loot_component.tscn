@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://c6vewa4loifec"]
+
+[ext_resource type="Script" uid="uid://bycshvk35muo2" path="res://draggable/loot/loot_component.gd" id="1_6eynw"]
+
+[node name="LootComponent" type="Area2D" unique_id=1797138014]
+script = ExtResource("1_6eynw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=326452015]
