@@ -33,7 +33,7 @@ func _process(_delta: float) -> void:
 	if sprite:
 		sprite.global_position = global_position + velocity / 50.0
 		
-	velocity = lerp(velocity, Vector2.ZERO, 0.1)
+	velocity = lerp(velocity, Vector2.ZERO, decelerate_speed)
 	
 func _handle_click_event(event: InputEventMouseButton) -> void:
 	if event.button_index != 1:
