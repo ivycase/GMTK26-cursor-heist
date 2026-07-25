@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://bvvebp52vw0ty"]
 
 [ext_resource type="Script" uid="uid://dql8l7556i30h" path="res://cursor/cursor.gd" id="1_isnha"]
+[ext_resource type="PackedScene" uid="uid://7n2cwwosg6c0" path="res://zone/zone.tscn" id="2_1oxqp"]
 [ext_resource type="Texture2D" uid="uid://camusn6f0yq2x" path="res://icon.svg" id="2_g0wji"]
+[ext_resource type="PackedScene" uid="uid://df6jaen2162xi" path="res://zone/alarm/alarm_component.tscn" id="4_eq5v2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7axr2"]
 
@@ -13,7 +15,7 @@ collision_layer = 2
 collision_mask = 3
 motion_mode = 1
 script = ExtResource("1_isnha")
-interact_area = NodePath("InteractArea")
+interact_area = NodePath("AlarmZone")
 sprite = NodePath("Sprite2D")
 move_speed = 200.0
 decelerate_speed = 1.0
@@ -26,7 +28,13 @@ z_index = 10
 scale = Vector2(0.07, 0.07)
 texture = ExtResource("2_g0wji")
 
-[node name="InteractArea" type="Area2D" parent="." unique_id=1275844708]
+[node name="AlarmComponent" parent="." unique_id=1460893888 node_paths=PackedStringArray("trigger_zone") instance=ExtResource("4_eq5v2")]
+trigger_zone = NodePath("../AlarmZone")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" unique_id=1226832031]
+[node name="AlarmZone" parent="." unique_id=1968612249 instance=ExtResource("2_1oxqp")]
+collision_layer = 2
+
+[node name="CollisionShape2D" parent="AlarmZone" index="0" unique_id=1240688880]
 shape = SubResource("CircleShape2D_g0wji")
+
+[editable path="AlarmZone"]
