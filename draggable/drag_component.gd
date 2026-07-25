@@ -6,7 +6,7 @@ extends Node2D
 signal picked
 
 @export var click_area: Area2D
-@export var dragged_node: Node2D
+@export var dragged_node: CharacterBody2D
 @export var drag_speed: float = 10.0
 @export var drag_curve: float = 1.0
 @export var visual: Node2D
@@ -38,9 +38,12 @@ func _physics_process(delta: float) -> void:
 		
 	var mouse_pos: Vector2 = Global.get_cursor_position()
 		
-	dragged_node.global_position = dragged_node.global_position.lerp(mouse_pos, ease(delta, drag_curve) * drag_speed)
+	dragged_node.velocity = (mouse_pos - dragged_node.global_position) * drag_speed
+	#dragged_node.global_position = dragged_node.global_position.lerp(mouse_pos, ease(delta, drag_curve) * drag_speed)
 	var rotate_to: float = dragged_node.global_position.angle_to(mouse_pos)
-	dragged_node.rotation = lerpf(dragged_node.rotation, rotate_to, ease(delta, drag_curve) * drag_speed)
+	dragged_node.rotation = lerpf(dragged_node.rotation, rotate_to, ease(delta * drag_speed, drag_curve))
+	
+	dragged_node.move_and_slide()
 
 func toggle_drag_visual(do_visual: bool) -> void:
 	if tween:
@@ -59,8 +62,8 @@ func toggle_drag_visual(do_visual: bool) -> void:
 		var over_rotation: float = dragged_node.rotation + dragged_node.global_position.angle_to(mouse_pos)
 		tween.tween_property(dragged_node, "rotation", over_rotation, 0.4).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 		
-		var over_translate: Vector2 = dragged_node.global_position.lerp(mouse_pos, ease(0.1, drag_curve) * drag_speed)
-		tween.tween_property(dragged_node, "global_position", over_translate, 0.4).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+		#var over_translate: Vector2 = dragged_node.global_position.lerp(mouse_pos, ease(0.1, drag_curve) * drag_speed)
+		#tween.tween_property(dragged_node, "global_position", over_translate, 0.4).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
 		
 func _receive_click(cursor: Cursor) -> void:
 	if !is_activated: 
@@ -85,6 +88,10 @@ func _receive_release(cursor: Cursor) -> void:
 	if is_activated: toggle_drag_visual(false)
 	
 	cursor.release.disconnect(_receive_release)
+	
+	var mouse_pos: Vector2 = Global.get_cursor_position()
+	var over_translate: Vector2 = dragged_node.global_position.lerp(mouse_pos, ease(0.1, drag_curve) * drag_speed)
+	dragged_node.velocity = (mouse_pos - over_translate) * drag_speed
 
 func _on_click_area_body_entered(body: PhysicsBody2D) -> void:
 	if body is Cursor:

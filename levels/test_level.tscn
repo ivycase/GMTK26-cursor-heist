@@ -23,6 +23,7 @@ normal = Vector2(-1, 0)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_mrv6w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7axr2"]
+size = Vector2(20, 14.038979)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w7r7j"]
 size = Vector2(20, 40.10128)
@@ -78,12 +79,12 @@ scale = Vector2(7.7458096, 6.932446)
 collision_mask = 15
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls/Wall" unique_id=374268129]
-position = Vector2(-4.546982, 35.485313)
+position = Vector2(-4.7767754, 38.947296)
 scale = Vector2(0.5434783, 1)
 shape = SubResource("RectangleShape2D_7axr2")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls/Wall" unique_id=1093494157]
-position = Vector2(15.365683, 19.762146)
+position = Vector2(15.365683, 16.781635)
 scale = Vector2(0.54347837, 1)
 shape = SubResource("RectangleShape2D_7axr2")
 
@@ -106,9 +107,10 @@ shape = SubResource("RectangleShape2D_e7anx")
 
 [node name="Cursor" parent="." unique_id=1176993969 instance=ExtResource("2_x25rp")]
 position = Vector2(58, 394)
+move_speed = 15.0
 
 [node name="Crate" parent="." unique_id=1053499090 instance=ExtResource("3_gmgay")]
-position = Vector2(630, 521)
+position = Vector2(353, 528)
 
 [node name="VaultZone" parent="." unique_id=1548073899 instance=ExtResource("4_o6mel")]
 position = Vector2(937, 383)
