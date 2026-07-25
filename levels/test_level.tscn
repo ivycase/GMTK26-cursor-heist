@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://r4173am4535v" path="res://countdown/countdown.tscn" id="6_e7anx"]
 [ext_resource type="PackedScene" uid="uid://c6vewa4loifec" path="res://draggable/loot/loot_component.tscn" id="7_ur00s"]
 [ext_resource type="PackedScene" uid="uid://co6gom0ie34uh" path="res://draggable/money_bag.tscn" id="8_wndkh"]
+[ext_resource type="PackedScene" uid="uid://cittmts7yh6ss" path="res://obstacle/camera/camera.tscn" id="11_paa45"]
 [ext_resource type="Script" uid="uid://b1yia4xulkik" path="res://countdown/score/score_label.gd" id="11_wkb0e"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_46lwt"]
@@ -107,7 +108,6 @@ shape = SubResource("RectangleShape2D_e7anx")
 
 [node name="Cursor" parent="." unique_id=1176993969 instance=ExtResource("2_x25rp")]
 position = Vector2(58, 394)
-move_speed = 15.0
 
 [node name="Crate" parent="." unique_id=1053499090 instance=ExtResource("3_gmgay")]
 position = Vector2(353, 528)
@@ -168,6 +168,9 @@ autowrap_mode = 0
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("11_wkb0e")
+
+[node name="Camera" parent="." unique_id=2117175 instance=ExtResource("11_paa45")]
+position = Vector2(242, 370)
 
 [editable path="VaultZone"]
 [editable path="GetawayZone"]

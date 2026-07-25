@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://cittmts7yh6ss"]
+
+[ext_resource type="PackedScene" uid="uid://kf8tqdlm8c5t" path="res://addons/vision_cone_2d/vision_cone_2d_template.tscn" id="1_uabes"]
+
+[node name="Camera" type="Node2D" unique_id=2117175]
+
+[node name="VisionCone2D" parent="." unique_id=1669735654 instance=ExtResource("1_uabes")]
+angle_deg = 45
+ray_count = 50
+max_distance = 200.0
+collision_layer_mask = 1
+debug_lines = true
+debug_shape = true

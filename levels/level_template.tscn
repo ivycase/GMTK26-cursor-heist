@@ -2,6 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://dja6t3k3p4v2t" path="res://tileset/tile_set.tres" id="1_gup2b"]
 [ext_resource type="PackedScene" uid="uid://r4173am4535v" path="res://countdown/countdown.tscn" id="2_vgt4e"]
+[ext_resource type="PackedScene" uid="uid://cittmts7yh6ss" path="res://obstacle/camera/camera.tscn" id="3_skox6"]
 
 [node name="LevelTemplate" type="Node2D" unique_id=1324624073]
 
@@ -23,3 +24,7 @@ rendering_quadrant_size = 8
 
 [node name="Countdown" parent="." unique_id=416416051 instance=ExtResource("2_vgt4e")]
 position = Vector2(641, 927)
+
+[node name="Camera" parent="." unique_id=2117175 instance=ExtResource("3_skox6")]
+position = Vector2(821, 421)
+rotation = -1.5707964
