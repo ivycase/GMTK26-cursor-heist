@@ -1,0 +1,57 @@
+[gd_scene format=4 uid="uid://dyhbb2hyes5kb"]
+
+[ext_resource type="PackedScene" uid="uid://8ho4d8rl7jv" path="res://levels/level_template.tscn" id="1_wh4pa"]
+[ext_resource type="PackedScene" uid="uid://bvvebp52vw0ty" path="res://cursor/cursor.tscn" id="2_bp1i4"]
+[ext_resource type="PackedScene" uid="uid://hwnx7dn1x7kb" path="res://zone/button/button_component.tscn" id="3_bvvno"]
+[ext_resource type="PackedScene" uid="uid://b61hrbhkewkux" path="res://draggable/crate.tscn" id="4_b4lsh"]
+[ext_resource type="PackedScene" uid="uid://co6gom0ie34uh" path="res://draggable/money_bag.tscn" id="5_yxclo"]
+[ext_resource type="PackedScene" uid="uid://borbhm83vuk1o" path="res://zone/getaway_zone.tscn" id="6_fx4lf"]
+[ext_resource type="PackedScene" uid="uid://bcv8cat0ydhc5" path="res://obstacle/door/door_component.tscn" id="7_bvvno"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ln0b"]
+size = Vector2(165, 20)
+
+[node name="LevelTemplate" unique_id=1324624073 instance=ExtResource("1_wh4pa")]
+
+[node name="BackgroundLayer" parent="Tiles" parent_id_path=PackedInt32Array(1062066135) index="0" unique_id=864770364]
+tile_map_data = PackedByteArray("AAAIAAAAAQAQAAoAAAAJAAAAAQAQAAoAAAAKAAAAAQAQAAoAAAALAAAAAQAQAAoAAAAHAAAAAQAQAAoAAAAGAAAAAQAQAAoAAAAFAAAAAQAQAAoAAAAEAAAAAQAQAAoAAAADAAAAAQAQAAoAAAACAAAAAQAQAAoAAAABAAAAAQAQAAoAAAAMAAAAAQAQAAoAAAANAAAAAQAQAAoAAAAOAAAAAQAQAAoAAAAPAAAAAQAQAAoAAAAQAAAAAQAQAAoAAAARAAAAAQAQAAoAAAASAAAAAQAQAAoAAAAAAAAAAQARAAoAABATAAAAAQARAAoAAAATAAEAAQARAAsAAAAAAAEAAQARAAsAABAAAAIAAQARAAsAABAAAAMAAQARAAsAABAAAAQAAQARAAsAABAAAAUAAQARAAsAABAAAAYAAQARAAsAABAAAAcAAQARAAsAABAAAAgAAQARAAsAABAAAAkAAQARAAsAABAAAAoAAQARAAsAABAAAAsAAQARAAsAABATAAIAAQARAAsAAAATAAMAAQARAAsAAAATAAQAAQARAAsAAAATAAUAAQARAAsAAAATAAYAAQARAAsAAAATAAcAAQARAAsAAAATAAgAAQARAAsAAAATAAkAAQARAAsAAAATAAoAAQARAAsAAAATAAsAAQARAAsAAAATAAwAAQARAAsAAAATAA0AAQARAAsAAAAAAAwAAQARAAsAABAAAA0AAQARAAsAABAAAA4AAQARAAoAADATAA4AAQARAAoAACASAA4AAQAQAAoAACABAA4AAQAQAAoAACACAA4AAQAQAAoAACADAA4AAQAQAAoAACAEAA4AAQAQAAoAACAFAA4AAQAQAAoAACAGAA4AAQAQAAoAACAHAA4AAQAQAAoAACAIAA4AAQAQAAoAACAJAA4AAQAQAAoAACAKAA4AAQAQAAoAACALAA4AAQAQAAoAACAMAA4AAQAQAAoAACANAA4AAQAQAAoAACAOAA4AAQAQAAoAACAPAA4AAQAQAAoAACAQAA4AAQAQAAoAACARAA4AAQAQAAoAACAPAAEAAQAPAAMAAAAPAAIAAQAPAAMAAAAPAAMAAQAPAAMAAAAPAAQAAQAPAAMAAAAPAAUAAQAPAAMAAAAPAAYAAQAPAAMAAAAPAAcAAQAPAAMAAAAPAAgAAQAPAAMAAAAPAAkAAQAPAAMAAAAPAAoAAQAPAAQAAAASAAgAAQAJAAMAAAASAAkAAQAJAAMAAAASAAoAAQAJAAMAAAASAAsAAQAJAAMAAAASAAwAAQAJAAQAAAASAAcAAQAJAAIAAAARAAcAAQAHAAIAAAAQAAcAAQAHAAIAAAAOAAoAAQAOAAQAAAAPAAsAAQABAAMAAAAPAAwAAQABAAQAAAARAAwAAQADAAQAAAAQAAwAAQADAAQAAAANAAoAAQAKAAIAAAANAAEAAQAKAAMAAAANAAIAAQAKAAMAAAANAAMAAQAKAAMAAAANAAQAAQAKAAMAAAANAAUAAQAKAAMAAAANAAYAAQAKAAMAAAANAAcAAQAPAAQAAAALAAoAAQAPAAIAAAANAAsAAQAPAAQAAAALAAsAAQAKAAQAAAAMAAsAAQAMAAQAAAAMAAcAAQANAAQAAAALAAcAAQANAAQAAAAKAAcAAQANAAQAAAAJAAcAAQANAAQAAAAIAAcAAQANAAQAAAAGAAcAAQANAAQAAAAFAAcAAQAKAAQAAAAFAAYAAQAKAAMAAAAFAAUAAQAKAAMAAAAFAAQAAQAKAAMAAAAFAAMAAQAKAAMAAAAFAAIAAQAKAAMAAAAFAAEAAQAKAAMAAAACAAcAAQAPAAQAAAACAAYAAQAPAAMAAAACAAUAAQAPAAMAAAACAAQAAQAPAAMAAAACAAMAAQAPAAMAAAACAAIAAQAPAAMAAAACAAEAAQAPAAMAAAAKAAoAAQALAAIAAAAJAAoAAQAKAAIAAAAGAAoAAQAPAAIAAAAJAAsAAQAKAAMAAAAGAAsAAQAPAAMAAAAGAA0AAQAKAAQAAAAJAA0AAQAPAAQAAAAJAAwAAQAKAAMAAAAGAAwAAQAPAAMAAAAHAA0AAQALAAQAAAAIAA0AAQALAAQAAAAFAAoAAQALAAIAAAAEAAoAAQALAAIAAAADAAoAAQAKAAIAAAABAAcAAQAKAAIAAAADAAwAAQAPAAQAAAABAAwAAQAKAAQAAAABAAsAAQAKAAMAAAABAAoAAQAKAAMAAAABAAkAAQAKAAMAAAABAAgAAQAKAAMAAAADAAsAAQAKAAMAAAACAAwAAQAMAAQAAAA=")
+
+[node name="Cursor" parent="." index="3" unique_id=1176993969 instance=ExtResource("2_bp1i4")]
+position = Vector2(926, 116)
+
+[node name="Crate" parent="." index="4" unique_id=1275245576 instance=ExtResource("4_b4lsh")]
+position = Vector2(801, 675)
+
+[node name="MoneyBag" parent="." index="5" unique_id=68727245 instance=ExtResource("5_yxclo")]
+position = Vector2(1092, 532)
+
+[node name="MoneyBag2" parent="." index="6" unique_id=416507259 instance=ExtResource("5_yxclo")]
+position = Vector2(1094, 641)
+
+[node name="MoneyBag3" parent="." index="7" unique_id=552334715 instance=ExtResource("5_yxclo")]
+position = Vector2(1097, 747)
+
+[node name="GetawayZone" parent="." index="8" unique_id=1968612249 instance=ExtResource("6_fx4lf")]
+position = Vector2(253, 91)
+
+[node name="CollisionShape2D" parent="GetawayZone" index="1" unique_id=1240688880]
+position = Vector2(3, -24)
+shape = SubResource("RectangleShape2D_7ln0b")
+
+[node name="DoorComponent" parent="." index="9" unique_id=1917155962 node_paths=PackedStringArray("connected_button") instance=ExtResource("7_bvvno")]
+position = Vector2(1022, 571)
+scale = Vector2(0.16000003, 1.6799998)
+connected_button = NodePath("../ButtonComponent2")
+
+[node name="DoorComponent2" parent="." index="10" unique_id=371777425 node_paths=PackedStringArray("connected_button") instance=ExtResource("7_bvvno")]
+position = Vector2(480.00003, 487)
+scale = Vector2(0.52, 0.27999997)
+connected_button = NodePath("../ButtonComponent")
+
+[node name="ButtonComponent" parent="." index="11" unique_id=1835980614 instance=ExtResource("3_bvvno")]
+position = Vector2(145.99997, 741)
+
+[node name="ButtonComponent2" parent="." index="12" unique_id=207725947 instance=ExtResource("3_bvvno")]
+position = Vector2(479, 426)
+
+[editable path="GetawayZone"]
