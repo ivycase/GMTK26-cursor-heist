@@ -17,7 +17,7 @@ motion_mode = 1
 script = ExtResource("1_isnha")
 interact_area = NodePath("AlarmZone")
 sprite = NodePath("Sprite2D")
-move_speed = 200.0
+move_speed = 20.0
 decelerate_speed = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1507982797]

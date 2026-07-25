@@ -27,7 +27,7 @@ func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
 		_handle_move_event(event)
 		
-func _process(_delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
 	if sprite:
