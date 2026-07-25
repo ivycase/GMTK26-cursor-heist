@@ -4,7 +4,7 @@
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lor06"]
 texture = ExtResource("1_tbwvn")
-texture_region_size = Vector2i(100, 100)
+texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-25, 12.5, 25, -37.5, 50, -37.5, 50, 12.5, 25, 50, -25, 50)
 1:0/0 = 0
@@ -3855,7 +3855,7 @@ texture_region_size = Vector2i(100, 100)
 61:61/0 = 0
 
 [resource]
-tile_size = Vector2i(100, 100)
+tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 7
 sources/0 = SubResource("TileSetAtlasSource_lor06")
