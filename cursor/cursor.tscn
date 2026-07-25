@@ -15,12 +15,14 @@ motion_mode = 1
 script = ExtResource("1_isnha")
 interact_area = NodePath("InteractArea")
 sprite = NodePath("Sprite2D")
-decelerate_speed = 0.6
+move_speed = 200.0
+decelerate_speed = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1507982797]
 shape = SubResource("CircleShape2D_7axr2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1907936384]
+z_index = 10
 scale = Vector2(0.07, 0.07)
 texture = ExtResource("2_g0wji")
 

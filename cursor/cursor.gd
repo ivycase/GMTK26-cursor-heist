@@ -10,7 +10,7 @@ signal release
 
 @export_group("Properties")
 @export var move_speed: float = 100.0
-@export var decelerate_speed: float = 0.2
+@export_range(0.0, 1.0) var decelerate_speed: float = 0.2
 
 var start_position: Vector2
 
