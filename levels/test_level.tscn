@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cgp6fwc0l6esq"]
 
 [ext_resource type="PackedScene" uid="uid://hwnx7dn1x7kb" path="res://zone/button/button_component.tscn" id="1_4n8tn"]
-[ext_resource type="Texture2D" uid="uid://bbxys6glk7pq7" path="res://art/ref.png" id="1_46lwt"]
 [ext_resource type="PackedScene" uid="uid://bcv8cat0ydhc5" path="res://obstacle/door/door_component.tscn" id="2_wkb0e"]
 [ext_resource type="PackedScene" uid="uid://bvvebp52vw0ty" path="res://cursor/cursor.tscn" id="2_x25rp"]
 [ext_resource type="PackedScene" uid="uid://b61hrbhkewkux" path="res://draggable/crate.tscn" id="3_gmgay"]
@@ -104,12 +103,6 @@ shape = SubResource("RectangleShape2D_e7anx")
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Walls/Wall" unique_id=685235514]
 position = Vector2(65.97115, 36.350807)
 shape = SubResource("RectangleShape2D_e7anx")
-
-[node name="Ref" type="Sprite2D" parent="." unique_id=748911924]
-modulate = Color(1, 1, 1, 0.08627451)
-position = Vector2(2014.9999, 522)
-scale = Vector2(0.85078204, 0.8507819)
-texture = ExtResource("1_46lwt")
 
 [node name="Cursor" parent="." unique_id=1176993969 instance=ExtResource("2_x25rp")]
 position = Vector2(58, 394)
