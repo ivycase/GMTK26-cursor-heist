@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://8ho4d8rl7jv"]
 
 [ext_resource type="TileSet" uid="uid://dja6t3k3p4v2t" path="res://tileset/tile_set.tres" id="1_gup2b"]
+[ext_resource type="PackedScene" uid="uid://r4173am4535v" path="res://countdown/countdown.tscn" id="2_vgt4e"]
 
 [node name="LevelTemplate" type="Node2D" unique_id=1324624073]
 
@@ -19,3 +20,6 @@ rendering_quadrant_size = 8
 tile_set = ExtResource("1_gup2b")
 occlusion_enabled = false
 rendering_quadrant_size = 8
+
+[node name="Countdown" parent="." unique_id=416416051 instance=ExtResource("2_vgt4e")]
+position = Vector2(641, 927)
