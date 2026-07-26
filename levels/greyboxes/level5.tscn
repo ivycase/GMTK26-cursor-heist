@@ -93,13 +93,13 @@ scale = Vector2(0.85, 0.85)
 position = Vector2(214, 214)
 
 [node name="Crate2" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="7" unique_id=1914700217 instance=ExtResource("2_fogoq")]
-position = Vector2(516, 838)
+position = Vector2(1888, 838)
 
 [node name="VentButton" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="8" unique_id=1835980614 instance=ExtResource("3_4qvb5")]
-position = Vector2(380, 414)
+position = Vector2(1888, 414)
 
 [node name="VentDoor" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="9" unique_id=365631626 node_paths=PackedStringArray("connected_button") instance=ExtResource("4_w0wgn")]
-position = Vector2(992, 160)
+position = Vector2(2500, 160)
 connected_button = NodePath("../VentButton")
 
 [node name="StaticBody2D" parent="BaseLevel/VentDoor" index="2" unique_id=706983520]
@@ -236,7 +236,7 @@ offset_right = 390.0
 offset_bottom = 38.0
 
 [node name="Vent" parent="." index="7" unique_id=1043266141 instance=ExtResource("8_w0wgn")]
-position = Vector2(992, 99)
+position = Vector2(2500, 99)
 
 [node name="VaultZoneEffect" parent="." index="8" unique_id=2127039763]
 offset_left = 992.0
