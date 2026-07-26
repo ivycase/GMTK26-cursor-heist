@@ -46,7 +46,7 @@ func _draw() -> void:
 	
 	var interpolation: float = ((charge_timer.wait_time + animation_buffer) - charge_timer.time_left) / (charge_timer.wait_time + animation_buffer)
 	var interp_color: Color = lerp(visual_start_color, visual_end_color, ease(interpolation, color_ease))
-	var interp_width: float = lerp(0.5, visual_width, ease(interpolation, width_ease))
+	var interp_width: float = lerp(5.0, visual_width, ease(interpolation, width_ease))
 	draw_line(Vector2.ZERO, to_local(current_target.global_position), interp_color, interp_width)
 	
 func _destroy_target() -> void:

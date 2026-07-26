@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://buh45mrbo1cmr" path="res://art/props/turret_on.png" id="3_lmep0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8bcgs"]
-radius = 250.0
+radius = 350.0
 
 [node name="Turret" type="Node2D" unique_id=659378386 node_paths=PackedStringArray("charge_timer", "rotate_node", "detect_zone")]
 script = ExtResource("1_epxty")
@@ -18,6 +18,8 @@ aim_speed = 5.0
 charge_duration = 1.5
 animation_buffer = -1.1
 visual_width = 50.0
+visual_start_color = Color(1, 0.33333334, 0, 1)
+visual_end_color = Color(0.95, 0.7949917, 0.10450001, 0)
 width_ease = -3.0
 color_ease = -5.0
 
