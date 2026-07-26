@@ -13,10 +13,10 @@
 [ext_resource type="FontFile" uid="uid://cf1moys5mvxrs" path="res://fonts/VT323-Regular.ttf" id="11_ojioq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lor06"]
-size = Vector2(20, 158)
+size = Vector2(27.82251, 158)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a3wvr"]
-size = Vector2(20, 186)
+size = Vector2(203, 317)
 
 [node name="LevelTemplate2" unique_id=1324624073 instance=ExtResource("1_bjd8j")]
 
@@ -25,14 +25,14 @@ position = Vector2(1127, 437)
 scale = Vector2(5.1037836, 2.8061273)
 
 [node name="CollisionShape2D" parent="GetawayZone" index="1" unique_id=956841795]
-position = Vector2(0, 3)
+position = Vector2(0, 3.0000153)
 shape = SubResource("RectangleShape2D_lor06")
 
 [node name="VaultZone" parent="." index="3" unique_id=1391700797 instance=ExtResource("3_y76bt")]
 position = Vector2(460, 438)
 
 [node name="CollisionShape2D" parent="VaultZone" index="1" unique_id=1235712958]
-position = Vector2(5, 18)
+position = Vector2(-47.5, -47.5)
 shape = SubResource("RectangleShape2D_a3wvr")
 
 [node name="BackgroundLayer" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="0" unique_id=864770364]
@@ -62,6 +62,9 @@ scale = Vector2(0.82, 0.82)
 [node name="StaticObstacle6" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="6" unique_id=740228720 instance=ExtResource("10_ukc3q")]
 position = Vector2(663, 458)
 scale = Vector2(0.82, 0.82)
+
+[node name="Quota" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="7" unique_id=284631434]
+position = Vector2(504.99994, 75)
 
 [node name="MoneyBag" parent="." index="7" unique_id=68727245 instance=ExtResource("4_oaunk")]
 position = Vector2(371, 288)
@@ -117,10 +120,19 @@ text = "Drive"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Quota" parent="." index="15" unique_id=284631434]
-position = Vector2(504.99994, 75)
+[node name="VaultZoneEffect" parent="." index="15" unique_id=2127039763]
+offset_left = 310.0
+offset_top = 240.0
+offset_right = 512.0
+offset_bottom = 551.0
+
+[node name="GetawayZoneEffect" parent="." index="16" unique_id=794497378]
+offset_left = 1054.0
+offset_top = 241.0
+offset_right = 1203.0
+offset_bottom = 674.0
 
 [editable path="GetawayZone"]
 [editable path="VaultZone"]
+[editable path="BaseLevel/Quota"]
 [editable path="Countdown"]
-[editable path="Quota"]

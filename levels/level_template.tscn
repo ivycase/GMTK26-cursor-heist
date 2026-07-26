@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://bnxleth520de3" path="res://quota/quota.tscn" id="4_13k7l"]
 [ext_resource type="PackedScene" uid="uid://bvvebp52vw0ty" path="res://cursor/cursor.tscn" id="5_8xmsw"]
 [ext_resource type="FontFile" uid="uid://cf1moys5mvxrs" path="res://fonts/VT323-Regular.ttf" id="6_glpk1"]
+[ext_resource type="Shader" uid="uid://ccx431w4c8uli" path="res://obstacle/camera/camera.gdshader" id="8_8urs1"]
+[ext_resource type="Texture2D" uid="uid://cdn4jtifoarya" path="res://art/DIAMOND_PATTERN.png" id="9_8urs1"]
+[ext_resource type="Texture2D" uid="uid://c28abop2jwv18" path="res://art/RING_PATTERN.png" id="10_64qpc"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8xmsw"]
 shader = ExtResource("1_yglgk")
@@ -17,6 +20,24 @@ shader_parameter/vignette_amount = 1.0
 shader_parameter/vignette_intensity = 0.4630000219925
 shader_parameter/grille_amount = 0.3550000168625
 shader_parameter/brightness_boost = 1.4850000230375
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_glpk1"]
+shader = ExtResource("8_8urs1")
+shader_parameter/image = ExtResource("9_8urs1")
+shader_parameter/image_scale = Vector2(2, 2)
+shader_parameter/image_offset = Vector2(-93.595, 111.9)
+shader_parameter/min_alpha = 0.1
+shader_parameter/target_color = Color(1, 1, 1, 1)
+shader_parameter/color_match_threshold = 0.8
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2ip8h"]
+shader = ExtResource("8_8urs1")
+shader_parameter/image = ExtResource("10_64qpc")
+shader_parameter/image_scale = Vector2(2, 2)
+shader_parameter/image_offset = Vector2(0, 85.875)
+shader_parameter/min_alpha = 0.1
+shader_parameter/target_color = Color(1, 1, 1, 1)
+shader_parameter/color_match_threshold = 0.8
 
 [node name="LevelTemplate2" type="Node2D" unique_id=1324624073]
 
@@ -48,6 +69,16 @@ tile_set = ExtResource("1_gup2b")
 occlusion_enabled = false
 rendering_quadrant_size = 8
 
+[node name="Quota" parent="BaseLevel" unique_id=284631434 instance=ExtResource("4_13k7l")]
+scale = Vector2(1, 0.9981952)
+
+[node name="ScoreLabel" parent="BaseLevel/Quota" index="0" unique_id=820636205]
+offset_left = -207.0
+offset_top = 221.39963
+offset_right = 1453.0
+offset_bottom = 857.39966
+theme_override_fonts/normal_font = ExtResource("6_glpk1")
+
 [node name="VentLevel" type="Node2D" parent="." unique_id=1062066135]
 visible = false
 
@@ -64,15 +95,23 @@ position = Vector2(508, 28)
 [node name="TimerLabel" parent="Countdown" index="1" unique_id=2013573632]
 theme_override_fonts/normal_font = ExtResource("6_glpk1")
 
-[node name="Quota" parent="." unique_id=284631434 instance=ExtResource("4_13k7l")]
-scale = Vector2(1, 0.9981952)
+[node name="VaultZoneEffect" type="ColorRect" parent="." unique_id=2127039763]
+light_mask = 65
+z_index = -10
+material = SubResource("ShaderMaterial_glpk1")
+offset_left = 529.0
+offset_top = 177.0
+offset_right = 762.0
+offset_bottom = 401.0
 
-[node name="ScoreLabel" parent="Quota" index="0" unique_id=820636205]
-offset_left = -207.0
-offset_top = 221.39963
-offset_right = 1453.0
-offset_bottom = 857.39966
-theme_override_fonts/normal_font = ExtResource("6_glpk1")
+[node name="GetawayZoneEffect" type="ColorRect" parent="." unique_id=794497378]
+light_mask = 65
+z_index = -10
+material = SubResource("ShaderMaterial_2ip8h")
+offset_left = 266.0
+offset_top = 177.0
+offset_right = 499.0
+offset_bottom = 401.0
 
+[editable path="BaseLevel/Quota"]
 [editable path="Countdown"]
-[editable path="Quota"]

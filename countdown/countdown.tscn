@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://b8xvraoa0yu5b" path="res://countdown/timer/timer_label.gd" id="2_342x3"]
 
 [node name="Countdown" type="Node2D" unique_id=416416051 node_paths=PackedStringArray("timer")]
+top_level = true
 script = ExtResource("1_kilsm")
 timer = NodePath("Timer")
 

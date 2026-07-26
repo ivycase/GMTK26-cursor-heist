@@ -52,6 +52,8 @@ func _draw() -> void:
 func _destroy_target() -> void:
 	if !current_target: return
 	print("TODO: destroy visual")
+	ez_sound.play_sfx("steam.wav")
+	ez_sound.play_sfx("energy-sword.wav")
 	current_target.queue_free()
 	
 func _raycast_to_target() -> Dictionary:
@@ -74,7 +76,11 @@ func _switch_target(node: Node2D) -> void:
 		
 	if !node.get_node_or_null("LootComponent"):
 		return
+		
+	if node == current_target:
+		return
 	
+	ez_sound.play_sfx("upgrade2.wav")
 	current_target = node
 
 func _try_aim() -> bool:
@@ -85,5 +91,6 @@ func _try_aim() -> bool:
 	if raycast_result.collider != current_target:
 		charge_timer.stop()
 		return false
+		
 	return true
 	

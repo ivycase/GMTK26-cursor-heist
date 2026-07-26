@@ -9,107 +9,229 @@
 [ext_resource type="PackedScene" uid="uid://cittmts7yh6ss" path="res://obstacle/camera/camera.tscn" id="8_jp08e"]
 [ext_resource type="PackedScene" uid="uid://cgoh2yxhwuxwo" path="res://vent/vent.tscn" id="9_2cunq"]
 [ext_resource type="PackedScene" uid="uid://bixx2d1r4mbxs" path="res://zone/vault_zone.tscn" id="9_oa8rn"]
+[ext_resource type="PackedScene" uid="uid://dwfqr84cptjpw" path="res://obstacle/level4/lv4_frame.tscn" id="10_oie1x"]
+[ext_resource type="PackedScene" uid="uid://ddv5e3uuimgg3" path="res://obstacle/level4/lv4_obstacle_1.tscn" id="11_8t8xd"]
+[ext_resource type="PackedScene" uid="uid://1j2j3gx5h70s" path="res://obstacle/level4/lv4_obstacle_2.tscn" id="12_yoomv"]
+[ext_resource type="PackedScene" uid="uid://bieuieakndo7h" path="res://obstacle/level4/lv4_obstacle_3.tscn" id="13_2wwhd"]
+[ext_resource type="PackedScene" uid="uid://bjsrl8fgyy0bo" path="res://obstacle/level4/lv4_obstacle_4.tscn" id="14_6j5hv"]
+[ext_resource type="PackedScene" uid="uid://c5kg5bi82jjrj" path="res://obstacle/level4/lv4_obstacle_5.tscn" id="15_msm8d"]
+[ext_resource type="PackedScene" uid="uid://c56c3o61xi13s" path="res://obstacle/level4/lv4_obstacle_6.tscn" id="16_nmkya"]
+[ext_resource type="PackedScene" uid="uid://1l0lljpksbbx" path="res://obstacle/level4/lv4_obstacle_7.tscn" id="17_2rb5m"]
+[ext_resource type="PackedScene" uid="uid://qxw8eunb3d6q" path="res://obstacle/level4/lv4_obstacle_8.tscn" id="18_s84kq"]
+[ext_resource type="PackedScene" uid="uid://bhscwixao0m76" path="res://obstacle/level4/lv4_room_gold.tscn" id="19_dj72r"]
+[ext_resource type="PackedScene" uid="uid://dv58n1dpnx8nk" path="res://obstacle/level4/lv4_room_home_.tscn" id="20_esd2q"]
+[ext_resource type="FontFile" uid="uid://cf1moys5mvxrs" path="res://fonts/VT323-Regular.ttf" id="21_8t8xd"]
+[ext_resource type="Shader" uid="uid://ccx431w4c8uli" path="res://obstacle/camera/camera.gdshader" id="22_2wwhd"]
+[ext_resource type="Texture2D" uid="uid://cdn4jtifoarya" path="res://art/DIAMOND_PATTERN.png" id="23_6j5hv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8eibn"]
 size = Vector2(165, 513)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ln0b"]
-size = Vector2(165, 20)
+size = Vector2(173.28943, 21.544537)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_glpk1"]
+shader = ExtResource("22_2wwhd")
+shader_parameter/image = ExtResource("23_6j5hv")
+shader_parameter/image_scale = Vector2(2, 2)
+shader_parameter/image_offset = Vector2(-93.595, 111.9)
+shader_parameter/min_alpha = 0.1
+shader_parameter/target_color = Color(1, 1, 1, 1)
+shader_parameter/color_match_threshold = 0.8
 
 [node name="LevelTemplate" unique_id=1324624073 instance=ExtResource("1_oa8rn")]
 
-[node name="ZLevelManager" parent="." index="1" unique_id=1971156110 node_paths=PackedStringArray("vents")]
+[node name="ZLevelManager" parent="." index="2" unique_id=1971156110 node_paths=PackedStringArray("vents")]
 vents = [NodePath("../Vent"), NodePath("../Vent2")]
 
-[node name="BackgroundLayer" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="0" unique_id=864770364]
-tile_map_data = PackedByteArray("AAAIAAAAAQAQAAoAAAAJAAAAAQAQAAoAAAAKAAAAAQAQAAoAAAALAAAAAQAQAAoAAAAHAAAAAQAQAAoAAAAGAAAAAQAQAAoAAAAFAAAAAQAQAAoAAAAEAAAAAQAQAAoAAAADAAAAAQAQAAoAAAACAAAAAQAQAAoAAAABAAAAAQAQAAoAAAAMAAAAAQAQAAoAAAANAAAAAQAQAAoAAAAOAAAAAQAQAAoAAAAPAAAAAQAQAAoAAAAQAAAAAQAQAAoAAAARAAAAAQAQAAoAAAASAAAAAQAQAAoAAAAAAAAAAQARAAoAABATAAAAAQARAAoAAAATAAEAAQARAAsAAAAAAAEAAQARAAsAABAAAAIAAQARAAsAABAAAAMAAQARAAsAABAAAAQAAQARAAsAABAAAAUAAQARAAsAABAAAAYAAQARAAsAABAAAAcAAQARAAsAABAAAAgAAQARAAsAABAAAAkAAQARAAsAABAAAAoAAQARAAsAABAAAAsAAQARAAsAABATAAIAAQARAAsAAAATAAMAAQARAAsAAAATAAQAAQARAAsAAAATAAUAAQARAAsAAAATAAYAAQARAAsAAAATAAcAAQARAAsAAAATAAgAAQARAAsAAAATAAkAAQARAAsAAAATAAoAAQARAAsAAAATAAsAAQARAAsAAAATAAwAAQARAAsAAAATAA0AAQARAAsAAAAAAAwAAQARAAsAABAAAA0AAQARAAsAABAAAA4AAQARAAoAADATAA4AAQARAAoAACASAA4AAQAQAAoAACABAA4AAQAQAAoAACACAA4AAQAQAAoAACADAA4AAQAQAAoAACAEAA4AAQAQAAoAACAFAA4AAQAQAAoAACAGAA4AAQAQAAoAACAHAA4AAQAQAAoAACAIAA4AAQAQAAoAACAJAA4AAQAQAAoAACAKAA4AAQAQAAoAACALAA4AAQAQAAoAACAMAA4AAQAQAAoAACANAA4AAQAQAAoAACAOAA4AAQAQAAoAACAPAA4AAQAQAAoAACAQAA4AAQAQAAoAACARAA4AAQAQAAoAACAPAAMAAQAKAAIAAAAPAAQAAQAPAAMAAAAPAAUAAQAPAAMAAAAPAAYAAQAPAAMAAAAPAAcAAQAPAAMAAAAPAAoAAQAPAAQAAAASAAgAAQAJAAMAAAASAAkAAQAJAAMAAAASAAoAAQAJAAMAAAASAAsAAQAJAAMAAAASAAcAAQAJAAMAAAAOAAoAAQAOAAQAAAAPAAsAAQACAAIAAAANAAoAAQAKAAIAAAANAAMAAQAPAAIAAAANAAYAAQAKAAMAAAANAAcAAQAPAAQAAAALAAoAAQAPAAIAAAANAAsAAQAPAAQAAAALAAsAAQAKAAQAAAAMAAsAAQAMAAQAAAAMAAcAAQAKAAIAAGAJAAcAAQANAAQAAAAIAAcAAQAKAAQAAAAGAAcAAQAPAAQAAAAFAAcAAQAKAAQAAAAFAAYAAQAKAAMAAAAFAAUAAQAKAAIAAAAFAAEAAQAKAAIAAAAKAAoAAQALAAIAAAAJAAoAAQAKAAIAAAAGAAoAAQAPAAIAAAAJAAsAAQAKAAMAAAAGAAsAAQAPAAMAAAAGAA0AAQAKAAQAAAAJAA0AAQAPAAQAAAAJAAwAAQAKAAMAAAAGAAwAAQAPAAMAAAAHAA0AAQALAAQAAAAIAA0AAQALAAQAAAAFAAoAAQALAAIAAAAEAAoAAQALAAIAAAADAAoAAQAKAAIAAAABAAcAAQAKAAIAAAADAAwAAQAPAAQAAAABAAwAAQAKAAQAAAABAAsAAQAKAAMAAAABAAoAAQAKAAMAAAABAAkAAQAKAAMAAAABAAgAAQAKAAMAAAADAAsAAQAKAAMAAAACAAwAAQAMAAQAAAAGAAYAAQAKAAIAAAAIAAYAAQAPAAIAAAAHAAYAAQALAAIAAAARAA0AAQAHAAQAAAAQAA0AAQAHAAQAAAAPAA0AAQAHAAQAAAAOAA0AAQABAAQAAAAOAAsAAQABAAIAAAAOAAwAAQABAAMAAAASAA0AAQAJAAQAAAASAAwAAQAJAAMAAAASAAYAAQAJAAMAAAAGAAUAAQALAAIAAAAHAAUAAQALAAIAAAAIAAUAAQALAAIAAAAJAAUAAQAPAAQAAAAJAAMAAQAPAAMAAAAJAAEAAQAPAAIAAAAIAAEAAQAOAAIAAAAHAAEAAQAOAAIAAAAGAAEAAQAOAAIAAAAFAAIAAQAKAAMAAAAFAAMAAQAKAAMAAAAQAAMAAQAPAAQAAAAMAAMAAQAKAAQAAAAQAAIAAQAPAAMAAAAQAAEAAQAPAAMAAAAMAAIAAQAPAAMAAAAMAAEAAQAPAAMAAAASAAUAAQABAAIAABAQAAUAAQAEAAIAAAAKAAcAAQAKAAIAADANAAUAAQAKAAIAAFAMAAYAAQALAAIAAFAMAAUAAQAKAAIAAAAKAAMAAQALAAIAAAALAAMAAQALAAIAAAAJAAIAAQALAAIAAFACAAcAAQAKAAIAADAEAAYAAQALAAIAAAADAAYAAQALAAIAAAACAAYAAQAKAAIAAAAFAAQAAQAKAAMAAAA=")
+[node name="VaultLabel" type="RichTextLabel" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="0" unique_id=1012375696]
+offset_left = 1021.0
+offset_top = 840.0
+offset_right = 1076.0
+offset_bottom = 869.0
+theme_override_fonts/normal_font = ExtResource("21_8t8xd")
+theme_override_font_sizes/normal_font_size = 27
+text = "Vault"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="VentCrate" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="1" unique_id=1275245576 instance=ExtResource("3_ds3xx")]
+[node name="StaticObstacle" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="1" unique_id=621537188 instance=ExtResource("10_oie1x")]
+position = Vector2(626.00006, 478)
+scale = Vector2(0.95, 0.95)
+
+[node name="StaticObstacle2" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="2" unique_id=1659028273 instance=ExtResource("11_8t8xd")]
+position = Vector2(200.00006, 275.00012)
+scale = Vector2(0.8, 0.8)
+
+[node name="StaticObstacle3" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="3" unique_id=379765654 instance=ExtResource("12_yoomv")]
+position = Vector2(752, 152.00012)
+scale = Vector2(0.8, 0.8)
+
+[node name="StaticObstacle4" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="4" unique_id=224674999 instance=ExtResource("13_2wwhd")]
+position = Vector2(247.00006, 779.00006)
+scale = Vector2(0.8, 0.8)
+
+[node name="StaticObstacle5" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="5" unique_id=905620487 instance=ExtResource("14_6j5hv")]
+position = Vector2(507.00006, 428.99997)
+scale = Vector2(0.8, 0.8)
+
+[node name="StaticObstacle6" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="6" unique_id=1116729980 instance=ExtResource("15_msm8d")]
+position = Vector2(778, 759.00006)
+scale = Vector2(0.8, 0.8)
+
+[node name="StaticObstacle7" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="7" unique_id=1548900580 instance=ExtResource("16_nmkya")]
+position = Vector2(1033, 200)
+scale = Vector2(0.8, 0.88)
+
+[node name="StaticObstacle8" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="8" unique_id=912260769 instance=ExtResource("17_2rb5m")]
+position = Vector2(832, 417.00006)
+scale = Vector2(0.8, 0.8)
+
+[node name="StaticObstacle9" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="9" unique_id=1245083589 instance=ExtResource("18_s84kq")]
+position = Vector2(1143, 75.00012)
+scale = Vector2(0.8, 0.8)
+
+[node name="StaticObstacle10" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="10" unique_id=839099511 instance=ExtResource("19_dj72r")]
+position = Vector2(1062, 606.00006)
+scale = Vector2(0.8, 0.8)
+
+[node name="StaticObstacle11" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="11" unique_id=2075556196 instance=ExtResource("20_esd2q")]
+position = Vector2(488.00003, 219.00012)
+scale = Vector2(0.8, 0.8)
+
+[node name="BackgroundLayer" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="12" unique_id=864770364]
+visible = false
+tile_map_data = PackedByteArray("AAAIAAAAAQAQAAoAAAAJAAAAAQAQAAoAAAAKAAAAAQAQAAoAAAALAAAAAQAQAAoAAAAHAAAAAQAQAAoAAAAGAAAAAQAQAAoAAAAFAAAAAQAQAAoAAAAEAAAAAQAQAAoAAAADAAAAAQAQAAoAAAACAAAAAQAQAAoAAAABAAAAAQAQAAoAAAAMAAAAAQAQAAoAAAANAAAAAQAQAAoAAAAOAAAAAQAQAAoAAAAPAAAAAQAQAAoAAAAQAAAAAQAQAAoAAAARAAAAAQAQAAoAAAASAAAAAQAQAAoAAAAAAAAAAQARAAoAABATAAAAAQARAAoAAAATAAEAAQARAAsAAAAAAAEAAQARAAsAABAAAAIAAQARAAsAABAAAAMAAQARAAsAABAAAAQAAQARAAsAABAAAAUAAQARAAsAABAAAAYAAQARAAsAABAAAAcAAQARAAsAABAAAAgAAQARAAsAABAAAAkAAQARAAsAABAAAAoAAQARAAsAABAAAAsAAQARAAsAABATAAIAAQARAAsAAAATAAMAAQARAAsAAAATAAQAAQARAAsAAAATAAUAAQARAAsAAAATAAYAAQARAAsAAAATAAcAAQARAAsAAAATAAgAAQARAAsAAAATAAkAAQARAAsAAAATAAoAAQARAAsAAAATAAsAAQARAAsAAAATAAwAAQARAAsAAAATAA0AAQARAAsAAAAAAAwAAQARAAsAABAAAA0AAQARAAsAABAAAA4AAQARAAoAADATAA4AAQARAAoAACASAA4AAQAQAAoAACABAA4AAQAQAAoAACACAA4AAQAQAAoAACADAA4AAQAQAAoAACAEAA4AAQAQAAoAACAFAA4AAQAQAAoAACAGAA4AAQAQAAoAACAHAA4AAQAQAAoAACAIAA4AAQAQAAoAACAJAA4AAQAQAAoAACAKAA4AAQAQAAoAACALAA4AAQAQAAoAACAMAA4AAQAQAAoAACANAA4AAQAQAAoAACAOAA4AAQAQAAoAACAPAA4AAQAQAAoAACAQAA4AAQAQAAoAACARAA4AAQAQAAoAACAPAAMAAQAKAAIAAAAPAAQAAQAPAAMAAAAPAAUAAQAPAAMAAAAPAAYAAQAPAAMAAAAPAAcAAQAPAAMAAAAPAAoAAQAPAAQAAAASAAgAAQAJAAMAAAASAAkAAQAJAAMAAAASAAoAAQAJAAMAAAASAAsAAQAJAAMAAAASAAcAAQAJAAMAAAAOAAoAAQAOAAQAAAAPAAsAAQACAAIAAAANAAoAAQAKAAIAAAANAAMAAQAPAAIAAAANAAYAAQAKAAMAAAANAAcAAQAPAAQAAAALAAoAAQAPAAIAAAANAAsAAQAPAAQAAAALAAsAAQAKAAQAAAAMAAsAAQAMAAQAAAAMAAcAAQAKAAIAAGAJAAcAAQANAAQAAAAIAAcAAQAKAAQAAAAGAAcAAQAPAAQAAAAFAAcAAQAKAAQAAAAFAAYAAQAKAAMAAAAFAAUAAQAKAAIAAAAFAAEAAQAKAAIAAAAKAAoAAQALAAIAAAAJAAoAAQAKAAIAAAAGAAoAAQAPAAIAAAAJAAsAAQAKAAMAAAAGAAsAAQAPAAMAAAAGAA0AAQAKAAQAAAAJAA0AAQAPAAQAAAAJAAwAAQAKAAMAAAAGAAwAAQAPAAMAAAAHAA0AAQALAAQAAAAIAA0AAQALAAQAAAAFAAoAAQALAAIAAAAEAAoAAQALAAIAAAADAAoAAQAKAAIAAAABAAcAAQAKAAIAAAADAAwAAQAPAAQAAAABAAwAAQAKAAQAAAABAAsAAQAKAAMAAAABAAoAAQAKAAMAAAABAAkAAQAKAAMAAAABAAgAAQAKAAMAAAADAAsAAQAKAAMAAAACAAwAAQAMAAQAAAAGAAYAAQAKAAIAAAAIAAYAAQAPAAIAAAAHAAYAAQALAAIAAAARAA0AAQAHAAQAAAAQAA0AAQAHAAQAAAAPAA0AAQAHAAQAAAAOAA0AAQABAAQAAAAOAAsAAQABAAIAAAAOAAwAAQABAAMAAAASAA0AAQAJAAQAAAASAAwAAQAJAAMAAAASAAYAAQAJAAMAAAAGAAUAAQALAAIAAAAHAAUAAQALAAIAAAAIAAUAAQALAAIAAAAJAAUAAQAPAAQAAAAJAAMAAQAPAAMAAAAJAAEAAQAPAAIAAAAIAAEAAQAOAAIAAAAHAAEAAQAOAAIAAAAGAAEAAQAOAAIAAAAFAAIAAQAKAAMAAAAFAAMAAQAKAAMAAAAQAAMAAQAPAAQAAAAMAAMAAQAKAAQAAAAQAAIAAQAPAAMAAAAQAAEAAQAPAAMAAAAMAAIAAQAPAAMAAAAMAAEAAQAPAAMAAAASAAUAAQABAAIAABAQAAUAAQAEAAIAAAAKAAcAAQAKAAIAADANAAUAAQAKAAIAAFAMAAYAAQALAAIAAFAMAAUAAQAKAAIAAAAKAAMAAQALAAIAAAALAAMAAQALAAIAAAAJAAIAAQALAAIAAFACAAcAAQAKAAIAADAEAAYAAQALAAIAAAADAAYAAQALAAIAAAACAAYAAQAKAAIAAAAFAAQAAQAKAAMAAAA=")
+collision_enabled = false
+
+[node name="VentCrate" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="13" unique_id=1275245576 instance=ExtResource("3_ds3xx")]
 position = Vector2(801, 675)
 
-[node name="MoneyBag" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="2" unique_id=68727245 instance=ExtResource("4_lpft4")]
+[node name="MoneyBag" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="14" unique_id=68727245 instance=ExtResource("4_lpft4")]
 position = Vector2(1116, 468)
 
-[node name="MoneyBag2" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="3" unique_id=416507259 instance=ExtResource("4_lpft4")]
+[node name="MoneyBag2" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="15" unique_id=416507259 instance=ExtResource("4_lpft4")]
 position = Vector2(1118, 565)
 
-[node name="MoneyBag3" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="4" unique_id=552334715 instance=ExtResource("4_lpft4")]
+[node name="MoneyBag3" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="16" unique_id=552334715 instance=ExtResource("4_lpft4")]
 position = Vector2(1121, 671)
 
-[node name="Camera" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="5" unique_id=2117175 node_paths=PackedStringArray("look_targets") instance=ExtResource("8_jp08e")]
-position = Vector2(621.00006, 498)
+[node name="Camera" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="17" unique_id=2117175 node_paths=PackedStringArray("look_targets") instance=ExtResource("8_jp08e")]
+position = Vector2(593, 521)
 rotation = 2.7594216
 look_targets = [NodePath("../../Marker2D")]
 
-[node name="Marker2D" type="Marker2D" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="6" unique_id=345120088]
+[node name="Marker2D" type="Marker2D" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="18" unique_id=345120088]
 position = Vector2(118.99999, 511)
 rotation = 1.3089969
 
-[node name="Camera2" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="7" unique_id=734436547 node_paths=PackedStringArray("look_targets") instance=ExtResource("8_jp08e")]
-position = Vector2(293, 448.99997)
+[node name="Camera2" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="19" unique_id=734436547 node_paths=PackedStringArray("look_targets") instance=ExtResource("8_jp08e")]
+position = Vector2(271, 441.00003)
 rotation = 1.3089969
 look_targets = [NodePath("../Marker2D")]
 
-[node name="Marker2D2" type="Marker2D" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="8" unique_id=1799331986]
+[node name="Marker2D2" type="Marker2D" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="20" unique_id=1799331986]
 position = Vector2(737, 497)
 rotation = 0.52359873
 scale = Vector2(0.99999994, 0.99999994)
 
-[node name="Camera3" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="9" unique_id=1897407407 node_paths=PackedStringArray("look_targets") instance=ExtResource("8_jp08e")]
-position = Vector2(606, 438)
+[node name="Camera3" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="21" unique_id=1897407407 node_paths=PackedStringArray("look_targets") instance=ExtResource("8_jp08e")]
+position = Vector2(602.00006, 431.00006)
 rotation = -0.7853982
 look_targets = [NodePath("../../Marker2D")]
 
-[node name="VaultCrate" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="10" unique_id=1196752612 instance=ExtResource("3_ds3xx")]
+[node name="VaultCrate" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="22" unique_id=1196752612 instance=ExtResource("3_ds3xx")]
 position = Vector2(1053, 288)
 
-[node name="VaultButton" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="11" unique_id=2140927593 instance=ExtResource("7_dv3k4")]
+[node name="VaultButton" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="23" unique_id=2140927593 instance=ExtResource("7_dv3k4")]
 position = Vector2(994, 808)
 
-[node name="VaultDoor" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="12" unique_id=1917155962 node_paths=PackedStringArray("connected_button") instance=ExtResource("6_u8oya")]
+[node name="VaultDoor" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="24" unique_id=1917155962 node_paths=PackedStringArray("connected_button") instance=ExtResource("6_u8oya")]
 position = Vector2(992, 576)
 rotation = 1.5707964
 connected_button = NodePath("../VaultButton")
 
-[node name="VentDoor" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="13" unique_id=371777425 node_paths=PackedStringArray("connected_button") instance=ExtResource("6_u8oya")]
-position = Vector2(480.00003, 487)
-scale = Vector2(0.52, 0.27999997)
+[node name="StaticBody2D" parent="BaseLevel/VaultDoor" index="2" unique_id=706983520]
+position = Vector2(-65, 2.84124e-06)
+scale = Vector2(3.0399952, 1)
+
+[node name="VentDoor" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="25" unique_id=371777425 node_paths=PackedStringArray("connected_button") instance=ExtResource("6_u8oya")]
+position = Vector2(469, 482.00003)
+scale = Vector2(0.55999994, 0.52)
 connected_button = NodePath("../VentButton")
 
-[node name="VentButton" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="14" unique_id=1835980614 instance=ExtResource("7_dv3k4")]
+[node name="StaticBody2D" parent="BaseLevel/VentDoor" index="2" unique_id=706983520]
+scale = Vector2(2.0714374, 1)
+
+[node name="VentButton" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="26" unique_id=1835980614 instance=ExtResource("7_dv3k4")]
 position = Vector2(145.99997, 741)
 
-[node name="VaultZone" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="15" unique_id=96194777 instance=ExtResource("9_oa8rn")]
+[node name="VaultZone" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="27" unique_id=96194777 instance=ExtResource("9_oa8rn")]
 position = Vector2(1022, 572)
 
 [node name="CollisionShape2D" parent="BaseLevel/VaultZone" index="1" unique_id=1235712958]
 position = Vector2(74.5, 25.5)
 shape = SubResource("RectangleShape2D_8eibn")
 
-[node name="GetawayZone" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="16" unique_id=745538486 instance=ExtResource("5_r61i0")]
+[node name="GetawayZone" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="28" unique_id=745538486 instance=ExtResource("5_r61i0")]
 position = Vector2(480, 208)
 scale = Vector2(1.52, 11.260738)
 
 [node name="CollisionShape2D" parent="BaseLevel/GetawayZone" index="1" unique_id=956841795]
+position = Vector2(4.1447144, 0.7722683)
+scale = Vector2(1.0000002, 1)
 shape = SubResource("RectangleShape2D_7ln0b")
+
+[node name="ScoreLabel" parent="BaseLevel/Quota" parent_id_path=PackedInt32Array(284631434) index="0" unique_id=820636205]
+offset_left = -349.0
+offset_top = 0.0
+offset_right = 1311.0
+offset_bottom = 636.0
 
 [node name="VentLayer" parent="VentLevel" parent_id_path=PackedInt32Array(1062066135) index="0" unique_id=1725894612]
 tile_map_data = PackedByteArray("AAATAAAAAQARAAoAAAATAA4AAQARAAoAACAAAA4AAQARAAoAADAAAAAAAQARAAoAABABAAAAAQAQAAoAAAACAAAAAQAQAAoAAAADAAAAAQAQAAoAAAAEAAAAAQAQAAoAAAAFAAAAAQAQAAoAAAAGAAAAAQAQAAoAAAAHAAAAAQAQAAoAAAAIAAAAAQAQAAoAAAAJAAAAAQAQAAoAAAAKAAAAAQAQAAoAAAALAAAAAQAQAAoAAAAMAAAAAQAQAAoAAAANAAAAAQAQAAoAAAAOAAAAAQAQAAoAAAAPAAAAAQAQAAoAAAAQAAAAAQAQAAoAAAARAAAAAQAQAAoAAAASAAAAAQAQAAoAAAASAA4AAQAQAAoAACARAA4AAQAQAAoAACAQAA4AAQAQAAoAACAPAA4AAQAQAAoAACAOAA4AAQAQAAoAACANAA4AAQAQAAoAACAMAA4AAQAQAAoAACALAA4AAQAQAAoAACAKAA4AAQAQAAoAACAJAA4AAQAQAAoAACAIAA4AAQAQAAoAACAHAA4AAQAQAAoAACAGAA4AAQAQAAoAACAFAA4AAQAQAAoAACAEAA4AAQAQAAoAACADAA4AAQAQAAoAACACAA4AAQAQAAoAACABAA4AAQAQAAoAACAAAAEAAQARAAsAAAAAAAIAAQARAAsAAAAAAAMAAQARAAsAAAAAAAQAAQARAAsAAAAAAAUAAQARAAsAAAAAAAYAAQARAAsAAAAAAAcAAQARAAsAAAAAAAgAAQARAAsAAAAAAAkAAQARAAsAAAAAAAoAAQARAAsAAAAAAAsAAQARAAsAAAAAAAwAAQARAAsAAAAAAA0AAQARAAsAAAATAAEAAQARAAsAAAATAAIAAQARAAsAAAATAAMAAQARAAsAAAATAAQAAQARAAsAAAATAAUAAQARAAsAAAATAAYAAQARAAsAAAATAAcAAQARAAsAAAATAAgAAQARAAsAAAATAAkAAQARAAsAAAATAAoAAQARAAsAAAATAAsAAQARAAsAAAATAAwAAQARAAsAAAATAA0AAQARAAsAAAAFAAgAAQAKAAQAAAAJAAgAAQAPAAQAAAAGAAgAAQALAAQAAAAHAAgAAQALAAQAAAAIAAgAAQALAAQAAAAFAAcAAQAKAAMAAAAFAAYAAQAKAAMAAAAFAAUAAQAKAAMAAAAFAAQAAQAKAAMAAAAJAAcAAQAPAAMAAAAJAAYAAQAPAAMAAAAJAAUAAQAKAAIAAAAFAAMAAQAKAAIAAAAGAAMAAQALAAIAAAAHAAMAAQALAAIAAAAIAAMAAQALAAIAAAAJAAMAAQALAAIAAAAKAAUAAQALAAIAAAALAAUAAQAPAAIAAAALAAYAAQAPAAMAAAALAAcAAQAPAAMAAAALAAgAAQAPAAMAAAALAAkAAQAPAAQAAAAKAAkAAQAOAAQAAAAJAAkAAQAOAAQAAAAIAAkAAQAOAAQAAAAKAAMAAQALAAIAAAALAAMAAQALAAIAAAAMAAMAAQALAAIAAAANAAMAAQAPAAIAAAANAAQAAQAPAAMAAAANAAUAAQAPAAMAAAANAAYAAQAPAAMAAAANAAcAAQAPAAMAAAANAAgAAQAPAAMAAAANAAkAAQAPAAMAAAANAAsAAQAPAAQAAAAMAAsAAQANAAQAAAALAAsAAQANAAQAAAAKAAsAAQANAAQAAAAJAAsAAQANAAQAAAAIAAsAAQANAAQAAAANAAoAAQAPAAMAAAAGAAkAAQAKAAIAAAAHAAkAAQALAAQAAAAGAAoAAQAKAAMAAAAGAAsAAQAKAAMAAAAGAAwAAQAKAAMAAAAGAA0AAQAKAAQAAAAHAA0AAQALAAQAAAAIAA0AAQALAAQAAAAJAA0AAQALAAQAAAAKAA0AAQALAAQAAAALAA0AAQALAAQAAAAMAA0AAQALAAQAAAANAA0AAQALAAQAAAAOAA0AAQALAAQAAAAPAA0AAQALAAQAAAAQAA0AAQALAAQAAAARAA0AAQALAAQAAAASAA0AAQAPAAQAAAASAAwAAQAPAAMAAAASAAsAAQAPAAMAAAASAAoAAQAPAAMAAAAQAAYAAQAKAAQAAAARAAYAAQAPAAIAAAAQAAUAAQAKAAMAAAAQAAsAAQAOAAQAAAAPAAsAAQAOAAQAAAAOAAsAAQAOAAQAAAARAAgAAQAKAAIAAAARAAcAAQAKAAIAACARAAkAAQALAAIAAGARAAoAAQALAAIAAGARAAsAAQAKAAIAADAQAAQAAQAKAAMAAAAQAAMAAQAKAAMAAAAQAAIAAQAKAAMAAAAQAAEAAQAKAAMAAAASAAUAAQAPAAIAAAA=")
 
-[node name="Cursor" parent="." index="4" unique_id=1176993969]
-position = Vector2(933, 133)
-
 [node name="Vent" parent="." index="5" unique_id=1169179804 instance=ExtResource("9_2cunq")]
-position = Vector2(480, 450)
+position = Vector2(466, 433)
 
 [node name="Vent2" parent="." index="6" unique_id=1968612249 instance=ExtResource("9_2cunq")]
-position = Vector2(1142, 131)
+position = Vector2(1142, 165)
 
 [node name="Marker2D" type="Marker2D" parent="." index="7" unique_id=1857871490]
 position = Vector2(792, 563)
 
+[node name="Cursor" parent="." index="8" unique_id=1176993969]
+position = Vector2(933, 133)
+
+[node name="TimerLabel" parent="Countdown" parent_id_path=PackedInt32Array(416416051) index="1" unique_id=2013573632]
+offset_left = -95.0
+offset_top = -57.0
+offset_right = 409.0
+offset_bottom = 77.0
+
+[node name="VaultZoneEffect" parent="." index="10" unique_id=2127039763]
+offset_left = 989.0
+offset_top = 333.0
+offset_right = 1213.0
+offset_bottom = 875.0
+
+[node name="VaultZoneEffect2" type="ColorRect" parent="." index="11" unique_id=1068159384]
+light_mask = 65
+z_index = -10
+material = SubResource("ShaderMaterial_glpk1")
+offset_left = 943.0
+offset_top = 725.0
+offset_right = 1213.0
+offset_bottom = 885.0
+
+[node name="GetawayZoneEffect" parent="." index="12" unique_id=794497378]
+offset_top = 94.0
+offset_right = 619.0
+
+[editable path="BaseLevel/VaultDoor"]
+[editable path="BaseLevel/VentDoor"]
 [editable path="BaseLevel/VaultZone"]
 [editable path="BaseLevel/GetawayZone"]
+[editable path="BaseLevel/Quota"]
 [editable path="Vent"]
 [editable path="Countdown"]
-[editable path="Quota"]

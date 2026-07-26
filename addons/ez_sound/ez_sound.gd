@@ -80,4 +80,3 @@ func play_sfx(filename, start_at = 0,  volume_db : float = 0, pitch_scale : floa
 	new_audiostream.stream = load(get_dir() + filename)
 	new_audiostream.play(start_at)
 	return new_audiostream
-

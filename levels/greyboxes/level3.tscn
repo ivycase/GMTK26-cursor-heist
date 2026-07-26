@@ -15,6 +15,8 @@
 [ext_resource type="PackedScene" uid="uid://cittmts7yh6ss" path="res://obstacle/camera/camera.tscn" id="8_dnb1p"]
 [ext_resource type="PackedScene" uid="uid://cn5bltca7y6gk" path="res://obstacle/level3/lv3_obstacle_4.tscn" id="8_qx67r"]
 [ext_resource type="PackedScene" uid="uid://duslmsdmeh63j" path="res://obstacle/level3/lv3_room_gold_1.tscn" id="9_crh8e"]
+[ext_resource type="Shader" uid="uid://ccx431w4c8uli" path="res://obstacle/camera/camera.gdshader" id="9_ivj32"]
+[ext_resource type="Texture2D" uid="uid://cdn4jtifoarya" path="res://art/DIAMOND_PATTERN.png" id="10_cbpku"]
 [ext_resource type="PackedScene" uid="uid://ohqyi55fie70" path="res://obstacle/level3/lv3_room_gold_2.tscn" id="10_ivj32"]
 [ext_resource type="FontFile" uid="uid://cf1moys5mvxrs" path="res://fonts/VT323-Regular.ttf" id="17_qx67r"]
 
@@ -22,10 +24,19 @@
 size = Vector2(160, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_55gdq"]
-size = Vector2(45, 20)
+size = Vector2(94.04762, 270)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crte6"]
-size = Vector2(106, 20)
+size = Vector2(90.66669, 419)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_glpk1"]
+shader = ExtResource("9_ivj32")
+shader_parameter/image = ExtResource("10_cbpku")
+shader_parameter/image_scale = Vector2(2, 2)
+shader_parameter/image_offset = Vector2(-93.595, 111.9)
+shader_parameter/min_alpha = 0.1
+shader_parameter/target_color = Color(1, 1, 1, 1)
+shader_parameter/color_match_threshold = 0.8
 
 [node name="LevelTemplate" unique_id=1324624073 instance=ExtResource("1_nkket")]
 
@@ -58,7 +69,8 @@ position = Vector2(250.00002, 492)
 scale = Vector2(3.36, 1)
 
 [node name="CollisionShape2D" parent="VaultZone" index="1" unique_id=1235712958]
-position = Vector2(0, -9)
+position = Vector2(0, -134)
+scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_55gdq")
 
 [node name="VaultZone2" parent="." index="8" unique_id=932839816 instance=ExtResource("6_351wm")]
@@ -66,7 +78,7 @@ position = Vector2(1116, 511)
 scale = Vector2(2.4, 1)
 
 [node name="CollisionShape2D" parent="VaultZone2" index="1" unique_id=1235712958]
-position = Vector2(1, -11)
+position = Vector2(8.666687, -210.5)
 shape = SubResource("RectangleShape2D_crte6")
 
 [node name="MoneyBag" parent="." index="9" unique_id=68727245 instance=ExtResource("7_kt1c5")]
@@ -89,6 +101,12 @@ visible = false
 tile_map_data = PackedByteArray("AAAIAAAAAQAQAAoAAAAJAAAAAQAQAAoAAAAKAAAAAQAQAAoAAAALAAAAAQAQAAoAAAAHAAAAAQAQAAoAAAAGAAAAAQAQAAoAAAAFAAAAAQAQAAoAAAAEAAAAAQAQAAoAAAADAAAAAQAQAAoAAAACAAAAAQAQAAoAAAABAAAAAQAQAAoAAAAMAAAAAQAQAAoAAAANAAAAAQAQAAoAAAAOAAAAAQAQAAoAAAAPAAAAAQAQAAoAAAAQAAAAAQAQAAoAAAARAAAAAQAQAAoAAAASAAAAAQAQAAoAAAAAAAAAAQARAAoAABATAAAAAQARAAoAAAATAAEAAQARAAsAAAAAAAEAAQARAAsAAAAAAAIAAQARAAsAAAAAAAMAAQARAAsAAAAAAAQAAQARAAsAAAAAAAUAAQARAAsAAAAAAAYAAQARAAsAAAAAAAcAAQARAAsAAAAAAAgAAQARAAsAAAAAAAkAAQARAAsAAAAAAAoAAQARAAsAAAAAAAsAAQARAAsAAAATAAIAAQARAAsAAAATAAMAAQARAAsAACATAAQAAQARAAsAAAATAAUAAQARAAsAACATAAYAAQARAAsAAAATAAcAAQARAAsAACATAAgAAQARAAsAAAATAAkAAQARAAsAACATAAoAAQARAAsAAAATAAsAAQARAAsAACATAAwAAQARAAsAAAATAA0AAQARAAsAACAAAAwAAQARAAsAAAAAAA0AAQARAAsAAAAAAA4AAQARAAoAADATAA4AAQARAAoAACASAA4AAQAQAAoAACABAA4AAQAQAAoAACACAA4AAQAQAAoAACADAA4AAQAQAAoAACAEAA4AAQAQAAoAACAFAA4AAQAQAAoAACAGAA4AAQAQAAoAACAHAA4AAQAQAAoAACAIAA4AAQAQAAoAACAJAA4AAQAQAAoAACAKAA4AAQAQAAoAACALAA4AAQAQAAoAACAMAA4AAQAQAAoAACANAA4AAQAQAAoAACAOAA4AAQAQAAoAACAPAA4AAQAQAAoAACAQAA4AAQAQAAoAACARAA4AAQAQAAoAACAIAAsAAQAOAAIAAAAJAAsAAQAOAAIAAAAKAAsAAQAOAAIAAAALAAsAAQAOAAIAAAAMAAsAAQAOAAIAAAANAAsAAQAOAAIAAAAOAAsAAQALAAIAAAAOAAcAAQAPAAMAABAOAAYAAQAPAAMAABAOAAUAAQAPAAMAABAOAAQAAQAPAAMAABAOAAMAAQAPAAMAABAOAAIAAQAPAAMAABAOAAEAAQAPAAMAABALAAEAAQAPAAIAAAALAAQAAQAPAAIAAAALAAcAAQAKAAMAABALAAgAAQAPAAQAAAAOAAgAAQAKAAQAAAARAAkAAQAPAAMAABARAAoAAQAPAAMAABARAAsAAQAPAAMAABARAAwAAQAPAAMAABARAA0AAQAPAAMAABAPAAsAAQAPAAIAAAAPAAwAAQAPAAMAAAAPAA0AAQAPAAMAAAAKAAgAAQAKAAQAAAAKAAcAAQAPAAIAAAAHAAgAAQAPAAQAAAABAAgAAQAMAAQAAAACAAgAAQAMAAQAAAAEAAgAAQABAAQAAAADAAgAAQABAAQAABAFAAgAAQAMAAQAAAAGAAgAAQAMAAQAAAADAAcAAQAJAAIAAAAEAAcAAQABAAIAAAAFAAcAAQAHAAIAAAACAAcAAQAHAAIAAAABAAcAAQABAAQAAAAGAAcAAQAJAAQAAAABAAYAAQABAAMAAAABAAUAAQABAAMAAAABAAQAAQABAAMAAAAGAAQAAQAJAAMAAAABAAMAAQABAAIAAAAGAAMAAQAJAAIAAAACAAMAAQACAAIAAAADAAMAAQAHAAIAAAAEAAMAAQAHAAIAAAAFAAMAAQAIAAIAAAAKAAQAAQAOAAIAAAAJAAQAAQAOAAIAAAAIAAQAAQAOAAIAAAAHAAQAAQAKAAQAAAAHAAMAAQAKAAMAAAAHAAIAAQAKAAMAAAAHAAEAAQAKAAIAAAAIAAEAAQALAAIAAAAJAAEAAQALAAIAAAAKAAEAAQALAAIAAAADAA0AAQAMAAQAAAACAA0AAQAMAAQAAAABAA0AAQAMAAQAAAAHAAcAAQAKAAIAAAAIAAcAAQALAAQAAAAJAAcAAQALAAQAAAAGAA0AAQAPAAQAAAAGAAsAAQAKAAIAAAAHAAsAAQALAAIAAAAFAA0AAQALAAIAAAAEAA0AAQALAAIAAAAGAAwAAQAKAAMAAAAGAAUAAQABAAIAAGAGAAYAAQABAAIAAEAHAAUAAQABAAIAAHAHAAYAAQABAAIAAFAPAAgAAQABAAIAADARAAgAAQABAAIAACAPAAcAAQADAAIAAGARAAcAAQADAAIAAFARAAYAAQABAAIAAAASAAYAAQABAAIAADAPAAYAAQACAAIAAGAPAAUAAQACAAIAAGAPAAQAAQACAAIAAGAPAAMAAQACAAIAAGAPAAIAAQACAAIAAGAPAAEAAQABAAIAAEASAAEAAQABAAIAAFASAAUAAQAEAAQAAGASAAQAAQAEAAQAAGASAAMAAQAEAAQAAGASAAIAAQAEAAQAAGARAAEAAQAEAAQAAAAQAAEAAQAEAAQAAAA=")
 collision_enabled = false
 
+[node name="ScoreLabel" parent="BaseLevel/Quota" parent_id_path=PackedInt32Array(284631434) index="0" unique_id=820636205]
+offset_left = -210.0
+offset_top = -34.061478
+offset_right = 1450.0
+offset_bottom = 601.93854
+
 [node name="Cursor" parent="." index="16" unique_id=1176993969]
 position = Vector2(160, 677)
 
@@ -106,44 +124,53 @@ look_targets = [NodePath("../Marker2D")]
 position = Vector2(713, 489)
 rotation = 4.712389
 
-[node name="ScoreLabel" parent="Quota" parent_id_path=PackedInt32Array(284631434) index="0" unique_id=820636205]
-offset_left = -210.0
-offset_top = -34.061478
-offset_right = 1450.0
-offset_bottom = 601.93854
+[node name="VaultZoneEffect" parent="." index="21" unique_id=2127039763]
+offset_left = 95.0
+offset_top = 222.0
+offset_right = 415.0
+offset_bottom = 493.0
 
-[node name="StaticObstacle" parent="." index="22" unique_id=621537188 instance=ExtResource("6_kjtam")]
+[node name="VaultZoneEffect2" type="ColorRect" parent="." index="22" unique_id=614059117]
+light_mask = 65
+z_index = -10
+material = SubResource("ShaderMaterial_glpk1")
+offset_left = 1017.0
+offset_top = 89.0
+offset_right = 1233.0
+offset_bottom = 529.0
+
+[node name="StaticObstacle" parent="." index="23" unique_id=621537188 instance=ExtResource("6_kjtam")]
 position = Vector2(637, 493)
 
-[node name="StaticObstacle2" parent="." index="23" unique_id=352892071 instance=ExtResource("5_5ogde")]
+[node name="StaticObstacle2" parent="." index="24" unique_id=352892071 instance=ExtResource("5_5ogde")]
 position = Vector2(274.00003, 193)
 scale = Vector2(0.9, 0.9)
 
-[node name="StaticObstacle3" parent="." index="24" unique_id=1263404603 instance=ExtResource("6_bxm51")]
+[node name="StaticObstacle3" parent="." index="25" unique_id=1263404603 instance=ExtResource("6_bxm51")]
 position = Vector2(612, 521)
 scale = Vector2(0.9, 0.9)
 
-[node name="StaticObstacle4" parent="." index="25" unique_id=385572801 instance=ExtResource("7_kjtam")]
+[node name="StaticObstacle4" parent="." index="26" unique_id=385572801 instance=ExtResource("7_kjtam")]
 position = Vector2(659, 810)
 scale = Vector2(0.9, 0.9)
 
-[node name="StaticObstacle5" parent="." index="26" unique_id=2008616149 instance=ExtResource("8_qx67r")]
+[node name="StaticObstacle5" parent="." index="27" unique_id=2008616149 instance=ExtResource("8_qx67r")]
 position = Vector2(71.00003, 761)
 scale = Vector2(0.9, 0.9)
 
-[node name="StaticObstacle6" parent="." index="27" unique_id=893378687 instance=ExtResource("9_crh8e")]
+[node name="StaticObstacle6" parent="." index="28" unique_id=893378687 instance=ExtResource("9_crh8e")]
 position = Vector2(234.00003, 385)
 scale = Vector2(0.9, 0.9)
 
-[node name="StaticObstacle7" parent="." index="28" unique_id=112754312 instance=ExtResource("10_ivj32")]
+[node name="StaticObstacle7" parent="." index="29" unique_id=112754312 instance=ExtResource("10_ivj32")]
 position = Vector2(1096, 326)
 scale = Vector2(0.9, 0.9)
 
-[node name="StaticObstacle8" parent="." index="29" unique_id=1479233450 instance=ExtResource("4_bxm51")]
+[node name="StaticObstacle8" parent="." index="30" unique_id=1479233450 instance=ExtResource("4_bxm51")]
 position = Vector2(612, 198.00002)
 scale = Vector2(0.7799902, 0.9)
 
-[node name="DriveLabel" type="RichTextLabel" parent="." index="30" unique_id=431858445]
+[node name="DriveLabel" type="RichTextLabel" parent="." index="31" unique_id=431858445]
 offset_left = 498.0
 offset_top = 65.0
 offset_right = 730.0
@@ -154,7 +181,7 @@ text = "Drive"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VaultLabel" type="RichTextLabel" parent="." index="31" unique_id=1513505649]
+[node name="VaultLabel" type="RichTextLabel" parent="." index="32" unique_id=1513505649]
 offset_left = 127.0
 offset_top = 192.0
 offset_right = 359.0
@@ -165,7 +192,7 @@ text = "Vault"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="VaultLabel2" type="RichTextLabel" parent="." index="32" unique_id=1986851447]
+[node name="VaultLabel2" type="RichTextLabel" parent="." index="33" unique_id=1986851447]
 offset_left = 1004.0
 offset_top = 73.0
 offset_right = 1236.0
@@ -176,9 +203,15 @@ text = "Vault"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="GetawayZoneEffect" parent="." index="34" unique_id=794497378]
+offset_left = 485.0
+offset_top = 83.0
+offset_right = 747.0
+offset_bottom = 307.0
+
 [editable path="DoorComponent"]
 [editable path="GetawayZone"]
 [editable path="VaultZone"]
 [editable path="VaultZone2"]
+[editable path="BaseLevel/Quota"]
 [editable path="Countdown"]
-[editable path="Quota"]

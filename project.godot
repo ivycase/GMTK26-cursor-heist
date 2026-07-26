@@ -43,6 +43,10 @@ version_control/autoload_on_startup=true
 
 enabled=PackedStringArray("res://addons/easytransition/plugin.cfg", "res://addons/ez_sound/plugin.cfg")
 
+[ez_sound]
+
+ez_sound_path="res://sound/"
+
 [layer_names]
 
 2d_physics/layer_1="Wall"

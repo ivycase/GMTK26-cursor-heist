@@ -25,7 +25,9 @@ func _ready() -> void:
 	vent_level_parent.reparent.call_deferred(yeet_parent) # just yeet is somewhere else lmfao
 
 func toggle_z_level(_node: Node2D) -> void:
-	if Global.mouse_holder is DragComponent:
+	ez_sound.play_sfx("release.wav")
+	
+	if Global.mouse_holder and Global.mouse_holder is DragComponent:
 		Global.mouse_holder.dragged_node.reparent.call_deferred(vent_level_parent if active_z_level == Layers.BASE else base_level_parent)
 	
 	match active_z_level:
