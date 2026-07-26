@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://8ho4d8rl7jv"]
 
 [ext_resource type="TileSet" uid="uid://dja6t3k3p4v2t" path="res://tileset/tile_set.tres" id="1_gup2b"]
+[ext_resource type="Script" uid="uid://c1yxyijn2u5xi" path="res://z_level/z_level_manager.gd" id="1_skox6"]
 [ext_resource type="PackedScene" uid="uid://r4173am4535v" path="res://countdown/countdown.tscn" id="2_vgt4e"]
 
 [node name="LevelTemplate2" type="Node2D" unique_id=1324624073]
@@ -8,18 +9,28 @@
 [node name="Camera2D" type="Camera2D" parent="." unique_id=735667684]
 position = Vector2(639, 482)
 
-[node name="Tiles" type="Node2D" parent="." unique_id=1062066135]
+[node name="ZLevelManager" type="Node2D" parent="." unique_id=1971156110 node_paths=PackedStringArray("base_level_parent", "base_level_tilemap", "vent_level_parent", "vent_level_tilemap")]
+script = ExtResource("1_skox6")
+base_level_parent = NodePath("../BaseLevel")
+base_level_tilemap = NodePath("../BaseLevel/BackgroundLayer")
+vent_level_parent = NodePath("../VentLevel")
+vent_level_tilemap = NodePath("../VentLevel/VentLayer")
 
-[node name="BackgroundLayer" type="TileMapLayer" parent="Tiles" unique_id=864770364]
+[node name="BaseLevel" type="Node2D" parent="." unique_id=299146741]
+
+[node name="BackgroundLayer" type="TileMapLayer" parent="BaseLevel" unique_id=864770364]
 tile_map_data = PackedByteArray("AAAIAAAAAQAQAAoAAAAJAAAAAQAQAAoAAAAKAAAAAQAQAAoAAAALAAAAAQAQAAoAAAAHAAAAAQAQAAoAAAAGAAAAAQAQAAoAAAAFAAAAAQAQAAoAAAAEAAAAAQAQAAoAAAADAAAAAQAQAAoAAAACAAAAAQAQAAoAAAABAAAAAQAQAAoAAAAMAAAAAQAQAAoAAAANAAAAAQAQAAoAAAAOAAAAAQAQAAoAAAAPAAAAAQAQAAoAAAAQAAAAAQAQAAoAAAARAAAAAQAQAAoAAAASAAAAAQAQAAoAAAAAAAAAAQARAAoAABATAAAAAQARAAoAAAATAAEAAQARAAsAAAAAAAEAAQARAAsAABAAAAIAAQARAAsAABAAAAMAAQARAAsAABAAAAQAAQARAAsAABAAAAUAAQARAAsAABAAAAYAAQARAAsAABAAAAcAAQARAAsAABAAAAgAAQARAAsAABAAAAkAAQARAAsAABAAAAoAAQARAAsAABAAAAsAAQARAAsAABATAAIAAQARAAsAAAATAAMAAQARAAsAAAATAAQAAQARAAsAAAATAAUAAQARAAsAAAATAAYAAQARAAsAAAATAAcAAQARAAsAAAATAAgAAQARAAsAAAATAAkAAQARAAsAAAATAAoAAQARAAsAAAATAAsAAQARAAsAAAATAAwAAQARAAsAAAATAA0AAQARAAsAAAAAAAwAAQARAAsAABAAAA0AAQARAAsAABAAAA4AAQARAAoAADATAA4AAQARAAoAACASAA4AAQAQAAoAACABAA4AAQAQAAoAACACAA4AAQAQAAoAACADAA4AAQAQAAoAACAEAA4AAQAQAAoAACAFAA4AAQAQAAoAACAGAA4AAQAQAAoAACAHAA4AAQAQAAoAACAIAA4AAQAQAAoAACAJAA4AAQAQAAoAACAKAA4AAQAQAAoAACALAA4AAQAQAAoAACAMAA4AAQAQAAoAACANAA4AAQAQAAoAACAOAA4AAQAQAAoAACAPAA4AAQAQAAoAACAQAA4AAQAQAAoAACARAA4AAQAQAAoAACA=")
 tile_set = ExtResource("1_gup2b")
 occlusion_enabled = false
 rendering_quadrant_size = 8
 
-[node name="VentLayer" type="TileMapLayer" parent="Tiles" unique_id=1725894612]
+[node name="VentLevel" type="Node2D" parent="." unique_id=1062066135]
+visible = false
+
+[node name="VentLayer" type="TileMapLayer" parent="VentLevel" unique_id=1725894612]
 tile_set = ExtResource("1_gup2b")
-occlusion_enabled = false
 rendering_quadrant_size = 8
+collision_enabled = false
 
 [node name="Countdown" parent="." unique_id=416416051 instance=ExtResource("2_vgt4e")]
 position = Vector2(641, 927)

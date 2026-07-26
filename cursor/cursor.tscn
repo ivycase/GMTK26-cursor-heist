@@ -32,7 +32,7 @@ texture = ExtResource("2_g0wji")
 trigger_zone = NodePath("../AlarmZone")
 
 [node name="AlarmZone" parent="." unique_id=1968612249 instance=ExtResource("2_1oxqp")]
-collision_layer = 2
+collision_layer = 16
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="AlarmZone" unique_id=1679376448]
 shape = SubResource("CircleShape2D_1oxqp")
