@@ -10,10 +10,11 @@
 script = ExtResource("1_yqej0")
 rotate_node = NodePath(".")
 timer = NodePath("Timer")
-rotate_speed = 0.2
+rotate_speed = 0.3
 ease_curve = -5.0
 
 [node name="Timer" type="Timer" parent="." unique_id=565069179]
+one_shot = true
 
 [node name="VisionConeRenderer" type="Polygon2D" parent="." unique_id=626669712]
 rotation = -1.5707964
