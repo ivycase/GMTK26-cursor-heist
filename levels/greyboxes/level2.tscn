@@ -1,13 +1,12 @@
 [gd_scene format=4 uid="uid://42kicsfhrk1x"]
 
-[ext_resource type="PackedScene" uid="uid://8ho4d8rl7jv" path="res://levels/level_template.tscn" id="1_y0xe8"]
-[ext_resource type="PackedScene" uid="uid://b61hrbhkewkux" path="res://draggable/crate.tscn" id="2_r40rm"]
-[ext_resource type="PackedScene" uid="uid://bcv8cat0ydhc5" path="res://obstacle/door/door_component.tscn" id="3_8tcn8"]
-[ext_resource type="PackedScene" uid="uid://hwnx7dn1x7kb" path="res://zone/button/button_component.tscn" id="4_r6vdu"]
-[ext_resource type="PackedScene" uid="uid://bvvebp52vw0ty" path="res://cursor/cursor.tscn" id="5_r6vdu"]
-[ext_resource type="PackedScene" uid="uid://co6gom0ie34uh" path="res://draggable/money_bag.tscn" id="6_e8p81"]
-[ext_resource type="PackedScene" uid="uid://bixx2d1r4mbxs" path="res://zone/vault_zone.tscn" id="7_55gdq"]
-[ext_resource type="PackedScene" uid="uid://borbhm83vuk1o" path="res://zone/getaway_zone.tscn" id="8_crte6"]
+[ext_resource type="PackedScene" uid="uid://8ho4d8rl7jv" path="res://levels/level_template.tscn" id="1_1vbpj"]
+[ext_resource type="PackedScene" uid="uid://bixx2d1r4mbxs" path="res://zone/vault_zone.tscn" id="2_qr6my"]
+[ext_resource type="PackedScene" uid="uid://borbhm83vuk1o" path="res://zone/getaway_zone.tscn" id="3_4pft8"]
+[ext_resource type="PackedScene" uid="uid://b61hrbhkewkux" path="res://draggable/crate.tscn" id="4_rurr7"]
+[ext_resource type="PackedScene" uid="uid://bcv8cat0ydhc5" path="res://obstacle/door/door_component.tscn" id="5_hbmyg"]
+[ext_resource type="PackedScene" uid="uid://hwnx7dn1x7kb" path="res://zone/button/button_component.tscn" id="6_1bmhg"]
+[ext_resource type="PackedScene" uid="uid://co6gom0ie34uh" path="res://draggable/money_bag.tscn" id="7_x56qf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1dg4"]
 size = Vector2(273, 20)
@@ -15,45 +14,42 @@ size = Vector2(273, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s1bpp"]
 size = Vector2(20, 115)
 
-[node name="LevelTemplate" unique_id=1324624073 instance=ExtResource("1_y0xe8")]
+[node name="LevelTemplate" unique_id=1324624073 instance=ExtResource("1_1vbpj")]
 
 [node name="BackgroundLayer" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="0" unique_id=864770364]
 tile_map_data = PackedByteArray("AAAIAAAAAQAQAAoAAAAJAAAAAQAQAAoAAAAKAAAAAQAQAAoAAAALAAAAAQAQAAoAAAAHAAAAAQAQAAoAAAAGAAAAAQAQAAoAAAAFAAAAAQAQAAoAAAAEAAAAAQAQAAoAAAADAAAAAQAQAAoAAAACAAAAAQAQAAoAAAABAAAAAQAQAAoAAAAMAAAAAQAQAAoAAAANAAAAAQAQAAoAAAAOAAAAAQAQAAoAAAAPAAAAAQAQAAoAAAAQAAAAAQAQAAoAAAARAAAAAQAQAAoAAAASAAAAAQAQAAoAAAAAAAAAAQARAAoAABATAAAAAQARAAoAAAATAAEAAQARAAsAABAAAAEAAQARAAsAAAAAAAIAAQARAAsAAAAAAAMAAQARAAsAAAAAAAQAAQARAAsAAAAAAAUAAQARAAsAAAAAAAYAAQARAAsAAAAAAAcAAQARAAsAAAAAAAgAAQARAAsAAAAAAAkAAQARAAsAAAAAAAoAAQARAAsAAAAAAAsAAQARAAsAAAATAAIAAQARAAsAABATAAMAAQARAAsAABATAAQAAQARAAsAABATAAUAAQARAAsAABATAAYAAQARAAsAABATAAcAAQARAAsAABATAAgAAQARAAsAABATAAkAAQARAAsAABATAAoAAQARAAsAABATAAsAAQARAAsAABATAAwAAQARAAsAABATAA0AAQARAAsAABAAAAwAAQARAAsAAAAAAA0AAQARAAsAAAAAAA4AAQARAAoAADATAA4AAQARAAoAACASAA4AAQAQAAoAACABAA4AAQAQAAoAACACAA4AAQAQAAoAACADAA4AAQAQAAoAACAEAA4AAQAQAAoAACAFAA4AAQAQAAoAACAGAA4AAQAQAAoAACAHAA4AAQAQAAoAACAIAA4AAQAQAAoAACAJAA4AAQAQAAoAACAKAA4AAQAQAAoAACALAA4AAQAQAAoAACAMAA4AAQAQAAoAACANAA4AAQAQAAoAACAOAA4AAQAQAAoAACAPAA4AAQAQAAoAACAQAA4AAQAQAAoAACARAA4AAQAQAAoAACABAAUAAQANAAQAAAACAAUAAQANAAQAAAADAAUAAQANAAQAAAAEAAUAAQANAAQAAAAFAAUAAQANAAQAAAAGAAUAAQAPAAQAAAANAAUAAQAKAAQAAAAOAAUAAQALAAQAAAAPAAUAAQALAAQAAAAQAAUAAQALAAQAAAARAAUAAQALAAQAAAASAAUAAQALAAQAAAAHAAEAAQALAAIAAAAIAAEAAQALAAIAAAAMAAEAAQALAAIAAAALAAEAAQALAAIAAAAKAAEAAQALAAIAAAAJAAEAAQALAAIAAAANAAIAAQAKAAMAAAANAAMAAQAKAAMAAAANAAQAAQAKAAMAAAAGAAIAAQAKAAMAAAAGAAMAAQAKAAMAAAAGAAQAAQAKAAMAAAAGAAEAAQAKAAIAAAANAAEAAQAPAAIAAAAJAAUAAQAMAAQAAAAKAAUAAQAMAAQAAAAIAAUAAQAKAAQAAAALAAUAAQAPAAQAAAAIAAMAAQAKAAIAAAAJAAMAAQALAAIAAAAKAAMAAQALAAIAAAALAAMAAQAPAAIAAAABAAcAAQAMAAQAAAACAAcAAQAMAAQAAAADAAcAAQAMAAQAAAAEAAcAAQAMAAQAAAAFAAcAAQAMAAQAAAAGAAcAAQAMAAQAAAAHAAcAAQAMAAQAAAAIAAcAAQAMAAQAAAAJAAcAAQAMAAQAAAAKAAcAAQAMAAQAAAALAAcAAQAMAAQAAAAMAAcAAQAMAAQAAAANAAcAAQAMAAQAAAAOAAcAAQAMAAQAAAAQAAcAAQAMAAQAAAARAAcAAQAMAAQAAAASAAcAAQAMAAQAAAANAAoAAQACAAQAAAAOAAoAAQAFAAQAAAAPAAoAAQAFAAQAAAAQAAoAAQAIAAQAAAAMAAgAAQABAAMAAAARAAgAAQAJAAMAAAAMAAoAAQABAAQAAAARAAoAAQAJAAQAAAAMAAkAAQABAAMAAAARAAkAAQAJAAMAAAALAAQAAQAPAAMAAAAIAAQAAQAKAAMAAAA=")
 
-[node name="VaultZone" parent="." index="3" unique_id=1968612249 instance=ExtResource("7_55gdq")]
+[node name="VaultZone" parent="." index="3" unique_id=1968612249 instance=ExtResource("2_qr6my")]
 position = Vector2(990, 514)
 
 [node name="CollisionShape2D" parent="VaultZone" index="1" unique_id=1235712958]
 position = Vector2(-29.5, -9)
 shape = SubResource("RectangleShape2D_g1dg4")
 
-[node name="GetawayZone" parent="VaultZone" index="2" unique_id=600129247 instance=ExtResource("8_crte6")]
+[node name="GetawayZone" parent="VaultZone" index="2" unique_id=600129247 instance=ExtResource("3_4pft8")]
 position = Vector2(212, -96)
 
 [node name="CollisionShape2D" parent="VaultZone/GetawayZone" index="1" unique_id=956841795]
 position = Vector2(5, 3.5)
 shape = SubResource("RectangleShape2D_s1bpp")
 
-[node name="Crate" parent="." index="6" unique_id=829496544 instance=ExtResource("2_r40rm")]
+[node name="Crate" parent="." index="6" unique_id=829496544 instance=ExtResource("4_rurr7")]
 position = Vector2(893, 428)
 
-[node name="DoorComponent" parent="." index="7" unique_id=1917155962 node_paths=PackedStringArray("connected_button") instance=ExtResource("3_8tcn8")]
+[node name="DoorComponent" parent="." index="7" unique_id=1917155962 node_paths=PackedStringArray("connected_button") instance=ExtResource("5_hbmyg")]
 position = Vector2(1001, 482)
 connected_button = NodePath("../ButtonComponent")
 
-[node name="ButtonComponent" parent="." index="8" unique_id=1835980614 instance=ExtResource("4_r6vdu")]
+[node name="ButtonComponent" parent="." index="8" unique_id=1835980614 instance=ExtResource("6_1bmhg")]
 position = Vector2(475, 162)
 
-[node name="Cursor" parent="." index="9" unique_id=1176993969 instance=ExtResource("5_r6vdu")]
-position = Vector2(117, 410)
-
-[node name="MoneyBag" parent="." index="10" unique_id=68727245 instance=ExtResource("6_e8p81")]
+[node name="MoneyBag" parent="." index="9" unique_id=68727245 instance=ExtResource("7_x56qf")]
 position = Vector2(869, 570)
 
-[node name="MoneyBag2" parent="." index="11" unique_id=1324933932 instance=ExtResource("6_e8p81")]
+[node name="MoneyBag2" parent="." index="10" unique_id=1324933932 instance=ExtResource("7_x56qf")]
 position = Vector2(944, 641)
 
-[node name="MoneyBag3" parent="." index="12" unique_id=2116588940 instance=ExtResource("6_e8p81")]
+[node name="MoneyBag3" parent="." index="11" unique_id=2116588940 instance=ExtResource("7_x56qf")]
 position = Vector2(1034, 583)
 
 [editable path="VaultZone"]

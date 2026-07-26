@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://c6vewa4loifec" path="res://draggable/loot/loot_component.tscn" id="9_1mpng"]
 [ext_resource type="PackedScene" uid="uid://co6gom0ie34uh" path="res://draggable/money_bag.tscn" id="10_iyyhl"]
 [ext_resource type="Script" uid="uid://b1yia4xulkik" path="res://countdown/score/score_label.gd" id="11_xy8qx"]
+[ext_resource type="Texture2D" uid="uid://ck3tsn8qo13rl" path="res://tileset/Tilemap V2.png" id="12_ih7d6"]
 [ext_resource type="PackedScene" uid="uid://cittmts7yh6ss" path="res://obstacle/camera/camera.tscn" id="12_jlufv"]
 [ext_resource type="PackedScene" uid="uid://cgoh2yxhwuxwo" path="res://vent/vent.tscn" id="12_nnusk"]
 
@@ -118,11 +119,35 @@ visible = true
 z_index = 10
 tile_map_data = PackedByteArray("AAAIAAsAAQALAAIAAAAJAAsAAQALAAIAAAAKAAsAAQALAAIAAAAIAAwAAQALAAQAAAAJAAwAAQALAAQAAAAKAAwAAQALAAQAAAAHAAwAAQAKAAQAAAALAAwAAQAPAAQAAAAHAAsAAQAKAAMAAAALAAsAAQAPAAMAAAALAAoAAQAPAAMAAAAHAAoAAQAKAAMAAAA=")
 
-[node name="Vent" parent="." index="7" unique_id=964969712 instance=ExtResource("12_nnusk")]
-position = Vector2(594, 425)
+[node name="Sprite2D2" type="Sprite2D" parent="." index="7" unique_id=652576993]
+position = Vector2(790, 595)
+scale = Vector2(0.42, 0.42)
+texture = ExtResource("12_ih7d6")
+region_enabled = true
+region_rect = Rect2(196.8411, 826.38727, 118.161316, 135.57819)
+
+[node name="Sprite2D3" type="Sprite2D" parent="." index="8" unique_id=1812386245]
+position = Vector2(855, 595)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_ih7d6")
+region_enabled = true
+region_rect = Rect2(320, 832, 128, 128)
+
+[node name="Vent" parent="." index="9" unique_id=964969712 instance=ExtResource("12_nnusk")]
+position = Vector2(790, 684)
 collision_mask = 2
+
+[node name="Vent2" parent="." index="10" unique_id=93818951 instance=ExtResource("12_nnusk")]
+position = Vector2(855, 684)
+collision_mask = 2
+
+[node name="Sprite2D" parent="Vent2" index="1" unique_id=425771834]
+scale = Vector2(0.5, 0.5)
+region_rect = Rect2(320, 832, 128, 128)
 
 [editable path="BaseLevel/VaultZone"]
 [editable path="BaseLevel/GetawayZone"]
 [editable path="BaseLevel/Camera"]
 [editable path="BaseLevel/Camera/AlarmZone"]
+[editable path="Vent"]
+[editable path="Vent2"]

@@ -18,5 +18,5 @@ func start_countdown() -> void:
 func end_countdown() -> void:
 	print("times up buster")
 	#Global.level_restart()
-	Global.level_transition()
+	#Global.level_transition()
 	timer.paused = true

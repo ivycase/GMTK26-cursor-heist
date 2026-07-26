@@ -1,13 +1,12 @@
 [gd_scene format=4 uid="uid://r0kp14mcuw6"]
 
-[ext_resource type="PackedScene" uid="uid://8ho4d8rl7jv" path="res://levels/level_template.tscn" id="1_r8unp"]
-[ext_resource type="PackedScene" uid="uid://b61hrbhkewkux" path="res://draggable/crate.tscn" id="2_0fm5q"]
-[ext_resource type="PackedScene" uid="uid://hwnx7dn1x7kb" path="res://zone/button/button_component.tscn" id="3_cpie4"]
-[ext_resource type="PackedScene" uid="uid://bcv8cat0ydhc5" path="res://obstacle/door/door_component.tscn" id="4_udvx3"]
-[ext_resource type="PackedScene" uid="uid://bvvebp52vw0ty" path="res://cursor/cursor.tscn" id="5_cpie4"]
-[ext_resource type="PackedScene" uid="uid://borbhm83vuk1o" path="res://zone/getaway_zone.tscn" id="6_1xfnq"]
-[ext_resource type="PackedScene" uid="uid://bixx2d1r4mbxs" path="res://zone/vault_zone.tscn" id="7_6uckl"]
-[ext_resource type="PackedScene" uid="uid://co6gom0ie34uh" path="res://draggable/money_bag.tscn" id="8_6uckl"]
+[ext_resource type="PackedScene" uid="uid://8ho4d8rl7jv" path="res://levels/level_template.tscn" id="1_nkket"]
+[ext_resource type="PackedScene" uid="uid://b61hrbhkewkux" path="res://draggable/crate.tscn" id="2_dnb1p"]
+[ext_resource type="PackedScene" uid="uid://bcv8cat0ydhc5" path="res://obstacle/door/door_component.tscn" id="3_aimfs"]
+[ext_resource type="PackedScene" uid="uid://hwnx7dn1x7kb" path="res://zone/button/button_component.tscn" id="4_31hjb"]
+[ext_resource type="PackedScene" uid="uid://borbhm83vuk1o" path="res://zone/getaway_zone.tscn" id="5_tkv4a"]
+[ext_resource type="PackedScene" uid="uid://bixx2d1r4mbxs" path="res://zone/vault_zone.tscn" id="6_351wm"]
+[ext_resource type="PackedScene" uid="uid://co6gom0ie34uh" path="res://draggable/money_bag.tscn" id="7_kt1c5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e8p81"]
 size = Vector2(160, 20)
@@ -18,58 +17,55 @@ size = Vector2(45, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_crte6"]
 size = Vector2(106, 20)
 
-[node name="LevelTemplate" unique_id=1324624073 instance=ExtResource("1_r8unp")]
+[node name="LevelTemplate" unique_id=1324624073 instance=ExtResource("1_nkket")]
 
-[node name="Crate" parent="." index="2" unique_id=829496544 instance=ExtResource("2_0fm5q")]
+[node name="Crate" parent="." index="2" unique_id=829496544 instance=ExtResource("2_dnb1p")]
 position = Vector2(257, 534)
 
-[node name="DoorComponent" parent="." index="3" unique_id=1917155962 node_paths=PackedStringArray("connected_button") instance=ExtResource("4_udvx3")]
+[node name="DoorComponent" parent="." index="3" unique_id=1917155962 node_paths=PackedStringArray("connected_button") instance=ExtResource("3_aimfs")]
 position = Vector2(1056, 536)
 connected_button = NodePath("../ButtonComponent")
 
-[node name="ButtonComponent" parent="." index="4" unique_id=1835980614 instance=ExtResource("3_cpie4")]
+[node name="ButtonComponent" parent="." index="4" unique_id=1835980614 instance=ExtResource("4_31hjb")]
 position = Vector2(1065, 860)
-
-[node name="Cursor" parent="." index="5" unique_id=1176993969 instance=ExtResource("5_cpie4")]
-position = Vector2(107, 636)
 
 [node name="BackgroundLayer" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="0" unique_id=864770364]
 tile_map_data = PackedByteArray("AAAIAAAAAQAQAAoAAAAJAAAAAQAQAAoAAAAKAAAAAQAQAAoAAAALAAAAAQAQAAoAAAAHAAAAAQAQAAoAAAAGAAAAAQAQAAoAAAAFAAAAAQAQAAoAAAAEAAAAAQAQAAoAAAADAAAAAQAQAAoAAAACAAAAAQAQAAoAAAABAAAAAQAQAAoAAAAMAAAAAQAQAAoAAAANAAAAAQAQAAoAAAAOAAAAAQAQAAoAAAAPAAAAAQAQAAoAAAAQAAAAAQAQAAoAAAARAAAAAQAQAAoAAAASAAAAAQAQAAoAAAAAAAAAAQARAAoAABATAAAAAQARAAoAAAATAAEAAQARAAsAAAAAAAEAAQARAAsAAAAAAAIAAQARAAsAAAAAAAMAAQARAAsAAAAAAAQAAQARAAsAAAAAAAUAAQARAAsAAAAAAAYAAQARAAsAAAAAAAcAAQARAAsAAAAAAAgAAQARAAsAAAAAAAkAAQARAAsAAAAAAAoAAQARAAsAAAAAAAsAAQARAAsAAAATAAIAAQARAAsAAAATAAMAAQARAAsAACATAAQAAQARAAsAAAATAAUAAQARAAsAACATAAYAAQARAAsAAAATAAcAAQARAAsAACATAAgAAQARAAsAAAATAAkAAQARAAsAACATAAoAAQARAAsAAAATAAsAAQARAAsAACATAAwAAQARAAsAAAATAA0AAQARAAsAACAAAAwAAQARAAsAAAAAAA0AAQARAAsAAAAAAA4AAQARAAoAADATAA4AAQARAAoAACASAA4AAQAQAAoAACABAA4AAQAQAAoAACACAA4AAQAQAAoAACADAA4AAQAQAAoAACAEAA4AAQAQAAoAACAFAA4AAQAQAAoAACAGAA4AAQAQAAoAACAHAA4AAQAQAAoAACAIAA4AAQAQAAoAACAJAA4AAQAQAAoAACAKAA4AAQAQAAoAACALAA4AAQAQAAoAACAMAA4AAQAQAAoAACANAA4AAQAQAAoAACAOAA4AAQAQAAoAACAPAA4AAQAQAAoAACAQAA4AAQAQAAoAACARAA4AAQAQAAoAACABAAsAAQAOAAIAAAACAAsAAQAOAAIAAAADAAsAAQAOAAIAAAAEAAsAAQAOAAIAAAAFAAsAAQAOAAIAAAAGAAsAAQAOAAIAAAAHAAsAAQAOAAIAAAAIAAsAAQAOAAIAAAAJAAsAAQAOAAIAAAAKAAsAAQAOAAIAAAALAAsAAQAOAAIAAAAMAAsAAQAOAAIAAAANAAsAAQAOAAIAAAAOAAsAAQALAAIAAAARAAYAAQAKAAQAACASAAYAAQAPAAQAAAAOAAcAAQAPAAMAABAOAAYAAQAPAAMAABAOAAUAAQAPAAMAABAOAAQAAQAPAAMAABAOAAMAAQAPAAMAABAOAAIAAQAPAAMAABAOAAEAAQAPAAMAABALAAEAAQAKAAMAABALAAIAAQAKAAMAABALAAMAAQAKAAMAABALAAQAAQAKAAMAABALAAUAAQAKAAMAABALAAYAAQAKAAMAABALAAcAAQAKAAMAABALAAgAAQAPAAQAAAAPAAcAAQAPAAMAABAPAAYAAQAPAAMAABAPAAUAAQAPAAMAABAPAAQAAQAPAAMAABAPAAMAAQAPAAMAABAPAAIAAQAKAAIAAAAOAAgAAQAKAAQAAAAPAAgAAQAPAAQAAAASAAIAAQAPAAIAAAASAAMAAQAPAAMAAAASAAQAAQAPAAMAAAASAAUAAQAPAAMAAAAHAAUAAQAKAAIAAAARAAcAAQAPAAMAABARAAgAAQAPAAMAABARAAkAAQAPAAMAABARAAoAAQAPAAMAABARAAsAAQAPAAMAABARAAwAAQAPAAMAABARAA0AAQAPAAMAABAPAAsAAQAPAAIAAAAPAAwAAQAPAAMAAAAPAA0AAQAPAAMAAAAKAAgAAQAKAAQAAAAKAAUAAQAPAAIAAAAKAAYAAQAPAAMAAAAKAAcAAQAPAAMAAAAJAAUAAQALAAIAAAAIAAUAAQALAAIAAAAHAAYAAQAKAAMAAAAHAAcAAQAKAAMAAAAHAAgAAQAPAAQAAAAQAAIAAQALAAIAAAARAAIAAQALAAIAAAABAAgAAQAMAAQAAAACAAgAAQAMAAQAAAAEAAgAAQABAAQAAAADAAgAAQABAAQAABAFAAgAAQAMAAQAAAAGAAgAAQAMAAQAAAADAAcAAQAJAAIAAAAEAAcAAQABAAIAAAAFAAcAAQAHAAIAAAACAAcAAQAHAAIAAAABAAcAAQABAAQAAAAGAAcAAQAJAAQAAAAGAAYAAQAJAAMAAAAGAAUAAQAJAAMAAAABAAYAAQABAAMAAAABAAUAAQABAAMAAAABAAQAAQABAAMAAAAGAAQAAQAJAAMAAAABAAMAAQABAAIAAAAGAAMAAQAJAAIAAAACAAMAAQACAAIAAAADAAMAAQAHAAIAAAAEAAMAAQAHAAIAAAAFAAMAAQAIAAIAAAA=")
 
-[node name="GetawayZone" parent="." index="7" unique_id=1968612249 instance=ExtResource("6_1xfnq")]
+[node name="GetawayZone" parent="." index="6" unique_id=1968612249 instance=ExtResource("5_tkv4a")]
 position = Vector2(823, 95)
 
 [node name="CollisionShape2D" parent="GetawayZone" index="1" unique_id=956841795]
 position = Vector2(8, -26)
 shape = SubResource("RectangleShape2D_e8p81")
 
-[node name="VaultZone" parent="." index="8" unique_id=813817377 instance=ExtResource("7_6uckl")]
+[node name="VaultZone" parent="." index="7" unique_id=813817377 instance=ExtResource("6_351wm")]
 position = Vector2(257, 466)
 
 [node name="CollisionShape2D" parent="VaultZone" index="1" unique_id=1235712958]
 position = Vector2(0, -9)
 shape = SubResource("RectangleShape2D_55gdq")
 
-[node name="VaultZone2" parent="." index="9" unique_id=932839816 instance=ExtResource("7_6uckl")]
+[node name="VaultZone2" parent="." index="8" unique_id=932839816 instance=ExtResource("6_351wm")]
 position = Vector2(1038, 411)
 
 [node name="CollisionShape2D" parent="VaultZone2" index="1" unique_id=1235712958]
 position = Vector2(1, -11)
 shape = SubResource("RectangleShape2D_crte6")
 
-[node name="MoneyBag" parent="VaultZone2" index="2" unique_id=68727245 instance=ExtResource("8_6uckl")]
+[node name="MoneyBag" parent="VaultZone2" index="2" unique_id=68727245 instance=ExtResource("7_kt1c5")]
 position = Vector2(-859, -129)
 
-[node name="MoneyBag2" parent="VaultZone2" index="3" unique_id=537991514 instance=ExtResource("8_6uckl")]
+[node name="MoneyBag2" parent="VaultZone2" index="3" unique_id=537991514 instance=ExtResource("7_kt1c5")]
 position = Vector2(-795, -30)
 
-[node name="MoneyBag3" parent="VaultZone2" index="4" unique_id=1051537568 instance=ExtResource("8_6uckl")]
+[node name="MoneyBag3" parent="VaultZone2" index="4" unique_id=1051537568 instance=ExtResource("7_kt1c5")]
 position = Vector2(-713, -115)
 
-[node name="MoneyBag4" parent="VaultZone2" index="5" unique_id=358103545 instance=ExtResource("8_6uckl")]
+[node name="MoneyBag4" parent="VaultZone2" index="5" unique_id=358103545 instance=ExtResource("7_kt1c5")]
 position = Vector2(-1, -181)
 
-[node name="MoneyBag5" parent="VaultZone2" index="6" unique_id=1551133187 instance=ExtResource("8_6uckl")]
+[node name="MoneyBag5" parent="VaultZone2" index="6" unique_id=1551133187 instance=ExtResource("7_kt1c5")]
 position = Vector2(83, -86)
 
 [editable path="GetawayZone"]

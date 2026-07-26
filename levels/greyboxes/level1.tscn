@@ -1,10 +1,9 @@
 [gd_scene format=4 uid="uid://bqk05g0alrih4"]
 
-[ext_resource type="PackedScene" uid="uid://8ho4d8rl7jv" path="res://levels/level_template.tscn" id="1_sjb42"]
-[ext_resource type="PackedScene" uid="uid://co6gom0ie34uh" path="res://draggable/money_bag.tscn" id="2_ua5ty"]
-[ext_resource type="PackedScene" uid="uid://borbhm83vuk1o" path="res://zone/getaway_zone.tscn" id="3_61w3m"]
-[ext_resource type="PackedScene" uid="uid://bixx2d1r4mbxs" path="res://zone/vault_zone.tscn" id="4_pdpul"]
-[ext_resource type="PackedScene" uid="uid://bvvebp52vw0ty" path="res://cursor/cursor.tscn" id="5_61w3m"]
+[ext_resource type="PackedScene" uid="uid://8ho4d8rl7jv" path="res://levels/level_template.tscn" id="1_bjd8j"]
+[ext_resource type="PackedScene" uid="uid://borbhm83vuk1o" path="res://zone/getaway_zone.tscn" id="2_c5vuv"]
+[ext_resource type="PackedScene" uid="uid://bixx2d1r4mbxs" path="res://zone/vault_zone.tscn" id="3_y76bt"]
+[ext_resource type="PackedScene" uid="uid://co6gom0ie34uh" path="res://draggable/money_bag.tscn" id="4_oaunk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lor06"]
 size = Vector2(20, 158)
@@ -12,16 +11,16 @@ size = Vector2(20, 158)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a3wvr"]
 size = Vector2(20, 186)
 
-[node name="LevelTemplate" unique_id=1324624073 instance=ExtResource("1_sjb42")]
+[node name="LevelTemplate" unique_id=1324624073 instance=ExtResource("1_bjd8j")]
 
-[node name="GetawayZone" parent="." index="2" unique_id=1968612249 instance=ExtResource("3_61w3m")]
+[node name="GetawayZone" parent="." index="2" unique_id=1968612249 instance=ExtResource("2_c5vuv")]
 position = Vector2(1204, 440)
 
 [node name="CollisionShape2D" parent="GetawayZone" index="1" unique_id=956841795]
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_lor06")
 
-[node name="VaultZone" parent="." index="3" unique_id=1391700797 instance=ExtResource("4_pdpul")]
+[node name="VaultZone" parent="." index="3" unique_id=1391700797 instance=ExtResource("3_y76bt")]
 position = Vector2(460, 438)
 
 [node name="CollisionShape2D" parent="VaultZone" index="1" unique_id=1235712958]
@@ -34,17 +33,14 @@ tile_map_data = PackedByteArray("AAAIAAAAAQAQAAoAAAAJAAAAAQAQAAoAAAAKAAAAAQAQAAo
 [node name="Countdown" parent="." index="6" unique_id=416416051]
 getaway_time = 1.0
 
-[node name="MoneyBag" parent="." index="7" unique_id=68727245 instance=ExtResource("2_ua5ty")]
+[node name="MoneyBag" parent="." index="7" unique_id=68727245 instance=ExtResource("4_oaunk")]
 position = Vector2(303, 298)
 
-[node name="MoneyBag2" parent="." index="8" unique_id=149199614 instance=ExtResource("2_ua5ty")]
+[node name="MoneyBag2" parent="." index="8" unique_id=149199614 instance=ExtResource("4_oaunk")]
 position = Vector2(305, 406)
 
-[node name="MoneyBag3" parent="." index="9" unique_id=129272643 instance=ExtResource("2_ua5ty")]
+[node name="MoneyBag3" parent="." index="9" unique_id=129272643 instance=ExtResource("4_oaunk")]
 position = Vector2(306, 506)
-
-[node name="Cursor" parent="." index="10" unique_id=1176993969 instance=ExtResource("5_61w3m")]
-position = Vector2(571, 855)
 
 [editable path="GetawayZone"]
 [editable path="VaultZone"]

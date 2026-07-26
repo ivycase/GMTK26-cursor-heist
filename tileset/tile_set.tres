@@ -1,5 +1,6 @@
 [gd_resource type="TileSet" format=3 uid="uid://dja6t3k3p4v2t"]
 
+[ext_resource type="PackedScene" uid="uid://b61hrbhkewkux" path="res://draggable/crate.tscn" id="2_a3wvr"]
 [ext_resource type="Texture2D" uid="uid://ck3tsn8qo13rl" path="res://tileset/Tilemap V2.png" id="2_lor06"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_a3wvr"]
@@ -187,8 +188,12 @@ texture_region_size = Vector2i(64, 64)
 10:5/0 = 0
 17:6/0 = 0
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_w6m5v"]
+scenes/1/scene = ExtResource("2_a3wvr")
+
 [resource]
 tile_size = Vector2i(64, 64)
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 7
 sources/1 = SubResource("TileSetAtlasSource_a3wvr")
+sources/2 = SubResource("TileSetScenesCollectionSource_w6m5v")
