@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://ce2fgpjgnibgs"]
+
+[ext_resource type="Script" uid="uid://bt7mhc1j3a3a" path="res://obstacle/turret/turret.gd" id="1_epxty"]
+[ext_resource type="Script" uid="uid://bv21js172p7d7" path="res://zone/zone.gd" id="2_8bcgs"]
+[ext_resource type="Texture2D" uid="uid://cjkvox2u0ie2m" path="res://art/props/turret_off.png" id="2_ekrq6"]
+[ext_resource type="Texture2D" uid="uid://buh45mrbo1cmr" path="res://art/props/turret_on.png" id="3_lmep0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8bcgs"]
+radius = 250.0
+
+[node name="Turret" type="Node2D" unique_id=659378386 node_paths=PackedStringArray("rotate_node", "detect_zone")]
+script = ExtResource("1_epxty")
+is_enabled = true
+rotate_node = NodePath(".")
+detect_zone = NodePath("Zone")
+
+[node name="OffSprite" type="Sprite2D" parent="." unique_id=1125197597]
+visible = false
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ekrq6")
+
+[node name="OnSprite" type="Sprite2D" parent="." unique_id=1473415228]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_lmep0")
+
+[node name="Zone" type="Area2D" parent="." unique_id=1133598947]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("2_8bcgs")
+metadata/_custom_type_script = "uid://bv21js172p7d7"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zone" unique_id=400191920]
+shape = SubResource("CircleShape2D_8bcgs")

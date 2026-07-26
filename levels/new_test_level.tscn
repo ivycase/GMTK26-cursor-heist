@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bixx2d1r4mbxs" path="res://zone/vault_zone.tscn" id="6_rc8qk"]
 [ext_resource type="PackedScene" uid="uid://borbhm83vuk1o" path="res://zone/getaway_zone.tscn" id="7_aar7y"]
 [ext_resource type="PackedScene" uid="uid://c6vewa4loifec" path="res://draggable/loot/loot_component.tscn" id="9_1mpng"]
+[ext_resource type="PackedScene" uid="uid://ce2fgpjgnibgs" path="res://obstacle/turret/turret.tscn" id="10_ih7d6"]
 [ext_resource type="PackedScene" uid="uid://co6gom0ie34uh" path="res://draggable/money_bag.tscn" id="10_iyyhl"]
 [ext_resource type="Script" uid="uid://b1yia4xulkik" path="res://countdown/score/score_label.gd" id="11_xy8qx"]
 [ext_resource type="Texture2D" uid="uid://ck3tsn8qo13rl" path="res://tileset/Tilemap V2.png" id="12_ih7d6"]
@@ -84,6 +85,11 @@ polygon = PackedVector2Array(0, 0, 33.250183, 105.45621, 29.577637, 107.38086, 2
 
 [node name="VisionConeCollider" parent="BaseLevel/Camera/AlarmZone" parent_id_path=PackedInt32Array(2117175, 1968612249) index="0" unique_id=6820882]
 polygon = PackedVector2Array(0, 0, 33.250183, 105.45621, 29.577637, 107.38086, 25.846008, 109.33649, 22.043762, 111.32913, 18.158142, 113.36545, 14.175781, 115.452515, 10.081726, 117.59808, 5.85968, 119.8107, 1.4917603, 122.09979, -3.0421143, 124.47586, -7.7647095, 126.950806, -12.701355, 129.538, -17.881287, 132.2526, -21.79132, 136.04764, -25.583252, 138.03491, -29.523743, 140.09998, -33.626587, 142.25012, -37.907104, 144.49347, -42.382935, 146.83911, -47.073242, 149.29715, 0, 0)
+
+[node name="Turret" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="14" unique_id=659378386 instance=ExtResource("10_ih7d6")]
+position = Vector2(575, 591)
+visual_start_color = Color(1, 0.33333334, 0, 1)
+visual_end_color = Color(0.94509804, 0.79607844, 0.105882354, 0)
 
 [node name="ScoreLabel" type="RichTextLabel" parent="." index="3" unique_id=1587280322]
 anchors_preset = 8
