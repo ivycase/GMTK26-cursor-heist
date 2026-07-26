@@ -20,6 +20,9 @@ func _late_ready() -> void:
 	update_visual()
 
 func _update_door(trigger_node: Node2D, new_power: bool) -> void:
+	if !trigger_node.is_visible_in_tree(): #ignore updates on inactive layers
+		return
+	
 	var index: int = nodes_on_top.find(trigger_node)
 	if index == -1:
 		nodes_on_top.append(trigger_node)
@@ -32,6 +35,10 @@ func _update_door(trigger_node: Node2D, new_power: bool) -> void:
 	is_closed = is_start_closed != new_power
 	static_body.collision_layer = int(is_closed) #layer one is wall layer
 	update_visual()
+	
+	# ping other layers
+	#connected_button.trigger_zone.process_mode = Node.PROCESS_MODE_DISABLED
+	#connected_button.trigger_zone.set_deferred("process_mode", Node.PROCESS_MODE_INHERIT)
 
 func update_visual() -> void:
 	if !opened_sprite or !closed_sprite:
