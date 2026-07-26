@@ -2,11 +2,32 @@
 
 [ext_resource type="TileSet" uid="uid://dja6t3k3p4v2t" path="res://tileset/tile_set.tres" id="1_gup2b"]
 [ext_resource type="Script" uid="uid://c1yxyijn2u5xi" path="res://z_level/z_level_manager.gd" id="1_skox6"]
+[ext_resource type="Shader" uid="uid://d3gacgh0vf866" path="res://art/crt.gdshader" id="1_yglgk"]
 [ext_resource type="PackedScene" uid="uid://r4173am4535v" path="res://countdown/countdown.tscn" id="2_vgt4e"]
 [ext_resource type="PackedScene" uid="uid://bnxleth520de3" path="res://quota/quota.tscn" id="4_13k7l"]
 [ext_resource type="PackedScene" uid="uid://bvvebp52vw0ty" path="res://cursor/cursor.tscn" id="5_8xmsw"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8xmsw"]
+shader = ExtResource("1_yglgk")
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/scan_line_amount = 0.0
+shader_parameter/warp_amount = 0.050000002375
+shader_parameter/vignette_amount = 1.0
+shader_parameter/vignette_intensity = 0.4630000219925
+shader_parameter/grille_amount = 0.3550000168625
+shader_parameter/brightness_boost = 1.4850000230375
+
 [node name="LevelTemplate2" type="Node2D" unique_id=1324624073]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1876592491]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=235839698]
+material = SubResource("ShaderMaterial_8xmsw")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=735667684]
 position = Vector2(639, 482)
