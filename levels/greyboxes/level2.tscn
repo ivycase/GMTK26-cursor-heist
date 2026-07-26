@@ -72,6 +72,12 @@ scale = Vector2(0.9, 0.9)
 position = Vector2(628, 484.00006)
 scale = Vector2(0.9, 0.9)
 
+[node name="ScoreLabel" parent="BaseLevel/Quota" parent_id_path=PackedInt32Array(284631434) index="0" unique_id=820636205]
+offset_left = -617.0
+offset_top = 347.62738
+offset_right = 1043.0
+offset_bottom = 983.6274
+
 [node name="Crate" parent="." index="6" unique_id=829496544 instance=ExtResource("4_rurr7")]
 position = Vector2(893, 428)
 
@@ -100,11 +106,11 @@ offset_top = -83.0
 offset_right = 355.0
 offset_bottom = 51.0
 
-[node name="ScoreLabel" parent="Quota" parent_id_path=PackedInt32Array(284631434) index="0" unique_id=820636205]
-offset_left = -617.0
-offset_top = 347.62738
-offset_right = 1043.0
-offset_bottom = 983.6274
+[node name="VaultZoneEffect" parent="." index="14" unique_id=2127039763]
+offset_left = 800.0
+offset_top = 520.0
+offset_right = 1128.0
+offset_bottom = 696.0
 
 [node name="TutText" type="RichTextLabel" parent="." index="15" unique_id=1176876598]
 offset_left = 435.0
@@ -128,7 +134,13 @@ Vault ->"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="GetawayZoneEffect" parent="." index="17" unique_id=794497378]
+offset_left = 72.0
+offset_top = 488.0
+offset_right = 352.0
+offset_bottom = 712.0
+
 [editable path="VaultZone"]
 [editable path="VaultZone/GetawayZone"]
+[editable path="BaseLevel/Quota"]
 [editable path="Countdown"]
-[editable path="Quota"]
