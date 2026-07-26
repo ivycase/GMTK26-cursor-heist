@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c1yxyijn2u5xi" path="res://z_level/z_level_manager.gd" id="1_skox6"]
 [ext_resource type="PackedScene" uid="uid://r4173am4535v" path="res://countdown/countdown.tscn" id="2_vgt4e"]
 [ext_resource type="PackedScene" uid="uid://bnxleth520de3" path="res://quota/quota.tscn" id="4_13k7l"]
+[ext_resource type="PackedScene" uid="uid://bvvebp52vw0ty" path="res://cursor/cursor.tscn" id="5_8xmsw"]
 
 [node name="LevelTemplate2" type="Node2D" unique_id=1324624073]
 
@@ -37,3 +38,5 @@ collision_enabled = false
 position = Vector2(641, 927)
 
 [node name="Quota" parent="." unique_id=284631434 instance=ExtResource("4_13k7l")]
+
+[node name="Cursor" parent="." unique_id=1176993969 instance=ExtResource("5_8xmsw")]
