@@ -38,8 +38,8 @@ func release_mouse(releaser: Node) -> bool:
 	
 func level_transition() -> void:
 	var next_level: int = current_level+1
-	EasyTransition.transition_to("res://levels/level" + str(next_level) + ".tscn")
+	EasyTransition.transition_to("res://levels/greyboxes/level" + str(next_level) + ".tscn")
 	current_level = next_level
 
 func level_restart() -> void: 
-	EasyTransition.transition_to("res://levels/level" + str(current_level) + ".tscn")
+	EasyTransition.transition_to("res://levels/greyboxes/level" + str(current_level) + ".tscn")
