@@ -10,6 +10,7 @@ var active_cursor: Cursor
 var active_countdown: Countdown
 var active_quota: Quota
 
+
 func add_score(amount: int) -> void:
 	active_quota.add_score(amount)
 
@@ -43,3 +44,17 @@ func level_transition() -> void:
 
 func level_restart() -> void: 
 	EasyTransition.transition_to("res://levels/greyboxes/level" + str(current_level) + ".tscn")
+	
+func _ready() -> void:
+	BgmSingleton.get_node("bgm").play()
+	BgmSingleton.get_node("bgm").stream.set_sync_stream_volume(1, -80.0)
+	
+func bgm_phase1() -> void:
+	if BgmSingleton.get_node("bgm").stream.get_sync_stream_volume(0) != 0:
+		BgmSingleton.get_node("bgm").stream.set_sync_stream_volume(1,-80)
+		BgmSingleton.get_node("bgm").stream.set_sync_stream_volume(0,0)
+		
+func bgm_phase2() -> void: 
+	if BgmSingleton.get_node("bgm").stream.get_sync_stream_volume(1) != 0:
+		BgmSingleton.get_node("bgm").stream.set_sync_stream_volume(0,-80)
+		BgmSingleton.get_node("bgm").stream.set_sync_stream_volume(1,0)
