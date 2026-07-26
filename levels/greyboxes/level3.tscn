@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://cn5bltca7y6gk" path="res://obstacle/level3/lv3_obstacle_4.tscn" id="8_qx67r"]
 [ext_resource type="PackedScene" uid="uid://duslmsdmeh63j" path="res://obstacle/level3/lv3_room_gold_1.tscn" id="9_crh8e"]
 [ext_resource type="PackedScene" uid="uid://ohqyi55fie70" path="res://obstacle/level3/lv3_room_gold_2.tscn" id="10_ivj32"]
+[ext_resource type="FontFile" uid="uid://cf1moys5mvxrs" path="res://fonts/VT323-Regular.ttf" id="17_qx67r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e8p81"]
 size = Vector2(160, 20)
@@ -141,6 +142,39 @@ scale = Vector2(0.9, 0.9)
 [node name="StaticObstacle8" parent="." index="29" unique_id=1479233450 instance=ExtResource("4_bxm51")]
 position = Vector2(612, 198.00002)
 scale = Vector2(0.7799902, 0.9)
+
+[node name="DriveLabel" type="RichTextLabel" parent="." index="30" unique_id=431858445]
+offset_left = 498.0
+offset_top = 65.0
+offset_right = 730.0
+offset_bottom = 155.0
+theme_override_fonts/normal_font = ExtResource("17_qx67r")
+theme_override_font_sizes/normal_font_size = 27
+text = "Drive"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VaultLabel" type="RichTextLabel" parent="." index="31" unique_id=1513505649]
+offset_left = 127.0
+offset_top = 192.0
+offset_right = 359.0
+offset_bottom = 282.0
+theme_override_fonts/normal_font = ExtResource("17_qx67r")
+theme_override_font_sizes/normal_font_size = 27
+text = "Vault"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VaultLabel2" type="RichTextLabel" parent="." index="32" unique_id=1986851447]
+offset_left = 1004.0
+offset_top = 73.0
+offset_right = 1236.0
+offset_bottom = 163.0
+theme_override_fonts/normal_font = ExtResource("17_qx67r")
+theme_override_font_sizes/normal_font_size = 27
+text = "Vault"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [editable path="DoorComponent"]
 [editable path="GetawayZone"]
