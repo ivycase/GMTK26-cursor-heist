@@ -19,7 +19,7 @@ func _ready() -> void:
 	target_angles.append(rotate_node.global_rotation)
 	
 	for marker: Marker2D in look_targets:
-		target_angles.append(rotate_node.global_position.angle_to_point(marker.global_position) + rotate_node.global_rotation)
+		target_angles.append(rotate_node.global_position.angle_to_point(marker.global_position))
 	
 	target = rotate_node.global_rotation
 	_look_at_next_target()
@@ -37,7 +37,7 @@ func _physics_process(delta: float) -> void:
 	rotate_node.global_rotation = lerp_angle(prev_target, target, ease(rotate_interpolation, ease_curve))
 	
 	rotate_interpolation += delta * rotate_speed
-	print(target_angles)
+	#print(target_angles)
 	
 func disable() -> void:
 	is_enabled = false
