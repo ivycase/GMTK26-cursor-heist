@@ -4,6 +4,8 @@ extends Node
 @export var timer: Timer
 @export var getaway_time: float = 10.0
 
+
+
 func _ready() -> void:
 	Global.active_countdown = self
 	timer.wait_time = getaway_time
@@ -12,12 +14,14 @@ func _ready() -> void:
 func start_countdown() -> void:
 	if !timer.is_stopped() or timer.paused:
 		return
-	
+	Global.bgm_phase2()
 	timer.start()
+
 	
 func end_countdown() -> void:
 	print("times up buster")
 	
+	Global.bgm_phase1()
 	if Global.active_quota.check_win():
 		Global.level_transition()
 		

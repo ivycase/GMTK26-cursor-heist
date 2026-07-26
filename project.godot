@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*uid://jbfiks7opwqh"
 EasyTransition="*uid://cq0t7o8xelk4k"
+BgmSingleton="*uid://ch7se1hg1hbji"
 
 [debug]
 
