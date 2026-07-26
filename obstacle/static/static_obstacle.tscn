@@ -5,3 +5,5 @@
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1879704494]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1603633120]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1454056980]
