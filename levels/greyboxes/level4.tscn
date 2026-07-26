@@ -145,9 +145,12 @@ position = Vector2(-65, 2.84124e-06)
 scale = Vector2(3.0399952, 1)
 
 [node name="VentDoor" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="25" unique_id=371777425 node_paths=PackedStringArray("connected_button") instance=ExtResource("6_u8oya")]
-position = Vector2(473, 482)
-scale = Vector2(0.96000487, 0.52)
+position = Vector2(469, 482.00003)
+scale = Vector2(0.55999994, 0.52)
 connected_button = NodePath("../VentButton")
+
+[node name="StaticBody2D" parent="BaseLevel/VentDoor" index="2" unique_id=706983520]
+scale = Vector2(2.0714374, 1)
 
 [node name="VentButton" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="26" unique_id=1835980614 instance=ExtResource("7_dv3k4")]
 position = Vector2(145.99997, 741)
@@ -194,6 +197,7 @@ offset_right = 1311.0
 offset_bottom = 636.0
 
 [editable path="BaseLevel/VaultDoor"]
+[editable path="BaseLevel/VentDoor"]
 [editable path="BaseLevel/VaultZone"]
 [editable path="BaseLevel/GetawayZone"]
 [editable path="Vent"]
