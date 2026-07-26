@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cojmwfjo5b4n1" path="res://obstacle/level1/lv1_room_gold.tscn" id="8_2dp2v"]
 [ext_resource type="PackedScene" uid="uid://bv8mavjb3ocne" path="res://obstacle/level1/lv1_room_home.tscn" id="9_tyi64"]
 [ext_resource type="PackedScene" uid="uid://bwwk6ou73lhym" path="res://obstacle/level1/lv1_frame.tscn" id="10_ukc3q"]
+[ext_resource type="FontFile" uid="uid://cf1moys5mvxrs" path="res://fonts/VT323-Regular.ttf" id="11_ojioq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lor06"]
 size = Vector2(20, 158)
@@ -38,6 +39,30 @@ shape = SubResource("RectangleShape2D_a3wvr")
 visible = false
 tile_map_data = PackedByteArray("AAAIAAAAAQAQAAoAAAAJAAAAAQAQAAoAAAAKAAAAAQAQAAoAAAALAAAAAQAQAAoAAAAHAAAAAQAQAAoAAAAGAAAAAQAQAAoAAAAFAAAAAQAQAAoAAAAEAAAAAQAQAAoAAAADAAAAAQAQAAoAAAACAAAAAQAQAAoAAAABAAAAAQAQAAoAAAAMAAAAAQAQAAoAAAANAAAAAQAQAAoAAAAOAAAAAQAQAAoAAAAPAAAAAQAQAAoAAAAQAAAAAQAQAAoAAAARAAAAAQAQAAoAAAASAAAAAQAQAAoAAAAAAAAAAQARAAoAABATAAAAAQARAAoAAAATAAEAAQARAAsAAAAAAAEAAQARAAsAABAAAAIAAQARAAsAAAAAAAMAAQARAAsAAAAAAAQAAQARAAsAAAAAAAUAAQARAAsAAAAAAAYAAQARAAsAAAAAAAcAAQARAAsAAAAAAAgAAQARAAsAAAAAAAkAAQARAAsAAAAAAAoAAQARAAsAAAAAAAsAAQARAAsAAAATAAIAAQARAAsAAAATAAMAAQARAAsAAAATAAQAAQARAAsAAAATAAUAAQARAAsAAAATAAYAAQARAAsAAAATAAcAAQARAAsAAAATAAgAAQARAAsAAAATAAkAAQARAAsAAAATAAoAAQARAAsAAAATAAsAAQARAAsAAAATAAwAAQARAAsAAAATAA0AAQARAAsAAAAAAAwAAQARAAsAAAAAAA0AAQARAAsAAAAAAA4AAQARAAoAADATAA4AAQARAAoAACASAA4AAQAQAAoAACABAA4AAQAQAAoAACACAA4AAQAQAAoAACADAA4AAQAQAAoAACAEAA4AAQAQAAoAACAFAA4AAQAQAAoAACAGAA4AAQAQAAoAACAHAA4AAQAQAAoAACAIAA4AAQAQAAoAACAJAA4AAQAQAAoAACAKAA4AAQAQAAoAACALAA4AAQAQAAoAACAMAA4AAQAQAAoAACANAA4AAQAQAAoAACAOAA4AAQAQAAoAACAPAA4AAQAQAAoAACAQAA4AAQAQAAoAACARAA4AAQAQAAoAACASAAUAAQAPAAMAAAAQAAUAAQAPAAQAAAAPAAUAAQALAAQAAAAOAAUAAQALAAQAAAANAAUAAQALAAQAAAAMAAUAAQALAAQAAAALAAUAAQALAAQAAAASAAgAAQAPAAMAAAAQAAgAAQAPAAIAAAAPAAgAAQALAAIAAAAOAAgAAQALAAIAAAANAAgAAQALAAIAAAAMAAgAAQALAAIAAAALAAgAAQALAAIAAAAKAAgAAQAKAAIAAAAKAAkAAQAKAAMAAAAKAAoAAQAKAAMAAAAKAAsAAQAKAAMAAAAKAAwAAQAKAAMAAAAKAA0AAQAKAAMAAAAHAA0AAQAPAAMAAAAHAAwAAQAPAAMAAAAHAAsAAQAPAAMAAAAHAAoAAQAPAAMAAAAHAAkAAQAPAAMAAAAHAAgAAQAPAAMAAAAGAAgAAQAHAAQAAAAFAAgAAQAHAAQAAAAEAAgAAQAHAAQAAAADAAgAAQABAAQAAAADAAcAAQABAAMAAAADAAYAAQABAAMAAAADAAUAAQABAAMAAAADAAQAAQABAAMAAAAKAAUAAQALAAQAAAAJAAUAAQALAAQAAAAIAAUAAQALAAQAAAAHAAUAAQALAAQAAAAGAAUAAQAJAAIAAEADAAMAAQABAAIAAAAGAAMAAQAJAAIAAAAGAAQAAQAJAAMAAAAEAAMAAQACAAIAAAAFAAMAAQACAAIAAAAQAAQAAQAPAAMAAAAQAAMAAQAKAAIAAAAQAAkAAQAPAAMAAAAQAAoAAQAKAAQAAAASAAMAAQAPAAIAAAASAAQAAQAPAAMAAAASAAYAAQAPAAMAAAASAAcAAQAPAAMAAAASAAkAAQAPAAMAAAASAAoAAQAPAAQAAAARAAMAAQAOAAIAAAARAAoAAQANAAQAAAA=")
 
+[node name="StaticObstacle" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="1" unique_id=621537188 instance=ExtResource("5_06f85")]
+position = Vector2(963.00006, 721)
+scale = Vector2(0.82, 0.82)
+
+[node name="StaticObstacle2" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="2" unique_id=1747636848 instance=ExtResource("6_ukc3q")]
+position = Vector2(781, 215)
+scale = Vector2(0.82, 0.82)
+
+[node name="StaticObstacle3" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="3" unique_id=1656261525 instance=ExtResource("7_ojioq")]
+position = Vector2(331, 744)
+scale = Vector2(0.82, 0.82)
+
+[node name="StaticObstacle4" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="4" unique_id=340578502 instance=ExtResource("8_2dp2v")]
+position = Vector2(357.00003, 356)
+scale = Vector2(0.82, 0.82)
+
+[node name="StaticObstacle5" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="5" unique_id=1925977123 instance=ExtResource("9_tyi64")]
+position = Vector2(1124, 455)
+scale = Vector2(0.82, 0.82)
+
+[node name="StaticObstacle6" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="6" unique_id=740228720 instance=ExtResource("10_ukc3q")]
+position = Vector2(663, 458)
+scale = Vector2(0.82, 0.82)
+
 [node name="MoneyBag" parent="." index="7" unique_id=68727245 instance=ExtResource("4_oaunk")]
 position = Vector2(371, 288)
 
@@ -47,36 +72,55 @@ position = Vector2(373, 396)
 [node name="MoneyBag3" parent="." index="9" unique_id=129272643 instance=ExtResource("4_oaunk")]
 position = Vector2(374, 496)
 
-[node name="Quota" parent="." index="11" unique_id=284631434]
-position = Vector2(-240, 27)
-
-[node name="StaticObstacle" parent="." index="12" unique_id=621537188 instance=ExtResource("5_06f85")]
-position = Vector2(963.00006, 721)
-scale = Vector2(0.82, 0.82)
-
-[node name="StaticObstacle2" parent="." index="13" unique_id=1747636848 instance=ExtResource("6_ukc3q")]
-position = Vector2(781, 215)
-scale = Vector2(0.82, 0.82)
-
-[node name="StaticObstacle3" parent="." index="14" unique_id=1656261525 instance=ExtResource("7_ojioq")]
-position = Vector2(331, 744)
-scale = Vector2(0.82, 0.82)
-
-[node name="StaticObstacle4" parent="." index="15" unique_id=340578502 instance=ExtResource("8_2dp2v")]
-position = Vector2(357.00003, 356)
-scale = Vector2(0.82, 0.82)
-
-[node name="StaticObstacle5" parent="." index="16" unique_id=1925977123 instance=ExtResource("9_tyi64")]
-position = Vector2(1124, 455)
-scale = Vector2(0.82, 0.82)
-
-[node name="StaticObstacle6" parent="." index="17" unique_id=740228720 instance=ExtResource("10_ukc3q")]
-position = Vector2(663, 458)
-scale = Vector2(0.82, 0.82)
-
-[node name="Cursor" parent="." index="18" unique_id=1176993969]
+[node name="Cursor" parent="." index="10" unique_id=1176993969]
 position = Vector2(606, 732)
+
+[node name="Countdown" parent="." index="11" unique_id=416416051]
+position = Vector2(667, 25)
+
+[node name="TutText" type="RichTextLabel" parent="." index="12" unique_id=643587237]
+offset_left = 179.0
+offset_top = 627.0
+offset_right = 482.0
+offset_bottom = 810.0
+theme_override_fonts/normal_font = ExtResource("11_ojioq")
+theme_override_font_sizes/normal_font_size = 16
+text = "- Move your mouse
+ 
+- Steal data from the vault by dragging it out
+
+- Deposit stolen data to the drive
+
+- Entering the vault will start the countdown
+
+- Touching a wall will start the countdown"
+
+[node name="VaultLabel" type="RichTextLabel" parent="." index="13" unique_id=962005436]
+offset_left = 328.0
+offset_top = 100.0
+offset_right = 383.0
+offset_bottom = 129.0
+theme_override_fonts/normal_font = ExtResource("11_ojioq")
+theme_override_font_sizes/normal_font_size = 27
+text = "Vault"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DriveLabel" type="RichTextLabel" parent="." index="14" unique_id=1171148509]
+offset_left = 1102.0
+offset_top = 181.0
+offset_right = 1157.0
+offset_bottom = 210.0
+theme_override_fonts/normal_font = ExtResource("11_ojioq")
+theme_override_font_sizes/normal_font_size = 27
+text = "Drive"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quota" parent="." index="15" unique_id=284631434]
+position = Vector2(504.99994, 75)
 
 [editable path="GetawayZone"]
 [editable path="VaultZone"]
+[editable path="Countdown"]
 [editable path="Quota"]
