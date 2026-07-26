@@ -36,6 +36,11 @@ func _update_door(trigger_node: Node2D, new_power: bool) -> void:
 	static_body.collision_layer = int(is_closed) #layer one is wall layer
 	update_visual()
 	
+	if is_closed:
+		ez_sound.play_sfx("earn2.wav")
+	else:
+		ez_sound.play_sfx("earn.wav")
+	
 	# ping other layers
 	#connected_button.trigger_zone.process_mode = Node.PROCESS_MODE_DISABLED
 	#connected_button.trigger_zone.set_deferred("process_mode", Node.PROCESS_MODE_INHERIT)

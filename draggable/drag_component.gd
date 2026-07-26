@@ -86,6 +86,7 @@ func _receive_release(cursor: Cursor) -> void:
 func _on_click_area_body_entered(body: PhysicsBody2D) -> void:
 	if body is Cursor:
 		body.click.connect(_receive_click.bind(body))
+		ez_sound.play_sfx("catch.wav")
 		
 func _on_click_area_body_exited(body: PhysicsBody2D) -> void:
 	if body is Cursor:

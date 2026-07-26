@@ -39,6 +39,7 @@ func _handle_click_event(event: InputEventMouseButton) -> void:
 	if event.button_index != 1:
 		return
 	elif event.is_pressed():
+		ez_sound.play_sfx("restock.wav")
 		click.emit()
 	else:
 		release.emit()
