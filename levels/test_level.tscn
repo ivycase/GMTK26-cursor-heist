@@ -171,7 +171,9 @@ script = ExtResource("11_wkb0e")
 
 [node name="Camera" parent="." unique_id=2117175 instance=ExtResource("11_paa45")]
 position = Vector2(242, 370)
-rotation = -0.2617994
+delay = 2.5
+rotate_speed = 0.2
+ease_curve = -5.0
 
 [editable path="VaultZone"]
 [editable path="GetawayZone"]

@@ -10,7 +10,7 @@ signal picked
 @export var mass: float = 1.0
 @export var max_force: float = 500.0
 @export var drag_speed: float = 10.0
-@export_range(-2.0, 2.0) var drag_curve: float = 1.0
+@export_range(-5.0, 5.0) var drag_curve: float = 1.0
 @export var visual: Node2D
 @export var visual_resize_scale: float = 1.2
 @export var is_activated: bool
@@ -43,8 +43,8 @@ func _physics_process(delta: float) -> void:
 	var force: Vector2 = mass * ((mouse_pos - dragged_node.global_position) * ease(delta, drag_curve) * drag_speed)
 	dragged_node.apply_impulse(clamp(force, Vector2.ONE * -max_force, Vector2.ONE * max_force))
 	#dragged_node.global_position = dragged_node.global_position.lerp(mouse_pos, ease(delta, drag_curve) * drag_speed)
-	var rotate_to: float = dragged_node.global_position.angle_to(mouse_pos)
-	dragged_node.rotation = lerpf(dragged_node.rotation, rotate_to, ease(delta * drag_speed, drag_curve))
+	#var rotate_to: float = dragged_node.global_position.angle_to(mouse_pos)
+	#dragged_node.rotation = lerpf(dragged_node.rotation, rotate_to, ease(delta * drag_speed, drag_curve))
 
 func toggle_drag_visual(do_visual: bool) -> void:
 	if tween:

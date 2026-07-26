@@ -16,7 +16,7 @@ gravity_scale = 0.0
 linear_damp_mode = 1
 linear_damp = 10.0
 angular_damp_mode = 1
-angular_damp = 4.0
+angular_damp = 10.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1647803655]
 shape = SubResource("RectangleShape2D_2crkd")
