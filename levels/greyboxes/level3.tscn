@@ -117,7 +117,7 @@ scale = Vector2(0.99999994, 0.99999994)
 
 [node name="Camera" parent="." index="19" unique_id=2117175 node_paths=PackedStringArray("look_targets") instance=ExtResource("8_dnb1p")]
 position = Vector2(607, 540)
-rotation = 2.3561945
+rotation = 2.838294
 look_targets = [NodePath("../Marker2D")]
 
 [node name="Camera2" parent="." index="20" unique_id=572009126 instance=ExtResource("8_dnb1p")]
