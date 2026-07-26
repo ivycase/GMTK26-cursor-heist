@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ciacjim6jjcc0"]
+
+[ext_resource type="PackedScene" uid="uid://ds640xyp6nucv" path="res://obstacle/static/static_obstacle.tscn" id="1_r84se"]
+[ext_resource type="Texture2D" uid="uid://bfrra6rp1omvr" path="res://tileset/level5 tilemap.png" id="2_2g6iv"]
+
+[node name="StaticObstacle" unique_id=621537188 instance=ExtResource("1_r84se")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1879704494]
+texture = ExtResource("2_2g6iv")
+region_enabled = true
+region_rect = Rect2(0, 0, 256, 896)
+
+[node name="CollisionPolygon2D" parent="." index="2" unique_id=1454056980]
+polygon = PackedVector2Array(-120, -432, 104, -432, 96, 128, 72, 128, 72, 144, 48, 168, 8, 168, -16, 192, -16, 424, -144, 424, -136, -432)
