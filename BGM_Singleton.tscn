@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ch7se1hg1hbji"]
 
-[ext_resource type="AudioStream" uid="uid://yu4fknipqeuv" path="res://sound/Cut Trance-bassy.wav" id="1_rboau"]
-[ext_resource type="AudioStream" uid="uid://lva6d76apjph" path="res://sound/Cut Trance-fast.wav" id="2_4pg3m"]
+[ext_resource type="AudioStream" uid="uid://xxudc3ydmpjn" path="res://sound/cursout phase1.wav" id="1_rboau"]
+[ext_resource type="AudioStream" uid="uid://dowyya4t0htah" path="res://sound/cursout phase2.wav" id="2_4pg3m"]
 
 [sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_riqys"]
 stream_count = 2
