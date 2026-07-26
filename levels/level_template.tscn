@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://r4173am4535v" path="res://countdown/countdown.tscn" id="2_vgt4e"]
 [ext_resource type="PackedScene" uid="uid://bnxleth520de3" path="res://quota/quota.tscn" id="4_13k7l"]
 [ext_resource type="PackedScene" uid="uid://bvvebp52vw0ty" path="res://cursor/cursor.tscn" id="5_8xmsw"]
+[ext_resource type="FontFile" uid="uid://cf1moys5mvxrs" path="res://fonts/VT323-Regular.ttf" id="6_glpk1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8xmsw"]
 shader = ExtResource("1_yglgk")
@@ -55,9 +56,23 @@ tile_set = ExtResource("1_gup2b")
 rendering_quadrant_size = 8
 collision_enabled = false
 
+[node name="Cursor" parent="." unique_id=1176993969 instance=ExtResource("5_8xmsw")]
+
 [node name="Countdown" parent="." unique_id=416416051 instance=ExtResource("2_vgt4e")]
-position = Vector2(641, 927)
+position = Vector2(508, 28)
+
+[node name="TimerLabel" parent="Countdown" index="1" unique_id=2013573632]
+theme_override_fonts/normal_font = ExtResource("6_glpk1")
 
 [node name="Quota" parent="." unique_id=284631434 instance=ExtResource("4_13k7l")]
+scale = Vector2(1, 0.9981952)
 
-[node name="Cursor" parent="." unique_id=1176993969 instance=ExtResource("5_8xmsw")]
+[node name="ScoreLabel" parent="Quota" index="0" unique_id=820636205]
+offset_left = -207.0
+offset_top = 221.39963
+offset_right = 1453.0
+offset_bottom = 857.39966
+theme_override_fonts/normal_font = ExtResource("6_glpk1")
+
+[editable path="Countdown"]
+[editable path="Quota"]

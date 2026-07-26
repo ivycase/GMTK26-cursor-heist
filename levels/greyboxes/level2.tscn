@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://bm3sv8nykmkki" path="res://obstacle/level2/lv2_room_home.tscn" id="7_5ii2t"]
 [ext_resource type="PackedScene" uid="uid://co6gom0ie34uh" path="res://draggable/money_bag.tscn" id="7_x56qf"]
 [ext_resource type="PackedScene" uid="uid://cn227wi10bo6q" path="res://obstacle/level2/lv2_frame.tscn" id="8_5ii2t"]
+[ext_resource type="FontFile" uid="uid://cf1moys5mvxrs" path="res://fonts/VT323-Regular.ttf" id="15_f0m67"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1dg4"]
 size = Vector2(273, 20)
@@ -89,8 +90,44 @@ position = Vector2(944, 641)
 [node name="MoneyBag3" parent="." index="11" unique_id=2116588940 instance=ExtResource("7_x56qf")]
 position = Vector2(1034, 583)
 
-[node name="Cursor" parent="." index="14" unique_id=1176993969]
+[node name="Cursor" parent="." index="12" unique_id=1176993969]
 position = Vector2(1157, 417)
+
+[node name="TimerLabel" parent="Countdown" parent_id_path=PackedInt32Array(416416051) index="1" unique_id=2013573632]
+offset_left = -149.0
+offset_top = -83.0
+offset_right = 355.0
+offset_bottom = 51.0
+
+[node name="ScoreLabel" parent="Quota" parent_id_path=PackedInt32Array(284631434) index="0" unique_id=820636205]
+offset_left = -617.0
+offset_top = 347.62738
+offset_right = 1043.0
+offset_bottom = 983.6274
+
+[node name="TutText" type="RichTextLabel" parent="." index="15" unique_id=1176876598]
+offset_left = 435.0
+offset_top = 573.0
+offset_right = 776.0
+offset_bottom = 772.0
+theme_override_fonts/normal_font = ExtResource("15_f0m67")
+theme_override_font_sizes/normal_font_size = 21
+text = "- Drag boxes onto buttons to open doors"
+
+[node name="DriveLabel" type="RichTextLabel" parent="." index="16" unique_id=1940748136]
+offset_left = 470.0
+offset_top = 630.0
+offset_right = 702.0
+offset_bottom = 720.0
+theme_override_fonts/normal_font = ExtResource("15_f0m67")
+theme_override_font_sizes/normal_font_size = 27
+text = "<-  Drive
+
+Vault ->"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [editable path="VaultZone"]
 [editable path="VaultZone/GetawayZone"]
+[editable path="Countdown"]
+[editable path="Quota"]
