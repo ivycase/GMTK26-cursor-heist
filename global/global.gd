@@ -38,7 +38,6 @@ func release_mouse(releaser: Node) -> bool:
 	
 func level_transition() -> void:
 	var next_level: int = current_level+1
-	print(next_level)
 	EasyTransition.transition_to("res://levels/level" + str(next_level) + ".tscn")
 	current_level = next_level
 
