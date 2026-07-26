@@ -14,14 +14,14 @@ size = Vector2(60, 60)
 radius = 38.013157
 
 [node name="MoneyBag" type="RigidBody2D" unique_id=68727245]
-modulate = Color(0.62, 1, 0.94299996, 1)
 collision_layer = 4
 collision_mask = 41
 gravity_scale = 0.0
 lock_rotation = true
-linear_damp = 20.0
+linear_damp_mode = 1
+linear_damp = 10.0
 angular_damp_mode = 1
-angular_damp = 4.0
+angular_damp = 10.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1647803655]
 shape = SubResource("RectangleShape2D_2crkd")
@@ -30,8 +30,6 @@ shape = SubResource("RectangleShape2D_2crkd")
 script = ExtResource("1_bx6xx")
 click_area = NodePath("../ClickArea")
 dragged_node = NodePath("..")
-mass = 20.0
-max_force = 2000.0
 drag_speed = 100.0
 drag_curve = 0.5
 visual = NodePath("../Sprite2D")
