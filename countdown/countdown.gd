@@ -17,6 +17,11 @@ func start_countdown() -> void:
 	
 func end_countdown() -> void:
 	print("times up buster")
-	#Global.level_restart()
-	#Global.level_transition()
+	
+	if Global.active_quota.check_win():
+		Global.level_transition()
+		
+	else:
+		Global.level_restart()
+	
 	timer.paused = true
