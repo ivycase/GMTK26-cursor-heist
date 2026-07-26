@@ -54,7 +54,7 @@ position = Vector2(944, 641)
 position = Vector2(1034, 583)
 
 [node name="Cursor" parent="." index="13" unique_id=1176993969]
-position = Vector2(1157, 425)
+position = Vector2(1157, 417)
 
 [editable path="VaultZone"]
 [editable path="VaultZone/GetawayZone"]

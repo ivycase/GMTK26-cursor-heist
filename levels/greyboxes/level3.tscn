@@ -71,6 +71,9 @@ position = Vector2(-1, -181)
 [node name="MoneyBag5" parent="VaultZone2" index="6" unique_id=1551133187 instance=ExtResource("7_kt1c5")]
 position = Vector2(83, -86)
 
+[node name="Cursor" parent="." index="12" unique_id=1176993969]
+position = Vector2(117, 645)
+
 [editable path="GetawayZone"]
 [editable path="VaultZone"]
 [editable path="VaultZone2"]
