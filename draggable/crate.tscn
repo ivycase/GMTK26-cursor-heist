@@ -32,7 +32,8 @@ is_activated = true
 metadata/_custom_type_script = "uid://msdiuwyqonfp"
 
 [node name="ClickArea" type="Area2D" parent="." unique_id=204969551]
-collision_mask = 7
+collision_layer = 64
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ClickArea" unique_id=1780010406]
 shape = SubResource("RectangleShape2D_71qf6")

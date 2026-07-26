@@ -8,11 +8,11 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_7axr2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1oxqp"]
-radius = 5.0
+radius = 11.0
 
 [node name="Cursor" type="CharacterBody2D" unique_id=1176993969 node_paths=PackedStringArray("interact_area", "sprite")]
 collision_layer = 2
-collision_mask = 3
+collision_mask = 65
 motion_mode = 1
 script = ExtResource("1_isnha")
 interact_area = NodePath("AlarmZone")
@@ -34,7 +34,7 @@ trigger_zone = NodePath("../AlarmZone")
 [node name="AlarmZone" parent="." unique_id=1968612249 instance=ExtResource("2_1oxqp")]
 collision_layer = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AlarmZone" unique_id=1679376448]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="AlarmZone" unique_id=1679376448]
 shape = SubResource("CircleShape2D_1oxqp")
 
 [editable path="AlarmZone"]
