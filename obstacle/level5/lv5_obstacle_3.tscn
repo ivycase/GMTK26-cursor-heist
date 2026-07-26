@@ -7,6 +7,7 @@
 
 [node name="Sprite2D" parent="." index="0" unique_id=1879704494]
 texture = ExtResource("2_6a87c")
+region_enabled = true
 region_rect = Rect2(1024, 0, 256, 256)
 
 [node name="CollisionPolygon2D" parent="." index="2" unique_id=1454056980]
