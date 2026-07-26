@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://1x4le7m3on6v"]
+
+[ext_resource type="PackedScene" uid="uid://c3485p1m5s7bl" path="res://3d_waddahell/computa_modified.tscn" id="1_ua4pr"]
+[ext_resource type="PackedScene" uid="uid://bqk05g0alrih4" path="res://levels/greyboxes/level1.tscn" id="2_6w4sv"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ua4pr"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0.045419253, 0.021014769, 0.021954348, 1)
+ground_bottom_color = Color(0.10084503, 0.0032270958, 0.006985419, 1)
+ground_horizon_color = Color(0.045419253, 0.021014769, 0.021954348, 1)
+energy_multiplier = 2.3
+
+[sub_resource type="Sky" id="Sky_6w4sv"]
+sky_material = SubResource("ProceduralSkyMaterial_ua4pr")
+
+[sub_resource type="Environment" id="Environment_17yd1"]
+background_mode = 2
+sky = SubResource("Sky_6w4sv")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_g4v7s"]
+size = Vector2(4, 3)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_17yd1"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ua4pr"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_17yd1")
+emission_energy_multiplier = 1.41
+
+[node name="3dScene" type="Node3D" unique_id=1397351771]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=193814434]
+environment = SubResource("Environment_17yd1")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1932481407]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+light_color = Color(1, 0.8499532, 0.82614595, 1)
+shadow_enabled = true
+
+[node name="Computa" parent="." unique_id=602512077 instance=ExtResource("1_ua4pr")]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1143882757]
+transform = Transform3D(-4.3711392e-08, 0, 1.0000001, 0, 1, 0, -1.0000001, 0, -4.3711392e-08, 1.789, -0.055, 0)
+fov = 69.4
+
+[node name="Screen" type="MeshInstance3D" parent="." unique_id=1057717836]
+transform = Transform3D(-2.4478377e-08, 0.112, -2.4478377e-08, 0, -4.8956754e-09, -0.56, -0.56, -4.8956754e-09, 1.0699839e-15, 0.13564152, 0, 0)
+mesh = SubResource("PlaneMesh_g4v7s")
+surface_material_override/0 = SubResource("StandardMaterial3D_ua4pr")
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1456566504]
+handle_input_locally = false
+size = Vector2i(1280, 960)
+
+[node name="LevelTemplate2" parent="SubViewport" unique_id=1324624073 instance=ExtResource("2_6w4sv")]
