@@ -11,4 +11,4 @@ region_enabled = true
 region_rect = Rect2(512, 576, 320, 640)
 
 [node name="CollisionPolygon2D" parent="." index="2" unique_id=1454056980]
-polygon = PackedVector2Array(-136, -304, -136, 304, -72, 304, -72, -256, 128, -256, 128, 256, 136, 256, 136, -304)
+polygon = PackedVector2Array(-87, -303, -87, 256, -69, 251, -72, -256, 128, -256, 128, 256, 136, 256, 136, -304)
