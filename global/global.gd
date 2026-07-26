@@ -4,17 +4,11 @@ signal update_score(old_score: int, new_score: int)
 
 var mouse_holder: Node
 
-var level_score: int = 0
-var level_quota: int = 500
-
 var current_level: int = 1
 
 var active_cursor: Cursor
 var active_countdown: Countdown
-
-func add_score(amount: int) -> void:
-	level_score += amount
-	update_score.emit(level_score - amount, level_score)
+var active_quota: Quota
 
 func get_cursor_position() -> Vector2:
 	return active_cursor.global_position

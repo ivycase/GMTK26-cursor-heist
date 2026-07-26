@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bnxleth520de3"]
+
+[ext_resource type="Script" uid="uid://cx0ng3qdgbp5o" path="res://quota/quota.gd" id="1_y7k4h"]
+
+[node name="Quota" type="Node2D" unique_id=284631434]
+script = ExtResource("1_y7k4h")
