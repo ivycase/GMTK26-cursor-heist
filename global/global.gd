@@ -44,3 +44,6 @@ func level_transition() -> void:
 	print(next_level)
 	EasyTransition.transition_to("res://levels/level" + str(next_level) + ".tscn")
 	current_level = next_level
+
+func level_restart() -> void: 
+	EasyTransition.transition_to("res://levels/level" + str(current_level) + ".tscn")
