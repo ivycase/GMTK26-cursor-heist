@@ -27,6 +27,7 @@ gdscript/warnings/untyped_declaration=2
 
 window/size/viewport_width=1280
 window/size/viewport_height=960
+window/size/mode=3
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
@@ -43,6 +44,7 @@ version_control/autoload_on_startup=true
 2d_physics/layer_4="Getaway Zone"
 2d_physics/layer_5="Alarm"
 2d_physics/layer_6="Button"
+2d_physics/layer_7="Clickable"
 
 [physics]
 
