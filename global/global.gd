@@ -10,6 +10,9 @@ var active_cursor: Cursor
 var active_countdown: Countdown
 var active_quota: Quota
 
+func add_score(amount: int) -> void:
+	active_quota.add_score(amount)
+
 func get_cursor_position() -> Vector2:
 	return active_cursor.global_position
 
