@@ -3,9 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://ds640xyp6nucv" path="res://obstacle/static/static_obstacle.tscn" id="1_uqrm1"]
 [ext_resource type="Texture2D" uid="uid://1cyhow3d82mf" path="res://tileset/level1 tilemap.png" id="2_0tp1f"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_booa5"]
-size = Vector2(392, 544)
-
 [node name="StaticObstacle" unique_id=621537188 instance=ExtResource("1_uqrm1")]
 
 [node name="Sprite2D" parent="." index="0" unique_id=1879704494]
@@ -16,4 +13,6 @@ region_rect = Rect2(640, 768, 576, 448)
 
 [node name="CollisionShape2D" parent="." index="1" unique_id=1603633120]
 position = Vector2(-4, 0)
-shape = SubResource("RectangleShape2D_booa5")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="2" unique_id=1778362448]
+polygon = PackedVector2Array(-200, -272, 192, -272, 192, 24, 144, 24, 144, -152, -56, -152, -56, 232, 192, 232, 192, 272, -200, 272)
