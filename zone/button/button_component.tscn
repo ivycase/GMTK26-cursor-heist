@@ -1,13 +1,19 @@
 [gd_scene format=3 uid="uid://hwnx7dn1x7kb"]
 
 [ext_resource type="Script" uid="uid://d0ahkkxcsai76" path="res://zone/button/button_component.gd" id="1_wcpxd"]
+[ext_resource type="Texture2D" uid="uid://boi512qflrpx6" path="res://art/props/key.png" id="2_d2htj"]
 [ext_resource type="Script" uid="uid://bv21js172p7d7" path="res://zone/zone.gd" id="2_uf74s"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d2htj"]
+radius = 22.203604
 
 [node name="ButtonComponent" type="Node2D" unique_id=1835980614 node_paths=PackedStringArray("trigger_zone")]
 script = ExtResource("1_wcpxd")
 trigger_zone = NodePath("ButtonZone")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1843512052]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_d2htj")
 
 [node name="ButtonZone" type="Area2D" parent="." unique_id=630908684]
 collision_layer = 32

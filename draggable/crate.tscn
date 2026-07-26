@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b61hrbhkewkux"]
 
 [ext_resource type="Script" uid="uid://msdiuwyqonfp" path="res://draggable/drag_component.gd" id="1_2crkd"]
-[ext_resource type="Texture2D" uid="uid://camusn6f0yq2x" path="res://icon.svg" id="2_71qf6"]
+[ext_resource type="Texture2D" uid="uid://yy6d8tuab1j7" path="res://art/props/lock.png" id="2_71qf6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2crkd"]
 size = Vector2(40, 40)
@@ -39,6 +39,5 @@ collision_mask = 2
 shape = SubResource("RectangleShape2D_71qf6")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=785617651]
-modulate = Color(1, 0.54846776, 0.99069136, 1)
 scale = Vector2(0.32, 0.32)
 texture = ExtResource("2_71qf6")
