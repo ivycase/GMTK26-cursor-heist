@@ -17,44 +17,44 @@ size = Vector2(20, 115)
 
 [node name="LevelTemplate" unique_id=1324624073 instance=ExtResource("1_y0xe8")]
 
-[node name="BackgroundLayer" parent="Tiles" parent_id_path=PackedInt32Array(1062066135) index="0" unique_id=864770364]
+[node name="BackgroundLayer" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="0" unique_id=864770364]
 tile_map_data = PackedByteArray("AAAIAAAAAQAQAAoAAAAJAAAAAQAQAAoAAAAKAAAAAQAQAAoAAAALAAAAAQAQAAoAAAAHAAAAAQAQAAoAAAAGAAAAAQAQAAoAAAAFAAAAAQAQAAoAAAAEAAAAAQAQAAoAAAADAAAAAQAQAAoAAAACAAAAAQAQAAoAAAABAAAAAQAQAAoAAAAMAAAAAQAQAAoAAAANAAAAAQAQAAoAAAAOAAAAAQAQAAoAAAAPAAAAAQAQAAoAAAAQAAAAAQAQAAoAAAARAAAAAQAQAAoAAAASAAAAAQAQAAoAAAAAAAAAAQARAAoAABATAAAAAQARAAoAAAATAAEAAQARAAsAABAAAAEAAQARAAsAAAAAAAIAAQARAAsAAAAAAAMAAQARAAsAAAAAAAQAAQARAAsAAAAAAAUAAQARAAsAAAAAAAYAAQARAAsAAAAAAAcAAQARAAsAAAAAAAgAAQARAAsAAAAAAAkAAQARAAsAAAAAAAoAAQARAAsAAAAAAAsAAQARAAsAAAATAAIAAQARAAsAABATAAMAAQARAAsAABATAAQAAQARAAsAABATAAUAAQARAAsAABATAAYAAQARAAsAABATAAcAAQARAAsAABATAAgAAQARAAsAABATAAkAAQARAAsAABATAAoAAQARAAsAABATAAsAAQARAAsAABATAAwAAQARAAsAABATAA0AAQARAAsAABAAAAwAAQARAAsAAAAAAA0AAQARAAsAAAAAAA4AAQARAAoAADATAA4AAQARAAoAACASAA4AAQAQAAoAACABAA4AAQAQAAoAACACAA4AAQAQAAoAACADAA4AAQAQAAoAACAEAA4AAQAQAAoAACAFAA4AAQAQAAoAACAGAA4AAQAQAAoAACAHAA4AAQAQAAoAACAIAA4AAQAQAAoAACAJAA4AAQAQAAoAACAKAA4AAQAQAAoAACALAA4AAQAQAAoAACAMAA4AAQAQAAoAACANAA4AAQAQAAoAACAOAA4AAQAQAAoAACAPAA4AAQAQAAoAACAQAA4AAQAQAAoAACARAA4AAQAQAAoAACABAAUAAQANAAQAAAACAAUAAQANAAQAAAADAAUAAQANAAQAAAAEAAUAAQANAAQAAAAFAAUAAQANAAQAAAAGAAUAAQAPAAQAAAANAAUAAQAKAAQAAAAOAAUAAQALAAQAAAAPAAUAAQALAAQAAAAQAAUAAQALAAQAAAARAAUAAQALAAQAAAASAAUAAQALAAQAAAAHAAEAAQALAAIAAAAIAAEAAQALAAIAAAAMAAEAAQALAAIAAAALAAEAAQALAAIAAAAKAAEAAQALAAIAAAAJAAEAAQALAAIAAAANAAIAAQAKAAMAAAANAAMAAQAKAAMAAAANAAQAAQAKAAMAAAAGAAIAAQAKAAMAAAAGAAMAAQAKAAMAAAAGAAQAAQAKAAMAAAAGAAEAAQAKAAIAAAANAAEAAQAPAAIAAAAJAAUAAQAMAAQAAAAKAAUAAQAMAAQAAAAIAAUAAQAKAAQAAAALAAUAAQAPAAQAAAAIAAMAAQAKAAIAAAAJAAMAAQALAAIAAAAKAAMAAQALAAIAAAALAAMAAQAPAAIAAAABAAcAAQAMAAQAAAACAAcAAQAMAAQAAAADAAcAAQAMAAQAAAAEAAcAAQAMAAQAAAAFAAcAAQAMAAQAAAAGAAcAAQAMAAQAAAAHAAcAAQAMAAQAAAAIAAcAAQAMAAQAAAAJAAcAAQAMAAQAAAAKAAcAAQAMAAQAAAALAAcAAQAMAAQAAAAMAAcAAQAMAAQAAAANAAcAAQAMAAQAAAAOAAcAAQAMAAQAAAAQAAcAAQAMAAQAAAARAAcAAQAMAAQAAAASAAcAAQAMAAQAAAANAAoAAQACAAQAAAAOAAoAAQAFAAQAAAAPAAoAAQAFAAQAAAAQAAoAAQAIAAQAAAAMAAgAAQABAAMAAAARAAgAAQAJAAMAAAAMAAoAAQABAAQAAAARAAoAAQAJAAQAAAAMAAkAAQABAAMAAAARAAkAAQAJAAMAAAALAAQAAQAPAAMAAAAIAAQAAQAKAAMAAAA=")
-
-[node name="Crate" parent="Tiles" parent_id_path=PackedInt32Array(1062066135) index="2" unique_id=829496544 instance=ExtResource("2_r40rm")]
-position = Vector2(893, 428)
-
-[node name="DoorComponent" parent="Tiles" parent_id_path=PackedInt32Array(1062066135) index="3" unique_id=1917155962 node_paths=PackedStringArray("connected_button") instance=ExtResource("3_8tcn8")]
-position = Vector2(1001, 482)
-connected_button = NodePath("../ButtonComponent")
-
-[node name="ButtonComponent" parent="Tiles" parent_id_path=PackedInt32Array(1062066135) index="4" unique_id=1835980614 instance=ExtResource("4_r6vdu")]
-position = Vector2(475, 162)
-
-[node name="Cursor" parent="Tiles" parent_id_path=PackedInt32Array(1062066135) index="5" unique_id=1176993969 instance=ExtResource("5_r6vdu")]
-position = Vector2(117, 410)
-
-[node name="MoneyBag" parent="Tiles" parent_id_path=PackedInt32Array(1062066135) index="6" unique_id=68727245 instance=ExtResource("6_e8p81")]
-position = Vector2(869, 570)
-
-[node name="MoneyBag2" parent="Tiles" parent_id_path=PackedInt32Array(1062066135) index="7" unique_id=1324933932 instance=ExtResource("6_e8p81")]
-position = Vector2(944, 641)
-
-[node name="MoneyBag3" parent="Tiles" parent_id_path=PackedInt32Array(1062066135) index="8" unique_id=2116588940 instance=ExtResource("6_e8p81")]
-position = Vector2(1034, 583)
 
 [node name="VaultZone" parent="." index="3" unique_id=1968612249 instance=ExtResource("7_55gdq")]
 position = Vector2(990, 514)
 
-[node name="CollisionShape2D" parent="VaultZone" index="1" unique_id=1240688880]
+[node name="CollisionShape2D" parent="VaultZone" index="1" unique_id=1235712958]
 position = Vector2(-29.5, -9)
 shape = SubResource("RectangleShape2D_g1dg4")
 
 [node name="GetawayZone" parent="VaultZone" index="2" unique_id=600129247 instance=ExtResource("8_crte6")]
 position = Vector2(212, -96)
 
-[node name="CollisionShape2D" parent="VaultZone/GetawayZone" index="1" unique_id=1240688880]
+[node name="CollisionShape2D" parent="VaultZone/GetawayZone" index="1" unique_id=956841795]
 position = Vector2(5, 3.5)
 shape = SubResource("RectangleShape2D_s1bpp")
+
+[node name="Crate" parent="." index="6" unique_id=829496544 instance=ExtResource("2_r40rm")]
+position = Vector2(893, 428)
+
+[node name="DoorComponent" parent="." index="7" unique_id=1917155962 node_paths=PackedStringArray("connected_button") instance=ExtResource("3_8tcn8")]
+position = Vector2(1001, 482)
+connected_button = NodePath("../ButtonComponent")
+
+[node name="ButtonComponent" parent="." index="8" unique_id=1835980614 instance=ExtResource("4_r6vdu")]
+position = Vector2(475, 162)
+
+[node name="Cursor" parent="." index="9" unique_id=1176993969 instance=ExtResource("5_r6vdu")]
+position = Vector2(117, 410)
+
+[node name="MoneyBag" parent="." index="10" unique_id=68727245 instance=ExtResource("6_e8p81")]
+position = Vector2(869, 570)
+
+[node name="MoneyBag2" parent="." index="11" unique_id=1324933932 instance=ExtResource("6_e8p81")]
+position = Vector2(944, 641)
+
+[node name="MoneyBag3" parent="." index="12" unique_id=2116588940 instance=ExtResource("6_e8p81")]
+position = Vector2(1034, 583)
 
 [editable path="VaultZone"]
 [editable path="VaultZone/GetawayZone"]
