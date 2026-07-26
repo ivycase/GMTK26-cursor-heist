@@ -47,11 +47,8 @@ position = Vector2(373, 396)
 [node name="MoneyBag3" parent="." index="9" unique_id=129272643 instance=ExtResource("4_oaunk")]
 position = Vector2(374, 496)
 
-[node name="Quota" parent="." index="10" unique_id=284631434]
+[node name="Quota" parent="." index="11" unique_id=284631434]
 position = Vector2(-240, 27)
-
-[node name="Cursor" parent="." index="11" unique_id=1176993969]
-position = Vector2(606, 732)
 
 [node name="StaticObstacle" parent="." index="12" unique_id=621537188 instance=ExtResource("5_06f85")]
 position = Vector2(963.00006, 721)
@@ -76,6 +73,9 @@ scale = Vector2(0.82, 0.82)
 [node name="StaticObstacle6" parent="." index="17" unique_id=740228720 instance=ExtResource("10_ukc3q")]
 position = Vector2(663, 458)
 scale = Vector2(0.82, 0.82)
+
+[node name="Cursor" parent="." index="18" unique_id=1176993969]
+position = Vector2(606, 732)
 
 [editable path="GetawayZone"]
 [editable path="VaultZone"]
