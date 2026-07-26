@@ -6,4 +6,4 @@ func _ready() -> void:
 	update_text(0, Global.active_quota.current_score)
 	
 func update_text(_old_score: int, new_score: int) -> void:
-	text = "[wave amp=1]$%s" % new_score
+	text = "[wave amp=1]%s" % new_score % "/" % Global.active_quota.total_quota
