@@ -6,18 +6,21 @@
 [ext_resource type="PackedScene" uid="uid://7n2cwwosg6c0" path="res://zone/zone.tscn" id="3_jksgt"]
 [ext_resource type="Script" uid="uid://b88iifj2svjwc" path="res://addons/vision_cone_2d/cone_editor_helper.gd" id="3_yqej0"]
 
-[node name="Camera" type="Node2D" unique_id=2117175 node_paths=PackedStringArray("rotate_node", "timer", "look_targets")]
-script = ExtResource("1_yqej0")
-rotate_node = NodePath(".")
-timer = NodePath("Timer")
-look_targets = [NodePath("MOVE_THIS_MARKER")]
-rotate_speed = 0.2
-ease_curve = -5.0
+[node name="Camera" type="Node2D" unique_id=2117175]
 
 [node name="MOVE_THIS_MARKER" type="Marker2D" parent="." unique_id=1281041925]
 position = Vector2(-63, 0)
 
 [node name="Timer" type="Timer" parent="." unique_id=565069179]
+
+[node name="RotateComponent" type="Node2D" parent="." unique_id=1083426318 node_paths=PackedStringArray("rotate_node", "timer", "look_targets")]
+script = ExtResource("1_yqej0")
+rotate_node = NodePath("..")
+timer = NodePath("../Timer")
+look_targets = [NodePath("../MOVE_THIS_MARKER")]
+rotate_speed = 0.2
+ease_curve = -5.0
+metadata/_custom_type_script = "uid://bbjdhfhreowij"
 
 [node name="VisionConeRenderer" type="Polygon2D" parent="." unique_id=626669712]
 rotation = -1.5707964
