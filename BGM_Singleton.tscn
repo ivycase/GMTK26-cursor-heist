@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ch7se1hg1hbji"]
+
+[ext_resource type="AudioStream" uid="uid://bvohudp3vp0o" path="res://sound/tempmusic1.wav" id="1_rboau"]
+[ext_resource type="AudioStream" uid="uid://bphai8mhiembj" path="res://sound/tempmusic2.wav" id="2_4pg3m"]
+
+[sub_resource type="AudioStreamSynchronized" id="AudioStreamSynchronized_riqys"]
+stream_count = 2
+stream_0/stream = ExtResource("1_rboau")
+stream_0/volume = 0.0
+stream_1/stream = ExtResource("2_4pg3m")
+stream_1/volume = 0.0
+
+[node name="BgmSingleton" type="Node2D" unique_id=446385288]
+
+[node name="bgm" type="AudioStreamPlayer2D" parent="." unique_id=1196791923]
+stream = SubResource("AudioStreamSynchronized_riqys")
