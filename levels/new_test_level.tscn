@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://co6gom0ie34uh" path="res://draggable/money_bag.tscn" id="10_iyyhl"]
 [ext_resource type="Script" uid="uid://b1yia4xulkik" path="res://countdown/score/score_label.gd" id="11_xy8qx"]
 [ext_resource type="PackedScene" uid="uid://cittmts7yh6ss" path="res://obstacle/camera/camera.tscn" id="12_jlufv"]
+[ext_resource type="PackedScene" uid="uid://cgoh2yxhwuxwo" path="res://vent/vent.tscn" id="12_nnusk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ef1rh"]
 size = Vector2(268, 416)
@@ -20,60 +21,75 @@ size = Vector2(282, 408)
 
 [node name="LevelTemplate2" unique_id=1324624073 instance=ExtResource("1_ymh1u")]
 
-[node name="VentLayer" parent="Tiles" parent_id_path=PackedInt32Array(1062066135) index="1" unique_id=1725894612]
-tile_map_data = PackedByteArray("AAAIAAsAAQALAAIAAAAJAAsAAQALAAIAAAAKAAsAAQALAAIAAAAIAAwAAQALAAQAAAAJAAwAAQALAAQAAAAKAAwAAQALAAQAAAAHAAwAAQAKAAQAAAALAAwAAQAPAAQAAAAHAAsAAQAKAAMAAAALAAsAAQAPAAMAAAALAAoAAQAPAAMAAAAHAAoAAQAKAAMAAAA=")
-collision_enabled = false
+[node name="ZLevelManager" parent="." index="1" unique_id=1971156110 node_paths=PackedStringArray("vents")]
+vents = [NodePath("../Vent")]
 
-[node name="PuzzleSet" type="Node2D" parent="." index="3" unique_id=1128285452]
+[node name="Cursor" parent="." index="2" unique_id=1176993969 instance=ExtResource("4_4thnx")]
+position = Vector2(119, 414)
+collision_mask = 3
 
-[node name="ButtonComponent" parent="PuzzleSet" index="0" unique_id=1835980614 instance=ExtResource("2_nnusk")]
+[node name="PuzzleSet" type="Node2D" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="1" unique_id=1128285452]
+
+[node name="ButtonComponent" parent="BaseLevel/PuzzleSet" index="0" unique_id=1835980614 instance=ExtResource("2_nnusk")]
 position = Vector2(630, 272)
 
-[node name="DoorComponent" parent="PuzzleSet" index="1" unique_id=1917155962 node_paths=PackedStringArray("connected_button") instance=ExtResource("3_ih7d6")]
+[node name="DoorComponent" parent="BaseLevel/PuzzleSet" index="1" unique_id=1917155962 node_paths=PackedStringArray("connected_button") instance=ExtResource("3_ih7d6")]
 position = Vector2(732, 387)
 rotation = -1.5707964
 connected_button = NodePath("../ButtonComponent")
 
-[node name="Cursor" parent="." index="4" unique_id=1176993969 instance=ExtResource("4_4thnx")]
-position = Vector2(119, 414)
-
-[node name="Crate" parent="." index="5" unique_id=1275245576 instance=ExtResource("5_ft8x0")]
+[node name="Crate" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="2" unique_id=1275245576 instance=ExtResource("5_ft8x0")]
 position = Vector2(353, 528)
 
-[node name="VaultZone" parent="." index="6" unique_id=1968612249 instance=ExtResource("6_rc8qk")]
+[node name="VaultZone" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="3" unique_id=1968612249 instance=ExtResource("6_rc8qk")]
 position = Vector2(1066, 480)
 
-[node name="CollisionShape2D" parent="VaultZone" index="1" unique_id=1235712958]
+[node name="CollisionShape2D" parent="BaseLevel/VaultZone" index="1" unique_id=1235712958]
 shape = SubResource("RectangleShape2D_ef1rh")
 
-[node name="GetawayZone" parent="." index="7" unique_id=1818373524 instance=ExtResource("7_aar7y")]
+[node name="GetawayZone" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="4" unique_id=1818373524 instance=ExtResource("7_aar7y")]
 position = Vector2(190, 71)
 
-[node name="CollisionShape2D" parent="GetawayZone" index="1" unique_id=956841795]
+[node name="CollisionShape2D" parent="BaseLevel/GetawayZone" index="1" unique_id=956841795]
 position = Vector2(0, 365)
 shape = SubResource("RectangleShape2D_qrbdw")
 
-[node name="Loot" parent="." index="8" unique_id=1797138014 instance=ExtResource("9_1mpng")]
+[node name="Loot" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="5" unique_id=1797138014 instance=ExtResource("9_1mpng")]
 
-[node name="MoneyBag" parent="." index="9" unique_id=68727245 instance=ExtResource("10_iyyhl")]
+[node name="MoneyBag" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="6" unique_id=68727245 instance=ExtResource("10_iyyhl")]
 position = Vector2(998, 385)
 
-[node name="MoneyBag2" parent="." index="10" unique_id=1487604712 instance=ExtResource("10_iyyhl")]
+[node name="MoneyBag2" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="7" unique_id=1487604712 instance=ExtResource("10_iyyhl")]
 position = Vector2(1096, 354)
 
-[node name="MoneyBag3" parent="." index="11" unique_id=454694304 instance=ExtResource("10_iyyhl")]
+[node name="MoneyBag3" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="8" unique_id=454694304 instance=ExtResource("10_iyyhl")]
 position = Vector2(1096, 437)
 
-[node name="MoneyBag4" parent="." index="12" unique_id=1469309286 instance=ExtResource("10_iyyhl")]
+[node name="MoneyBag4" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="9" unique_id=1469309286 instance=ExtResource("10_iyyhl")]
 position = Vector2(1018, 531)
 
-[node name="MoneyBag5" parent="." index="13" unique_id=83279175 instance=ExtResource("10_iyyhl")]
+[node name="MoneyBag5" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="10" unique_id=83279175 instance=ExtResource("10_iyyhl")]
 position = Vector2(1122, 614)
 
-[node name="MoneyBag6" parent="." index="14" unique_id=885380175 instance=ExtResource("10_iyyhl")]
+[node name="MoneyBag6" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="11" unique_id=885380175 instance=ExtResource("10_iyyhl")]
 position = Vector2(1029, 646)
 
-[node name="ScoreLabel" type="RichTextLabel" parent="." index="15" unique_id=1587280322]
+[node name="Marker2D" type="Marker2D" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="12" unique_id=855231076]
+position = Vector2(770, 183.99997)
+rotation = -1.0639141
+
+[node name="Camera" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="13" unique_id=2117175 node_paths=PackedStringArray("look_targets") instance=ExtResource("12_jlufv")]
+position = Vector2(622, 160)
+rotation = -1.0639141
+look_targets = [NodePath("../Marker2D")]
+
+[node name="VisionConeRenderer" parent="BaseLevel/Camera" index="1" unique_id=626669712]
+polygon = PackedVector2Array(0, 0, 41.226685, 99.53003, 36.689148, 101.90802, 34.117126, 105.00186, 29.401367, 107.47327, 24.587097, 109.99625, 19.649109, 112.58411, 14.559631, 115.25131, 9.287842, 118.01407, 5.6551514, 119.91791, 1.9145508, 121.878204, -1.9464111, 123.90167, -5.9417725, 125.995514, -10.087036, 128.16791, -14.399414, 130.42789, -18.898132, 132.78555, -21.525818, 135.90851, -26.414734, 138.47064, -31.553955, 141.16394, -36.97412, 144.00449, -42.710693, 147.01083, -48.804382, 150.20438, -55.3031, 153.61017, -62.262634, 157.25745, -65.935486, 159.18228, 0, 0)
+
+[node name="VisionConeCollider" parent="BaseLevel/Camera/AlarmZone" parent_id_path=PackedInt32Array(2117175, 1968612249) index="0" unique_id=6820882]
+polygon = PackedVector2Array(0, 0, 41.226685, 99.53003, 36.689148, 101.90802, 34.117126, 105.00186, 29.401367, 107.47327, 24.587097, 109.99625, 19.649109, 112.58411, 14.559631, 115.25131, 9.287842, 118.01407, 5.6551514, 119.91791, 1.9145508, 121.878204, -1.9464111, 123.90167, -5.9417725, 125.995514, -10.087036, 128.16791, -14.399414, 130.42789, -18.898132, 132.78555, -21.525818, 135.90851, -26.414734, 138.47064, -31.553955, 141.16394, -36.97412, 144.00449, -42.710693, 147.01083, -48.804382, 150.20438, -55.3031, 153.61017, -62.262634, 157.25745, -65.935486, 159.18228, 0, 0)
+
+[node name="ScoreLabel" type="RichTextLabel" parent="." index="4" unique_id=1587280322]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -95,22 +111,18 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("11_xy8qx")
 
-[node name="Marker2D" type="Marker2D" parent="." index="16" unique_id=855231076]
-position = Vector2(770, 183.99997)
-rotation = -1.0639141
+[node name="VentLevel" parent="." index="5" unique_id=1062066135]
+visible = true
 
-[node name="Camera" parent="." index="17" unique_id=2117175 node_paths=PackedStringArray("look_targets") instance=ExtResource("12_jlufv")]
-position = Vector2(622, 160)
-rotation = -1.0639141
-look_targets = [NodePath("../Marker2D")]
+[node name="VentLayer" parent="VentLevel" index="0" unique_id=1725894612]
+z_index = 10
+tile_map_data = PackedByteArray("AAAIAAsAAQALAAIAAAAJAAsAAQALAAIAAAAKAAsAAQALAAIAAAAIAAwAAQALAAQAAAAJAAwAAQALAAQAAAAKAAwAAQALAAQAAAAHAAwAAQAKAAQAAAALAAwAAQAPAAQAAAAHAAsAAQAKAAMAAAALAAsAAQAPAAMAAAALAAoAAQAPAAMAAAAHAAoAAQAKAAMAAAA=")
 
-[node name="VisionConeRenderer" parent="Camera" index="1" unique_id=626669712]
-polygon = PackedVector2Array(0, 0, 41.226685, 99.53003, 36.689148, 101.90802, 34.117126, 105.00186, 29.401367, 107.47327, 24.587097, 109.99625, 19.649109, 112.58411, 14.559631, 115.25131, 9.287842, 118.01407, 5.6551514, 119.91791, 1.9145508, 121.878204, -1.9464111, 123.90167, -5.9417725, 125.995514, -10.087036, 128.16791, -14.399414, 130.42789, -18.898132, 132.78555, -21.525818, 135.90851, -26.414734, 138.47064, -31.553955, 141.16394, -36.97412, 144.00449, -42.710693, 147.01083, -48.804382, 150.20438, -55.3031, 153.61017, -62.262634, 157.25745, -65.935486, 159.18228, 0, 0)
+[node name="Vent" parent="." index="7" unique_id=964969712 instance=ExtResource("12_nnusk")]
+position = Vector2(594, 425)
+collision_mask = 2
 
-[node name="VisionConeCollider" parent="Camera/AlarmZone" parent_id_path=PackedInt32Array(2117175, 1968612249) index="0" unique_id=6820882]
-polygon = PackedVector2Array(0, 0, 41.226685, 99.53003, 36.689148, 101.90802, 34.117126, 105.00186, 29.401367, 107.47327, 24.587097, 109.99625, 19.649109, 112.58411, 14.559631, 115.25131, 9.287842, 118.01407, 5.6551514, 119.91791, 1.9145508, 121.878204, -1.9464111, 123.90167, -5.9417725, 125.995514, -10.087036, 128.16791, -14.399414, 130.42789, -18.898132, 132.78555, -21.525818, 135.90851, -26.414734, 138.47064, -31.553955, 141.16394, -36.97412, 144.00449, -42.710693, 147.01083, -48.804382, 150.20438, -55.3031, 153.61017, -62.262634, 157.25745, -65.935486, 159.18228, 0, 0)
-
-[editable path="VaultZone"]
-[editable path="GetawayZone"]
-[editable path="Camera"]
-[editable path="Camera/AlarmZone"]
+[editable path="BaseLevel/VaultZone"]
+[editable path="BaseLevel/GetawayZone"]
+[editable path="BaseLevel/Camera"]
+[editable path="BaseLevel/Camera/AlarmZone"]

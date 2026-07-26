@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cgoh2yxhwuxwo"]
+
+[ext_resource type="PackedScene" uid="uid://7n2cwwosg6c0" path="res://zone/zone.tscn" id="1_1l1ut"]
+[ext_resource type="Texture2D" uid="uid://ck3tsn8qo13rl" path="res://tileset/Tilemap V2.png" id="2_aw1xo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1l1ut"]
+size = Vector2(40, 40)
+
+[node name="Vent" unique_id=1968612249 instance=ExtResource("1_1l1ut")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0" unique_id=1853400263]
+shape = SubResource("RectangleShape2D_1l1ut")
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="1" unique_id=425771834]
+texture = ExtResource("2_aw1xo")
+region_enabled = true
+region_rect = Rect2(320, 768, 64, 64)
