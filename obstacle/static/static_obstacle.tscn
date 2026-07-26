@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ds640xyp6nucv"]
+
+[node name="StaticObstacle" type="StaticBody2D" unique_id=621537188]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1879704494]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1603633120]
