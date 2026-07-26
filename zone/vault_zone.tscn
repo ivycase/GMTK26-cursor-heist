@@ -9,3 +9,5 @@ collision_mask = 2
 
 [node name="AlarmComponent" parent="." index="0" unique_id=1460893888 node_paths=PackedStringArray("trigger_zone") instance=ExtResource("2_au256")]
 trigger_zone = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1" unique_id=1235712958]

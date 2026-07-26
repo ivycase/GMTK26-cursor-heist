@@ -1,13 +1,47 @@
 [gd_scene format=3 uid="uid://cittmts7yh6ss"]
 
-[ext_resource type="PackedScene" uid="uid://kf8tqdlm8c5t" path="res://addons/vision_cone_2d/vision_cone_2d_template.tscn" id="1_uabes"]
+[ext_resource type="PackedScene" uid="uid://df6jaen2162xi" path="res://zone/alarm/alarm_component.tscn" id="1_judsg"]
+[ext_resource type="Script" uid="uid://bbjdhfhreowij" path="res://obstacle/camera/rotate_component.gd" id="1_yqej0"]
+[ext_resource type="Script" uid="uid://bo744wpycscqd" path="res://addons/vision_cone_2d/vision_cone_2d.gd" id="2_jksgt"]
+[ext_resource type="PackedScene" uid="uid://7n2cwwosg6c0" path="res://zone/zone.tscn" id="3_jksgt"]
+[ext_resource type="Script" uid="uid://b88iifj2svjwc" path="res://addons/vision_cone_2d/cone_editor_helper.gd" id="3_yqej0"]
 
-[node name="Camera" type="Node2D" unique_id=2117175]
+[node name="Camera" type="Node2D" unique_id=2117175 node_paths=PackedStringArray("rotate_node", "timer", "look_targets")]
+script = ExtResource("1_yqej0")
+rotate_node = NodePath(".")
+timer = NodePath("Timer")
+look_targets = [NodePath("MOVE_THIS_MARKER")]
 
-[node name="VisionCone2D" parent="." unique_id=1669735654 instance=ExtResource("1_uabes")]
+[node name="MOVE_THIS_MARKER" type="Marker2D" parent="." unique_id=1281041925]
+position = Vector2(72, 0)
+
+[node name="Timer" type="Timer" parent="." unique_id=565069179]
+
+[node name="VisionConeRenderer" type="Polygon2D" parent="." unique_id=626669712]
+color = Color(0.431373, 0.929412, 0.278431, 0.286275)
+polygon = PackedVector2Array(0, 0, 76.53669, 184.7759, 70.69497, 187.0888, 64.783485, 189.21707, 58.808064, 191.1586, 52.77461, 192.91148, 46.689075, 194.47398, 40.55746, 195.84457, 34.38582, 197.02187, 28.180244, 198.00473, 21.946863, 198.79219, 15.69182, 199.38347, 9.42129, 199.77797, 3.1414635, 199.97533, -3.1414635, 199.97533, -9.42129, 199.77797, -15.69182, 199.38347, -21.946863, 198.79219, -28.180244, 198.00473, -34.38582, 197.02187, -40.55746, 195.84457, -46.689075, 194.47398, -52.77461, 192.91148, -58.808064, 191.1586, -64.783485, 189.21707, -70.69497, 187.0888, -76.53669, 184.7759, 0, 0)
+
+[node name="AlarmComponent" parent="." unique_id=1460893888 node_paths=PackedStringArray("trigger_zone") instance=ExtResource("1_judsg")]
+trigger_zone = NodePath("../AlarmZone")
+
+[node name="AlarmZone" parent="." unique_id=1968612249 instance=ExtResource("3_jksgt")]
+collision_mask = 2
+
+[node name="VisionConeCollider" type="CollisionPolygon2D" parent="AlarmZone" unique_id=6820882]
+polygon = PackedVector2Array(0, 0, 76.53669, 184.7759, 70.69497, 187.0888, 64.783485, 189.21707, 58.808064, 191.1586, 52.77461, 192.91148, 46.689075, 194.47398, 40.55746, 195.84457, 34.38582, 197.02187, 28.180244, 198.00473, 21.946863, 198.79219, 15.69182, 199.38347, 9.42129, 199.77797, 3.1414635, 199.97533, -3.1414635, 199.97533, -9.42129, 199.77797, -15.69182, 199.38347, -21.946863, 198.79219, -28.180244, 198.00473, -34.38582, 197.02187, -40.55746, 195.84457, -46.689075, 194.47398, -52.77461, 192.91148, -58.808064, 191.1586, -64.783485, 189.21707, -70.69497, 187.0888, -76.53669, 184.7759, 0, 0)
+
+[node name="VisionCone2D" type="Node2D" parent="." unique_id=1669735654 node_paths=PackedStringArray("write_collision_polygon", "write_polygon2d")]
+script = ExtResource("2_jksgt")
 angle_deg = 45
 ray_count = 50
 max_distance = 200.0
 collision_layer_mask = 1
+write_collision_polygon = NodePath("../AlarmZone/VisionConeCollider")
+write_polygon2d = NodePath("../VisionConeRenderer")
 debug_lines = true
 debug_shape = true
+
+[node name="DebugDraw" type="Node2D" parent="VisionCone2D" unique_id=70591713]
+script = ExtResource("3_yqej0")
+
+[editable path="AlarmZone"]

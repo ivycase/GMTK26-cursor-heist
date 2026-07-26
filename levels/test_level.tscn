@@ -115,12 +115,12 @@ position = Vector2(353, 528)
 [node name="VaultZone" parent="." unique_id=1548073899 instance=ExtResource("4_o6mel")]
 position = Vector2(937, 383)
 
-[node name="CollisionShape2D" parent="VaultZone" index="1" unique_id=1240688880]
+[node name="CollisionShape2D" parent="VaultZone" index="1" unique_id=1235712958]
 shape = SubResource("RectangleShape2D_2pwjn")
 
 [node name="GetawayZone" parent="." unique_id=1968612249 instance=ExtResource("5_e7anx")]
 
-[node name="CollisionShape2D" parent="GetawayZone" index="1" unique_id=1240688880]
+[node name="CollisionShape2D" parent="GetawayZone" index="1" unique_id=956841795]
 position = Vector2(0, 365)
 shape = SubResource("RectangleShape2D_ur00s")
 
@@ -171,6 +171,7 @@ script = ExtResource("11_wkb0e")
 
 [node name="Camera" parent="." unique_id=2117175 instance=ExtResource("11_paa45")]
 position = Vector2(242, 370)
+rotation = -0.2617994
 
 [editable path="VaultZone"]
 [editable path="GetawayZone"]

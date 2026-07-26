@@ -9,3 +9,5 @@ collision_mask = 6
 
 [node name="CollectComponent" parent="." index="0" unique_id=891377485 node_paths=PackedStringArray("trigger_zone") instance=ExtResource("2_gjvgx")]
 trigger_zone = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1" unique_id=956841795]

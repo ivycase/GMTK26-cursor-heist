@@ -4,5 +4,3 @@
 
 [node name="Zone" type="Area2D" unique_id=1968612249]
 script = ExtResource("1_k7nro")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1240688880]
