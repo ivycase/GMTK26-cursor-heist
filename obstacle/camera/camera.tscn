@@ -50,9 +50,9 @@ debug_shape = true
 script = ExtResource("3_yqej0")
 
 [node name="Sprite2D" type="Sprite2D" parent="VisionCone2D" unique_id=110183527]
-position = Vector2(1.3113414e-07, -2.9999998)
+position = Vector2(-6.556708e-07, 15)
 rotation = -3.1415925
-scale = Vector2(0.1, 0.1)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_o3hw3")
 
 [editable path="AlarmZone"]
