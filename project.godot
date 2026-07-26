@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Global="*uid://jbfiks7opwqh"
 EasyTransition="*uid://cq0t7o8xelk4k"
 BgmSingleton="*uid://ch7se1hg1hbji"
+ez_sound="*uid://efjgpm38t0s0"
 
 [debug]
 
@@ -40,7 +41,7 @@ version_control/autoload_on_startup=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/easytransition/plugin.cfg")
+enabled=PackedStringArray("res://addons/easytransition/plugin.cfg", "res://addons/ez_sound/plugin.cfg")
 
 [layer_names]
 
