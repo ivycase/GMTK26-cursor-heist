@@ -16,5 +16,5 @@ region_rect = Rect2(64, 0, 704, 512)
 [node name="CollisionShape2D" parent="." index="1" unique_id=1603633120]
 shape = SubResource("RectangleShape2D_mj1nj")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="2" unique_id=692030070]
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="." index="2" unique_id=692030070]
 polygon = PackedVector2Array(-328, -232, 104, -232, 104, -8, 320, -8, 320, 240, -328, 232)

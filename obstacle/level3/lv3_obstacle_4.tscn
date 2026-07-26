@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cn5bltca7y6gk"]
+
+[ext_resource type="PackedScene" uid="uid://ds640xyp6nucv" path="res://obstacle/static/static_obstacle.tscn" id="1_mawjw"]
+[ext_resource type="Texture2D" uid="uid://bc0n0ws5m6n4" path="res://tileset/level3 tilemap.png" id="2_gqkch"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_65u20"]
+size = Vector2(32, 384)
+
+[node name="StaticObstacle" unique_id=621537188 instance=ExtResource("1_mawjw")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1879704494]
+texture = ExtResource("2_gqkch")
+region_enabled = true
+region_rect = Rect2(832, 576, 64, 384)
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=1603633120]
+shape = SubResource("RectangleShape2D_65u20")
