@@ -11,8 +11,18 @@
 [ext_resource type="PackedScene" uid="uid://ce2fgpjgnibgs" path="res://obstacle/turret/turret.tscn" id="8_sftyy"]
 [ext_resource type="PackedScene" uid="uid://cgoh2yxhwuxwo" path="res://vent/vent.tscn" id="8_w0wgn"]
 [ext_resource type="PackedScene" uid="uid://bixx2d1r4mbxs" path="res://zone/vault_zone.tscn" id="9_sftyy"]
+[ext_resource type="PackedScene" uid="uid://dfjdbmapg4p3g" path="res://obstacle/level5/lv5_frame.tscn" id="11_ypixr"]
 [ext_resource type="Shader" uid="uid://ccx431w4c8uli" path="res://obstacle/camera/camera.gdshader" id="12_hekac"]
+[ext_resource type="PackedScene" uid="uid://ciacjim6jjcc0" path="res://obstacle/level5/lv5_obstacle_1.tscn" id="12_p6c8d"]
 [ext_resource type="Texture2D" uid="uid://cdn4jtifoarya" path="res://art/DIAMOND_PATTERN.png" id="13_jj6ev"]
+[ext_resource type="PackedScene" uid="uid://bpb4wkhdloe73" path="res://obstacle/level5/lv5_obstacle_4.tscn" id="13_whjvh"]
+[ext_resource type="PackedScene" uid="uid://boxxe0b38gk62" path="res://obstacle/level5/lv5_obstacle_5.tscn" id="14_srlfg"]
+[ext_resource type="PackedScene" uid="uid://xe4ni0oj7xmm" path="res://obstacle/level5/lv5_obstacle_6.tscn" id="15_4g6ea"]
+[ext_resource type="PackedScene" uid="uid://co2xw1ap37dc0" path="res://obstacle/level5/lv5_room_gold.tscn" id="16_0ddad"]
+[ext_resource type="PackedScene" uid="uid://cu2qg5g36nrdd" path="res://obstacle/level5/lv5_room_home_1.tscn" id="17_ubnh6"]
+[ext_resource type="PackedScene" uid="uid://b4vmral2bfdfp" path="res://obstacle/level5/lv5_room_home_2.tscn" id="18_i0ab5"]
+[ext_resource type="PackedScene" uid="uid://dqu30pg02mdsy" path="res://obstacle/level5/lv5_obstacle_3.tscn" id="22_whjvh"]
+[ext_resource type="PackedScene" uid="uid://be66eunofwyyh" path="res://obstacle/level5/lv5_obstacle_2.tscn" id="23_srlfg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bqh2k"]
 size = Vector2(187, 252.99998)
@@ -30,6 +40,9 @@ shader_parameter/target_color = Color(1, 1, 1, 1)
 shader_parameter/color_match_threshold = 0.8
 
 [node name="LevelTemplate" unique_id=1324624073 instance=ExtResource("1_bqh2k")]
+
+[node name="Camera2D" parent="." index="1" unique_id=735667684]
+position = Vector2(639, 462)
 
 [node name="ZLevelManager" parent="." index="2" unique_id=1971156110 node_paths=PackedStringArray("vents")]
 vents = [NodePath("../Vent")]
@@ -59,7 +72,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="BackgroundLayer" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="2" unique_id=864770364]
+visible = false
 tile_map_data = PackedByteArray("AAAIAAAAAQAQAAoAAAAJAAAAAQAQAAoAAAAKAAAAAQAQAAoAAAALAAAAAQAQAAoAAAAHAAAAAQAQAAoAAAAGAAAAAQAQAAoAAAAFAAAAAQAQAAoAAAAEAAAAAQAQAAoAAAADAAAAAQAQAAoAAAACAAAAAQAQAAoAAAABAAAAAQAQAAoAAAAMAAAAAQAQAAoAAAANAAAAAQAQAAoAAAAOAAAAAQAQAAoAAAAPAAAAAQAQAAoAAAAQAAAAAQAQAAoAAAARAAAAAQAQAAoAAAASAAAAAQAQAAoAAAAAAAAAAQARAAoAABATAAAAAQARAAoAAAATAAEAAQARAAsAAAAAAAEAAQARAAsAABAAAAIAAQARAAsAABAAAAMAAQARAAsAABAAAAQAAQARAAsAABAAAAUAAQARAAsAABAAAAYAAQARAAsAABAAAAcAAQARAAsAABAAAAgAAQARAAsAABAAAAkAAQARAAsAABAAAAoAAQARAAsAABAAAAsAAQARAAsAABATAAIAAQARAAsAAAATAAMAAQARAAsAAAATAAQAAQARAAsAAAATAAUAAQARAAsAAAATAAYAAQARAAsAAAATAAcAAQARAAsAAAATAAgAAQARAAsAAAATAAkAAQARAAsAAAATAAoAAQARAAsAAAATAAsAAQARAAsAAAATAAwAAQARAAsAAAATAA0AAQARAAsAAAAAAAwAAQARAAsAABAAAA0AAQARAAsAABAAAA4AAQARAAoAADATAA4AAQARAAoAACASAA4AAQAQAAoAACABAA4AAQAQAAoAACACAA4AAQAQAAoAACADAA4AAQAQAAoAACAEAA4AAQAQAAoAACAFAA4AAQAQAAoAACAGAA4AAQAQAAoAACAHAA4AAQAQAAoAACAIAA4AAQAQAAoAACAJAA4AAQAQAAoAACAKAA4AAQAQAAoAACALAA4AAQAQAAoAACAMAA4AAQAQAAoAACANAA4AAQAQAAoAACAOAA4AAQAQAAoAACAPAA4AAQAQAAoAACAQAA4AAQAQAAoAACARAA4AAQAQAAoAACACAAIAAQAKAAIAAAAEAAQAAQAKAAIAAAAEAAoAAQAKAAIAAAAGAAoAAQAPAAIAAAAGAAUAAQAPAAQAAAAGAAQAAQAPAAIAAAAFAAQAAQALAAIAAAACAAMAAQAKAAMAAAACAAQAAQAKAAMAAAACAAUAAQAKAAMAAAACAAYAAQAKAAMAAAACAAcAAQAKAAMAAAACAAgAAQAKAAMAAAACAAkAAQAKAAMAAAACAAoAAQAPAAQAAAAEAAsAAQAKAAMAAAAEAAwAAQAKAAMAAAAEAA0AAQAKAAMAAAAEAAUAAQAKAAMAAAAEAAYAAQAKAAMAAAAEAAgAAQAKAAQAAAAGAAgAAQAPAAQAAAAGAAcAAQAPAAIAAAAFAAcAAQAKAAQAAAAEAAcAAQAKAAMAAAAFAAUAAQAKAAIAAAAFAAYAAQAKAAMAAAAFAAgAAQAMAAQAAAAFAAoAAQALAAIAAAAGAAsAAQAPAAMAAAAGAAwAAQAPAAMAAAAGAA0AAQAPAAMAAAADAAIAAQALAAIAAAAEAAIAAQALAAIAAAAFAAIAAQALAAIAAAAGAAIAAQALAAIAAAAHAAIAAQALAAIAAAAOAAIAAQAPAAQAAAAQAAIAAQAKAAQAAAARAAIAAQAPAAIAAAAQAAEAAQAKAAMAAAAOAAEAAQAKAAMAAAAJAAQAAQAKAAIAAAAMAAQAAQAPAAIAAAAJAAgAAQAKAAQAAAAMAAgAAQAPAAQAAAAKAAgAAQAMAAQAAAALAAgAAQAMAAQAAAAJAAUAAQAKAAMAAAAJAAcAAQAKAAMAAAAMAAUAAQAPAAMAAAAMAAcAAQAPAAMAAAAJAAoAAQABAAIAAAAOAAoAAQAJAAIAAAAOAA0AAQAJAAQAAAAJAA0AAQABAAQAAAAJAAsAAQABAAMAAAAJAAwAAQABAAMAAAAOAAsAAQAJAAMAAAAOAAwAAQAJAAMAAAANAA0AAQAHAAQAAAAMAA0AAQAHAAQAAAALAA0AAQAHAAQAAAAKAA0AAQAHAAQAAAAKAAoAAQACAAIAAAANAAoAAQAIAAIAAAARAA0AAQAPAAMAAAARAAwAAQAPAAMAAAARAAsAAQAPAAMAAAARAAoAAQAPAAMAAAARAAkAAQAPAAMAAAARAAgAAQAPAAMAAAAPAAcAAQAKAAQAAAASAAcAAQAPAAQAAAARAAcAAQAKAAMAAAASAAQAAQAPAAIAAAAPAAQAAQAKAAIAAAAPAAUAAQAKAAMAAAAPAAYAAQAKAAMAAAASAAUAAQAPAAMAAAASAAYAAQAPAAMAAAAQAAQAAQALAAIAAAARAAQAAQALAAIAAAARAAMAAQAPAAMAAAAIAAIAAQALAAIAAAAJAAIAAQAKAAQAAAAMAAIAAQAPAAQAAAANAAIAAQALAAIAAAAJAAYAAQAKAAMAAAAMAAYAAQAPAAMAAAABAAwAAQAKAAMAAAABAA0AAQAKAAMAAAABAAoAAQAKAAIAAAABAAsAAQAKAAMAAAAQAAcAAQAKAAMAAAAJAAEAAQAKAAMAAAAMAAEAAQAPAAMAAAA=")
+collision_enabled = false
 
 [node name="Crate" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="3" unique_id=1275245576 instance=ExtResource("2_fogoq")]
 position = Vector2(214, 214)
@@ -97,7 +112,7 @@ position = Vector2(1043, 350)
 position = Vector2(1129, 418)
 
 [node name="Camera" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="14" unique_id=2117175 node_paths=PackedStringArray("look_targets") instance=ExtResource("6_bqh2k")]
-position = Vector2(158, 607)
+position = Vector2(174, 607)
 look_targets = [NodePath("../Cam1Marker")]
 
 [node name="Cam1Marker" type="Marker2D" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="15" unique_id=1834241065]
@@ -146,11 +161,45 @@ position = Vector2(1072, 320)
 position = Vector2(16, 64)
 shape = SubResource("RectangleShape2D_g4v7s")
 
-[node name="ScoreLabel" parent="BaseLevel/Quota" parent_id_path=PackedInt32Array(284631434) index="0" unique_id=820636205]
+[node name="Quota" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="24" unique_id=284631434]
+total_quota = 5
+
+[node name="ScoreLabel" parent="BaseLevel/Quota" index="0" unique_id=820636205]
 offset_left = -130.0
 offset_top = 208.37608
 offset_right = 1530.0
 offset_bottom = 844.3761
+
+[node name="StaticObstacle" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="25" unique_id=621537188 instance=ExtResource("11_ypixr")]
+position = Vector2(639, 465)
+
+[node name="StaticObstacle2" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="26" unique_id=286080632 instance=ExtResource("12_p6c8d")]
+position = Vector2(92.99999, 539.99994)
+scale = Vector2(0.85, 0.85)
+
+[node name="StaticObstacle5" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="27" unique_id=421844873 instance=ExtResource("13_whjvh")]
+position = Vector2(353, 778)
+scale = Vector2(0.85, 0.85)
+
+[node name="StaticObstacle6" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="28" unique_id=91878931 instance=ExtResource("14_srlfg")]
+position = Vector2(1166.0001, 708.9999)
+scale = Vector2(0.85, 0.85)
+
+[node name="StaticObstacle7" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="29" unique_id=692140447 instance=ExtResource("15_4g6ea")]
+position = Vector2(356.00003, 405.9995)
+scale = Vector2(0.85, 0.85)
+
+[node name="StaticObstacle8" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="30" unique_id=1358180321 instance=ExtResource("16_0ddad")]
+position = Vector2(766, 765.99976)
+scale = Vector2(0.85, 0.85)
+
+[node name="StaticObstacle9" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="31" unique_id=1741795047 instance=ExtResource("17_ubnh6")]
+position = Vector2(1087, 394.9995)
+scale = Vector2(0.85, 0.85)
+
+[node name="StaticObstacle10" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="32" unique_id=908702178 instance=ExtResource("18_i0ab5")]
+position = Vector2(699.9999, 417.99988)
+scale = Vector2(0.85, 0.85)
 
 [node name="VentLayer" parent="VentLevel" parent_id_path=PackedInt32Array(1062066135) index="0" unique_id=1725894612]
 tile_map_data = PackedByteArray("AAATAAAAAQARAAoAAAAAAAAAAQARAAoAABAAAA4AAQARAAoAADATAA4AAQARAAoAACASAA4AAQAQAAoAACARAA4AAQAQAAoAACAQAA4AAQAQAAoAACAPAA4AAQAQAAoAACAOAA4AAQAQAAoAACANAA4AAQAQAAoAACAMAA4AAQAQAAoAACALAA4AAQAQAAoAACAKAA4AAQAQAAoAACAJAA4AAQAQAAoAACAIAA4AAQAQAAoAACAHAA4AAQAQAAoAACAGAA4AAQAQAAoAACAFAA4AAQAQAAoAACAEAA4AAQAQAAoAACADAA4AAQAQAAoAACACAA4AAQAQAAoAACABAA4AAQAQAAoAACABAAAAAQAQAAoAAAACAAAAAQAQAAoAAAADAAAAAQAQAAoAAAAEAAAAAQAQAAoAAAAFAAAAAQAQAAoAAAAGAAAAAQAQAAoAAAAHAAAAAQAQAAoAAAAIAAAAAQAQAAoAAAAJAAAAAQAQAAoAAAAKAAAAAQAQAAoAAAALAAAAAQAQAAoAAAAMAAAAAQAQAAoAAAANAAAAAQAQAAoAAAAOAAAAAQAQAAoAAAAPAAAAAQAQAAoAAAAQAAAAAQAQAAoAAAARAAAAAQAQAAoAAAASAAAAAQAQAAoAAAATAAEAAQARAAsAAAATAAIAAQARAAsAAAATAAMAAQARAAsAAAATAAQAAQARAAsAAAATAAUAAQARAAsAAAATAAYAAQARAAsAAAATAAcAAQARAAsAAAATAAgAAQARAAsAAAATAAkAAQARAAsAAAATAAoAAQARAAsAAAATAAsAAQARAAsAAAATAAwAAQARAAsAAAATAA0AAQARAAsAAAAAAAEAAQARAAsAAAAAAAIAAQARAAsAAAAAAAMAAQARAAsAAAAAAAQAAQARAAsAAAAAAAUAAQARAAsAAAAAAAYAAQARAAsAAAAAAAcAAQARAAsAAAAAAAgAAQARAAsAAAAAAAkAAQARAAsAAAAAAAoAAQARAAsAAAAAAAsAAQARAAsAAAAAAAwAAQARAAsAAAAAAA0AAQARAAsAAAAOAAEAAQAKAAMAAAAQAAEAAQAPAAMAAAAPAAEAAQALAAIAAAAOAAIAAQAKAAMAAAAOAAMAAQAKAAMAAAAOAAQAAQAKAAMAAAAQAAIAAQAPAAMAAAAQAAMAAQAPAAMAAAAQAAQAAQAPAAMAAAAQAAUAAQAPAAMAAAAQAAYAAQAPAAMAAAAQAAcAAQAPAAMAAAAQAAgAAQAPAAMAAAAQAAkAAQAPAAMAAAAQAAoAAQAPAAMAAAAQAAwAAQAPAAQAAAAQAAsAAQAPAAMAAAAOAAUAAQAKAAMAAAAOAAYAAQAKAAMAAAAOAAcAAQAKAAMAAAAOAAgAAQAKAAMAAAAOAAkAAQAKAAMAAAAOAAoAAQAPAAQAAAANAAoAAQAMAAQAAAAPAAwAAQANAAQAAAAOAAwAAQANAAQAAAANAAwAAQANAAQAAAAMAAwAAQANAAQAAAALAAwAAQALAAQAAAAMAAoAAQAKAAQAAAAMAAkAAQAKAAMAAAAKAAwAAQAKAAQAAAAKAAsAAQAKAAMAAAAKAAoAAQAKAAMAAAAKAAkAAQAKAAMAAAAKAAgAAQAKAAMAAAAMAAgAAQAKAAMAAAAMAAcAAQAKAAMAAAAMAAYAAQAKAAMAAAAMAAUAAQAKAAMAAAAMAAQAAQAKAAMAAAAMAAMAAQAPAAIAAAAKAAUAAQAPAAIAAAAKAAcAAQAKAAMAAAAKAAYAAQAKAAMAAAALAAMAAQALAAIAAAAKAAMAAQALAAIAAAAJAAMAAQALAAIAAAAIAAMAAQALAAIAAAAGAAMAAQAKAAIAAAAIAAUAAQAKAAIAAAAJAAUAAQALAAIAAAAHAAMAAQALAAIAAAAIAAYAAQAKAAMAAAAIAAcAAQAKAAMAAAAIAAgAAQAKAAMAAAAIAAkAAQAKAAMAAAAGAAQAAQAKAAMAAAAGAAUAAQAKAAMAAAAGAAYAAQAKAAMAAAAGAAcAAQAKAAMAAAAIAAoAAQAPAAQAAAAGAAgAAQAPAAQAAAAFAAgAAQAMAAQAAAAEAAgAAQAMAAQAAAADAAgAAQAMAAQAAAAHAAoAAQAMAAQAAAAGAAoAAQAMAAQAAAAFAAoAAQAMAAQAAAAEAAoAAQAMAAQAAAADAAoAAQAMAAQAAAACAAgAAQAKAAIAAAACAAoAAQAKAAQAAAACAAkAAQAKAAMAAAA=")
@@ -162,10 +211,10 @@ position = Vector2(213, 612)
 position = Vector2(212, 848)
 
 [node name="TimerLabel" parent="Countdown" parent_id_path=PackedInt32Array(416416051) index="1" unique_id=2013573632]
-offset_left = -113.0
-offset_top = -70.0
-offset_right = 391.0
-offset_bottom = 64.0
+offset_left = -114.0
+offset_top = -96.0
+offset_right = 390.0
+offset_bottom = 38.0
 
 [node name="Vent" parent="." index="7" unique_id=1043266141 instance=ExtResource("8_w0wgn")]
 position = Vector2(992, 99)
@@ -190,6 +239,18 @@ offset_left = 608.0
 offset_top = 288.0
 offset_right = 800.0
 offset_bottom = 544.0
+
+[node name="StaticObstacle" parent="." index="11" unique_id=784080364 instance=ExtResource("22_whjvh")]
+position = Vector2(1161, 101)
+scale = Vector2(0.65000004, 0.85)
+
+[node name="StaticObstacle3" parent="." index="12" unique_id=1287262101 instance=ExtResource("22_whjvh")]
+position = Vector2(852, 101)
+scale = Vector2(0.45000982, 0.85)
+
+[node name="StaticObstacle2" parent="." index="13" unique_id=164995132 instance=ExtResource("23_srlfg")]
+position = Vector2(309, 93.99999)
+scale = Vector2(0.85, 0.85)
 
 [editable path="BaseLevel/GetawayZone"]
 [editable path="BaseLevel/Quota"]

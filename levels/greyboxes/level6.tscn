@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://b7blbtp083thu"]
+
+[ext_resource type="PackedScene" uid="uid://8ho4d8rl7jv" path="res://levels/level_template.tscn" id="1_x4e8e"]
+[ext_resource type="FontFile" uid="uid://cf1moys5mvxrs" path="res://fonts/VT323-Regular.ttf" id="2_mhq50"]
+[ext_resource type="PackedScene" uid="uid://co6gom0ie34uh" path="res://draggable/money_bag.tscn" id="4_fwynd"]
+
+[node name="LevelTemplate2" unique_id=1324624073 instance=ExtResource("1_x4e8e")]
+
+[node name="Quota" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="1" unique_id=284631434]
+visible = false
+
+[node name="Cursor" parent="." index="5" unique_id=1176993969]
+position = Vector2(662, 735)
+
+[node name="Countdown" parent="." index="6" unique_id=416416051]
+visible = false
+
+[node name="TimerLabel" parent="Countdown" index="1" unique_id=2013573632]
+visible = false
+
+[node name="VaultZoneEffect" parent="." index="7" unique_id=2127039763]
+visible = false
+
+[node name="GetawayZoneEffect" parent="." index="8" unique_id=794497378]
+visible = false
+
+[node name="MoneyBag" parent="." index="9" unique_id=68727245 instance=ExtResource("4_fwynd")]
+position = Vector2(213, 768)
+
+[node name="MoneyBag2" parent="." index="10" unique_id=1277295783 instance=ExtResource("4_fwynd")]
+position = Vector2(1064, 768)
+
+[node name="MoneyBag3" parent="." index="11" unique_id=497894162 instance=ExtResource("4_fwynd")]
+position = Vector2(205, 159)
+
+[node name="MoneyBag4" parent="." index="12" unique_id=1292054286 instance=ExtResource("4_fwynd")]
+position = Vector2(1082, 138)
+
+[node name="VaultLabel" type="RichTextLabel" parent="." index="13" unique_id=888941575]
+offset_left = 371.0
+offset_top = 245.0
+offset_right = 906.0
+offset_bottom = 709.0
+theme_override_fonts/normal_font = ExtResource("2_mhq50")
+theme_override_font_sizes/normal_font_size = 56
+text = "!! You Win !!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[editable path="BaseLevel/Quota"]
+[editable path="Countdown"]
