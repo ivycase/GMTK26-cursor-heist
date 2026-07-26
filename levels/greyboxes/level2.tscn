@@ -1,12 +1,19 @@
 [gd_scene format=4 uid="uid://42kicsfhrk1x"]
 
 [ext_resource type="PackedScene" uid="uid://8ho4d8rl7jv" path="res://levels/level_template.tscn" id="1_1vbpj"]
+[ext_resource type="PackedScene" uid="uid://c2e3l4m36bbku" path="res://obstacle/level2/lv2_obstacle_1.tscn" id="2_4pft8"]
 [ext_resource type="PackedScene" uid="uid://bixx2d1r4mbxs" path="res://zone/vault_zone.tscn" id="2_qr6my"]
 [ext_resource type="PackedScene" uid="uid://borbhm83vuk1o" path="res://zone/getaway_zone.tscn" id="3_4pft8"]
+[ext_resource type="PackedScene" uid="uid://d161kr1i1iyq7" path="res://obstacle/level2/lv2_obstacle_2.tscn" id="3_rurr7"]
+[ext_resource type="PackedScene" uid="uid://d6q83ynae74a" path="res://obstacle/level2/lv2_obstacle_3.tscn" id="4_hbmyg"]
 [ext_resource type="PackedScene" uid="uid://b61hrbhkewkux" path="res://draggable/crate.tscn" id="4_rurr7"]
+[ext_resource type="PackedScene" uid="uid://cihnjiul7cv5h" path="res://obstacle/level2/lv2_obstacle_4.tscn" id="5_1bmhg"]
 [ext_resource type="PackedScene" uid="uid://bcv8cat0ydhc5" path="res://obstacle/door/door_component.tscn" id="5_hbmyg"]
 [ext_resource type="PackedScene" uid="uid://hwnx7dn1x7kb" path="res://zone/button/button_component.tscn" id="6_1bmhg"]
+[ext_resource type="PackedScene" uid="uid://klxracbpjq1g" path="res://obstacle/level2/lv2_room_gold.tscn" id="6_x56qf"]
+[ext_resource type="PackedScene" uid="uid://bm3sv8nykmkki" path="res://obstacle/level2/lv2_room_home.tscn" id="7_5ii2t"]
 [ext_resource type="PackedScene" uid="uid://co6gom0ie34uh" path="res://draggable/money_bag.tscn" id="7_x56qf"]
+[ext_resource type="PackedScene" uid="uid://cn227wi10bo6q" path="res://obstacle/level2/lv2_frame.tscn" id="8_5ii2t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1dg4"]
 size = Vector2(273, 20)
@@ -17,10 +24,39 @@ size = Vector2(20, 115)
 [node name="LevelTemplate" unique_id=1324624073 instance=ExtResource("1_1vbpj")]
 
 [node name="BackgroundLayer" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="0" unique_id=864770364]
+visible = false
 tile_map_data = PackedByteArray("AAAIAAAAAQAQAAoAAAAJAAAAAQAQAAoAAAAKAAAAAQAQAAoAAAALAAAAAQAQAAoAAAAHAAAAAQAQAAoAAAAGAAAAAQAQAAoAAAAFAAAAAQAQAAoAAAAEAAAAAQAQAAoAAAADAAAAAQAQAAoAAAACAAAAAQAQAAoAAAABAAAAAQAQAAoAAAAMAAAAAQAQAAoAAAANAAAAAQAQAAoAAAAOAAAAAQAQAAoAAAAPAAAAAQAQAAoAAAAQAAAAAQAQAAoAAAARAAAAAQAQAAoAAAASAAAAAQAQAAoAAAAAAAAAAQARAAoAABATAAAAAQARAAoAAAATAAEAAQARAAsAABAAAAEAAQARAAsAAAAAAAIAAQARAAsAAAAAAAMAAQARAAsAAAAAAAQAAQARAAsAAAAAAAUAAQARAAsAAAAAAAYAAQARAAsAAAAAAAcAAQARAAsAAAAAAAgAAQARAAsAAAAAAAkAAQARAAsAAAAAAAoAAQARAAsAAAAAAAsAAQARAAsAAAATAAIAAQARAAsAABATAAMAAQARAAsAABATAAQAAQARAAsAABATAAUAAQARAAsAABATAAYAAQARAAsAABATAAcAAQARAAsAABATAAgAAQARAAsAABATAAkAAQARAAsAABATAAoAAQARAAsAABATAAsAAQARAAsAABATAAwAAQARAAsAABATAA0AAQARAAsAABAAAAwAAQARAAsAAAAAAA0AAQARAAsAAAAAAA4AAQARAAoAADATAA4AAQARAAoAACASAA4AAQAQAAoAACABAA4AAQAQAAoAACACAA4AAQAQAAoAACADAA4AAQAQAAoAACAEAA4AAQAQAAoAACAFAA4AAQAQAAoAACAGAA4AAQAQAAoAACAHAA4AAQAQAAoAACAIAA4AAQAQAAoAACAJAA4AAQAQAAoAACAKAA4AAQAQAAoAACALAA4AAQAQAAoAACAMAA4AAQAQAAoAACANAA4AAQAQAAoAACAOAA4AAQAQAAoAACAPAA4AAQAQAAoAACAQAA4AAQAQAAoAACARAA4AAQAQAAoAACAFAAUAAQANAAQAAAAGAAUAAQAPAAQAAAANAAUAAQAKAAQAAAAOAAUAAQALAAQAAAAPAAUAAQALAAQAAAAQAAUAAQAPAAQAAAAHAAEAAQALAAIAAAAIAAEAAQALAAIAAAAMAAEAAQALAAIAAAALAAEAAQALAAIAAAAKAAEAAQALAAIAAAAJAAEAAQALAAIAAAANAAIAAQAKAAMAAAANAAMAAQAKAAMAAAANAAQAAQAKAAMAAAAGAAIAAQAKAAMAAAAGAAMAAQAKAAMAAAAGAAQAAQAKAAMAAAAGAAEAAQAKAAIAAAANAAEAAQAPAAIAAAAJAAUAAQAMAAQAAAAKAAUAAQAMAAQAAAAIAAUAAQAKAAQAAAALAAUAAQAPAAQAAAAIAAMAAQAKAAIAAAAJAAMAAQALAAIAAAAKAAMAAQALAAIAAAALAAMAAQAPAAIAAAAFAAcAAQAKAAIAAAAGAAcAAQAMAAQAAAAHAAcAAQAMAAQAAAAIAAcAAQAMAAQAAAAJAAcAAQAMAAQAAAAKAAcAAQAMAAQAAAALAAcAAQAMAAQAAAAMAAcAAQAMAAQAAAANAAcAAQAMAAQAAAAOAAcAAQAMAAQAAAAQAAcAAQAMAAQAAAARAAcAAQAMAAQAAAASAAcAAQAMAAQAAAANAAoAAQACAAQAAAAOAAoAAQAFAAQAAAAPAAoAAQAFAAQAAAAQAAoAAQAIAAQAAAAMAAgAAQABAAMAAAARAAgAAQAJAAMAAAAMAAoAAQABAAQAAAARAAoAAQAJAAQAAAAMAAkAAQABAAMAAAARAAkAAQAJAAMAAAALAAQAAQAPAAMAAAAIAAQAAQAKAAMAAAAFAAgAAQAKAAMAAAAFAAkAAQAKAAMAAAAFAAoAAQAPAAQAAAAEAAoAAQAOAAQAAAADAAoAAQAOAAQAAAABAAcAAQAKAAIAAAABAAoAAQAKAAQAAAABAAgAAQAKAAMAAAABAAkAAQAKAAMAAAACAAoAAQALAAQAAAAEAAUAAQAMAAQAAAADAAUAAQAMAAQAAAACAAUAAQAMAAQAAAABAAUAAQAKAAIAAAABAAYAAQAKAAMAAAACAAcAAQALAAIAAAAQAAQAAQAPAAMAAAAQAAMAAQAKAAIAAAARAAMAAQALAAIAAAASAAMAAQALAAIAAAA=")
 
+[node name="StaticObstacle" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="1" unique_id=621537188 instance=ExtResource("2_4pft8")]
+position = Vector2(235, 260)
+scale = Vector2(0.9, 0.9)
+
+[node name="StaticObstacle2" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="2" unique_id=1827220394 instance=ExtResource("3_rurr7")]
+position = Vector2(581, 674)
+scale = Vector2(0.9, 0.9)
+
+[node name="StaticObstacle3" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="3" unique_id=1462410248 instance=ExtResource("4_hbmyg")]
+position = Vector2(1044.0001, 205)
+scale = Vector2(0.97999996, 0.9)
+
+[node name="StaticObstacle4" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="4" unique_id=2145081622 instance=ExtResource("5_1bmhg")]
+position = Vector2(640, 283)
+scale = Vector2(0.9, 0.9)
+
+[node name="StaticObstacle5" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="5" unique_id=1458158504 instance=ExtResource("6_x56qf")]
+position = Vector2(1024, 657.00006)
+scale = Vector2(0.93999016, 0.9)
+
+[node name="StaticObstacle6" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="6" unique_id=168614905 instance=ExtResource("7_5ii2t")]
+position = Vector2(214, 617)
+scale = Vector2(0.9, 0.9)
+
+[node name="StaticObstacle7" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="7" unique_id=703623268 instance=ExtResource("8_5ii2t")]
+position = Vector2(628, 484.00006)
+scale = Vector2(0.9, 0.9)
+
 [node name="VaultZone" parent="." index="3" unique_id=1968612249 instance=ExtResource("2_qr6my")]
-position = Vector2(990, 514)
+position = Vector2(990, 529)
 
 [node name="CollisionShape2D" parent="VaultZone" index="1" unique_id=1235712958]
 position = Vector2(-29.5, -9)
