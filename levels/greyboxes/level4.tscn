@@ -119,7 +119,7 @@ position = Vector2(1121, 671)
 
 [node name="Camera" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="17" unique_id=2117175 node_paths=PackedStringArray("look_targets") instance=ExtResource("8_jp08e")]
 position = Vector2(593, 521)
-rotation = 2.7594216
+rotation = 3.1415927
 look_targets = [NodePath("../../Marker2D")]
 
 [node name="Marker2D" type="Marker2D" parent="BaseLevel" parent_id_path=PackedInt32Array(299146741) index="18" unique_id=345120088]
