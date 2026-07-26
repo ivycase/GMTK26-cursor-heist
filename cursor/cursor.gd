@@ -40,6 +40,7 @@ func _handle_click_event(event: InputEventMouseButton) -> void:
 		return
 	elif event.is_pressed():
 		ez_sound.play_sfx("restock.wav")
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 		click.emit()
 	else:
 		release.emit()
