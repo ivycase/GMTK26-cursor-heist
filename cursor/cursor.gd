@@ -44,4 +44,4 @@ func _handle_click_event(event: InputEventMouseButton) -> void:
 		release.emit()
 	
 func _handle_move_event(event: InputEventMouseMotion) -> void:
-	velocity = event.relative * move_speed
+	velocity = event.screen_relative * move_speed
