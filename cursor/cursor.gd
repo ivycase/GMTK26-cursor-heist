@@ -31,7 +31,7 @@ func _physics_process(_delta: float) -> void:
 	move_and_slide()
 	
 	if sprite:
-		sprite.global_position = global_position + velocity / 50.0
+		sprite.global_position = global_position + velocity / 500.0
 		
 	velocity = lerp(velocity, Vector2.ZERO, decelerate_speed)
 	

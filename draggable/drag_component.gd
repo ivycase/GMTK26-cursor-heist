@@ -41,7 +41,8 @@ func _physics_process(delta: float) -> void:
 	var mouse_pos: Vector2 = Global.get_cursor_position()
 		
 	var force: Vector2 = mass * ((mouse_pos - dragged_node.global_position) * ease(delta, drag_curve) * drag_speed)
-	dragged_node.apply_impulse(clamp(force, Vector2.ONE * -max_force, Vector2.ONE * max_force))
+	dragged_node.apply_central_impulse(force)
+	#dragged_node.apply_impulse(clamp(force, Vector2.ONE * -max_force, Vector2.ONE * max_force))
 	#dragged_node.global_position = dragged_node.global_position.lerp(mouse_pos, ease(delta, drag_curve) * drag_speed)
 	#var rotate_to: float = dragged_node.global_position.angle_to(mouse_pos)
 	#dragged_node.rotation = lerpf(dragged_node.rotation, rotate_to, ease(delta * drag_speed, drag_curve))

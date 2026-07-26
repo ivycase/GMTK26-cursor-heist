@@ -5,9 +5,6 @@
 [ext_resource type="Texture2D" uid="uid://ddjun7tq1mbn3" path="res://art/cursor_2.png" id="2_eq5v2"]
 [ext_resource type="PackedScene" uid="uid://df6jaen2162xi" path="res://zone/alarm/alarm_component.tscn" id="4_eq5v2"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_eq5v2"]
-radius = 2.4867592
-
 [node name="Cursor" type="CharacterBody2D" unique_id=1176993969 node_paths=PackedStringArray("interact_area", "sprite")]
 collision_layer = 2
 collision_mask = 65
@@ -18,12 +15,14 @@ sprite = NodePath("Sprite2D")
 move_speed = 20.0
 decelerate_speed = 1.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=127558436]
-shape = SubResource("CircleShape2D_eq5v2")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=1498799045]
+position = Vector2(15.525787, 19.436272)
+scale = Vector2(1.07, 1.07)
+polygon = PackedVector2Array(-15.189517, -18.138971, -14.036572, -18.77309, -5.5336123, -13.411901, -14.411281, -9.491892)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1907936384]
 z_index = 10
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.15, 0.15)
 texture = ExtResource("2_eq5v2")
 offset = Vector2(70, 90)
 
@@ -36,6 +35,6 @@ collision_layer = 16
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AlarmZone" unique_id=447066234]
 position = Vector2(17.190025, 21.377886)
 scale = Vector2(1.205, 1.205)
-polygon = PackedVector2Array(-16.36817, -19.161613, -14.581584, -20.376493, 15.693468, -1.3873577, -12.192387, 15.508627)
+polygon = PackedVector2Array(-15.189517, -18.138971, -14.036572, -18.77309, -5.5336123, -13.411901, -14.411281, -9.491892)
 
 [editable path="AlarmZone"]
