@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://bo744wpycscqd" path="res://addons/vision_cone_2d/vision_cone_2d.gd" id="2_jksgt"]
 [ext_resource type="PackedScene" uid="uid://7n2cwwosg6c0" path="res://zone/zone.tscn" id="3_jksgt"]
 [ext_resource type="Script" uid="uid://b88iifj2svjwc" path="res://addons/vision_cone_2d/cone_editor_helper.gd" id="3_yqej0"]
+[ext_resource type="Texture2D" uid="uid://crydppq0qsvru" path="res://art/props/camera.png" id="6_o3hw3"]
 
 [node name="Camera" type="Node2D" unique_id=2117175 node_paths=PackedStringArray("rotate_node", "timer")]
 script = ExtResource("1_yqej0")
@@ -46,5 +47,11 @@ debug_shape = true
 
 [node name="DebugDraw" type="Node2D" parent="VisionCone2D" unique_id=70591713]
 script = ExtResource("3_yqej0")
+
+[node name="Sprite2D" type="Sprite2D" parent="VisionCone2D" unique_id=110183527]
+position = Vector2(1.3113414e-07, -2.9999998)
+rotation = -3.1415925
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("6_o3hw3")
 
 [editable path="AlarmZone"]

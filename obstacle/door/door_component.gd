@@ -4,6 +4,8 @@ extends Node2D
 @export var connected_button: ButtonComponent
 @export var is_start_closed: bool = true
 @export var static_body: StaticBody2D
+@export var closed_sprite: Sprite2D
+@export var opened_sprite: Sprite2D
 
 var is_closed: bool
 var nodes_on_top: Array[Node2D]
@@ -15,7 +17,7 @@ func _ready() -> void:
 func _late_ready() -> void:
 	connected_button.update_power.connect(_update_door)
 	is_closed = is_start_closed
-	_temp_visual()
+	update_visual()
 
 func _update_door(trigger_node: Node2D, new_power: bool) -> void:
 	var index: int = nodes_on_top.find(trigger_node)
@@ -29,11 +31,15 @@ func _update_door(trigger_node: Node2D, new_power: bool) -> void:
 	
 	is_closed = is_start_closed != new_power
 	static_body.collision_layer = int(is_closed) #layer one is wall layer
+	update_visual()
+
+func update_visual() -> void:
+	if !opened_sprite or !closed_sprite:
+		return
 	
-	_temp_visual()
-	
-func _temp_visual() -> void:
 	if is_closed:
-		modulate = Color.WHITE
+		opened_sprite.hide()
+		closed_sprite.show()
 	else:
-		modulate = Color(Color.WHITE, 0.25)
+		opened_sprite.show()
+		closed_sprite.hide()
