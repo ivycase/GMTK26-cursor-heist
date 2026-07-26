@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cn227wi10bo6q"]
+
+[ext_resource type="PackedScene" uid="uid://ds640xyp6nucv" path="res://obstacle/static/static_obstacle.tscn" id="1_gwvam"]
+[ext_resource type="Texture2D" uid="uid://b5pxs6spnur42" path="res://art/frame/lv2_frame.png" id="2_ebxfv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6j16f"]
+size = Vector2(34, 93)
+
+[node name="StaticObstacle" unique_id=621537188 instance=ExtResource("1_gwvam")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=1879704494]
+texture = ExtResource("2_ebxfv")
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=1603633120]
+position = Vector2(-664, -518.5)
+shape = SubResource("RectangleShape2D_6j16f")
+
+[node name="CollisionPolygon2D" parent="." index="2" unique_id=1454056980]
+polygon = PackedVector2Array(-680, -472, -680, 424, 688, 424, 688, -472, -648, -472, -648, -568, 752, -568, 752, 568, -752, 568, -752, -568, -680, -568)
