@@ -17,7 +17,7 @@ texture = ExtResource("2_d2htj")
 
 [node name="ButtonZone" type="Area2D" parent="." unique_id=630908684]
 collision_layer = 32
-collision_mask = 7
+collision_mask = 5
 script = ExtResource("2_uf74s")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ButtonZone" unique_id=258820418]
