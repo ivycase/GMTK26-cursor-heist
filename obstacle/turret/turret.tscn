@@ -14,12 +14,12 @@ charge_timer = NodePath("Timer")
 is_enabled = true
 rotate_node = NodePath(".")
 detect_zone = NodePath("Zone")
-aim_speed = 5.0
+aim_speed = 15.0
 charge_duration = 1.5
 animation_buffer = -1.1
 visual_width = 50.0
-visual_start_color = Color(1, 0.33333334, 0, 1)
-visual_end_color = Color(0.95, 0.7949917, 0.10450001, 0)
+visual_start_color = Color(0.9490196, 0.79607844, 0.105882354, 1)
+visual_end_color = Color(1, 0.33333334, 0, 0)
 width_ease = -3.0
 color_ease = -5.0
 

@@ -38,11 +38,13 @@ func release_mouse(releaser: Node) -> bool:
 	return true
 	
 func level_transition() -> void:
+	ez_sound.play_sfx("hi-tech.wav")
 	var next_level: int = current_level+1
 	EasyTransition.transition_to("res://levels/greyboxes/level" + str(next_level) + ".tscn")
 	current_level = next_level
 
 func level_restart() -> void: 
+	ez_sound.play_sfx("power_down.wav")
 	EasyTransition.transition_to("res://levels/greyboxes/level" + str(current_level) + ".tscn")
 	
 func _ready() -> void:

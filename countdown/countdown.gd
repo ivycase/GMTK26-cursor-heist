@@ -16,6 +16,7 @@ func start_countdown() -> void:
 		return
 	Global.bgm_phase2()
 	timer.start()
+	ez_sound.play_sfx("zap.wav")
 
 	
 func end_countdown() -> void:

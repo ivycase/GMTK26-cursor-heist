@@ -8,6 +8,9 @@ func _ready() -> void:
 	Global.active_quota = self
 
 func add_score(amount: int) -> void:
+	if amount > 0:
+		ez_sound.play_sfx("coin.wav")
+	
 	current_score += amount
 	Global.update_score.emit(current_score - amount, current_score)
 
