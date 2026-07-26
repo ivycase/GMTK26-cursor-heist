@@ -32,16 +32,19 @@ position = Vector2(571, 855)
 [node name="GetawayZone" parent="." index="2" unique_id=1968612249 instance=ExtResource("3_61w3m")]
 position = Vector2(1204, 440)
 
-[node name="CollisionShape2D" parent="GetawayZone" index="1" unique_id=1240688880]
+[node name="CollisionShape2D" parent="GetawayZone" index="1" unique_id=956841795]
 position = Vector2(0, 3)
 shape = SubResource("RectangleShape2D_lor06")
 
 [node name="VaultZone" parent="." index="3" unique_id=1391700797 instance=ExtResource("4_pdpul")]
 position = Vector2(460, 438)
 
-[node name="CollisionShape2D" parent="VaultZone" index="1" unique_id=1240688880]
+[node name="CollisionShape2D" parent="VaultZone" index="1" unique_id=1235712958]
 position = Vector2(5, 18)
 shape = SubResource("RectangleShape2D_a3wvr")
+
+[node name="Countdown" parent="." index="4" unique_id=416416051]
+getaway_time = 1.0
 
 [editable path="GetawayZone"]
 [editable path="VaultZone"]
